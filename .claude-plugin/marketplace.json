@@ -34,12 +34,12 @@
       "description": "MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs."
     },
     {
-      "name": "book-forge",
+      "name": "velith",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/book-forge.git"
       },
-      "description": "End-to-end book creation toolkit — 6-phase pipeline from ideation to EPUB/PDF. Supports fiction, non-fiction, and technical books."
+      "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
     }
   ]
 }
