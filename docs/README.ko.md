@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-3-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -19,6 +19,8 @@
 | [epic](#epic) | 자율 에이전트 하니스 — 6개의 파워 커맨드, 자가 진화 스킬, 세션마다 작동하는 보이지 않는 훅 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [transpile](#transpile) | 토큰 최적화 문서 리더 — `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 사용량 최대 40% 절감 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP 문서 서버 — BM25+벡터 하이브리드 검색, 린트, 프로젝트 문서용 launchd 라이프사이클 관리 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
+| [velith](#velith) | AI 네이티브 퍼블리싱 시스템 — 아이디에이션부터 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 소프트웨어처럼 책을 만드세요. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [obscura](#obscura) | 헤드리스 브라우저를 MCP 툴로 — fetch, scrape, 마크다운 추출, JS eval. 제로 설정, 바이너리 자동 설치. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 
 ---
 
@@ -29,11 +31,21 @@
 마켓플레이스 추가 후 플러그인을 설치합니다:
 
 ```bash
-claude plugin add epicsagas
-claude plugin install epicsagas/epic
-claude plugin install epicsagas/transpile
-claude plugin install epicsagas/alcove
+claude plugin marketplace add epicsagas/plugins
+claude plugin install epic@epicsagas
+claude plugin install transpile@epicsagas
+claude plugin install alcove@epicsagas
+claude plugin install velith@epicsagas
+claude plugin install obscura@epicsagas
 ```
+
+### Codex CLI
+
+```bash
+codex plugin marketplace add epicsagas/plugins
+```
+
+모든 플러그인을 바로 사용할 수 있습니다 — 추가 설정 불필요.
 
 ### epic — 독립 설치
 
@@ -144,6 +156,38 @@ AI 코딩 에이전트에게 MCP를 통해 프로젝트 비공개 문서에 대�
 - macOS launchd 통합 — enable/disable/start/stop/restart 라이프사이클 커맨드
 
 → [소스 및 문서](https://github.com/epicsagas/alcove)
+
+---
+
+### velith
+
+**AI-Native Publishing System**
+
+Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF.
+
+**Key features:**
+- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
+- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
+- 5-stage editing pipeline with AI-slop detection
+- EPUB, PDF, MOBI, TXT, Markdown output
+
+→ [Source & Docs](https://github.com/epicsagas/Velith)
+
+---
+
+### obscura
+
+**Headless Browser as MCP Tools**
+
+Gives AI agents direct access to the web via five MCP tools. Auto-installs required binaries on first load.
+
+**Key features:**
+- Zero config — plugin auto-installs all required binaries
+- `obscura_scrape` with configurable concurrency via `obscura-worker`
+- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
+- Stealth mode for anti-detection
+
+→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
 
 ---
 

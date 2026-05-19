@@ -21,69 +21,71 @@
 
 | Plugin | Description | Source |
 |--------|-------------|--------|
-| [epic](#epic) | Autonomous agent harness — 6 power commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [epic](#epic) | Autonomous agent harness — 8 commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [transpile](#transpile) | Token-optimized document reader — silently compresses `.md`, `.html`, and `.txt` files on Read, cutting context usage by up to 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
+| [velith](#velith) | AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [obscura](#obscura) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 
 ---
 
 ## Installation
 
-### Via Claude Code (recommended)
+### Claude Code (recommended)
 
-Add this marketplace, then install plugins:
+Register this marketplace once, then install any plugin:
 
 ```bash
-claude marketplace add epicsagas/plugins
-claude plugin install epic
-claude plugin install transpile
-claude plugin install alcove
+claude plugin marketplace add epicsagas/plugins
+claude plugin install epic@epicsagas
+claude plugin install transpile@epicsagas
+claude plugin install alcove@epicsagas
+claude plugin install velith@epicsagas
+claude plugin install obscura@epicsagas
 ```
 
-### epic — standalone install
+### Codex CLI
 
-**Homebrew** (macOS):
+```bash
+codex plugin marketplace add epicsagas/plugins
+```
+
+All plugins are available immediately — no further steps needed.
+
+---
+
+## Standalone Install
+
+### epic
+
 ```bash
 brew install epicsagas/tap/epic-harness
+cargo binstall epic-harness   # pre-built binary
+cargo install epic-harness    # build from source
 ```
 
-**cargo-binstall** (pre-built binary):
-```bash
-cargo binstall epic-harness
-```
+### transpile
 
-**Cargo** (build from source):
 ```bash
-cargo install epic-harness
-```
-
-### transpile — standalone install
-
-**cargo-binstall** (pre-built binary):
-```bash
+brew install epicsagas/tap/llm-transpile
 cargo binstall llm-transpile
-```
-
-**Cargo** (build from source):
-```bash
 cargo install llm-transpile
 ```
 
-### alcove — standalone install
+### alcove
 
-**Homebrew** (macOS):
 ```bash
 brew install epicsagas/tap/alcove
-```
-
-**cargo-binstall** (pre-built binary):
-```bash
 cargo binstall alcove
+cargo install alcove
 ```
 
-**Cargo** (build from source):
+### obscura
+
 ```bash
-cargo install alcove
+brew install epicsagas/tap/obscura-plugin
+cargo binstall obscura-plugin
+cargo install obscura-plugin
 ```
 
 ---
@@ -94,7 +96,7 @@ cargo install alcove
 
 **Autonomous Agent Harness**
 
-Build agent workflows that handle complex, multi-step tasks independently. Powered by 6 built-in power commands, skills evolve the more you use them. Session hooks run automatically to guard your code, polish output, and reflect on each session.
+Build agent workflows that handle complex, multi-step tasks independently. Powered by 8 built-in power commands and an autonomous `/orbit` pipeline. Skills evolve the more you use them. Session hooks run automatically to guard your code, polish output, and reflect on each session.
 
 **When to use:**
 - Automating repetitive code review, commit, and test cycles
@@ -102,7 +104,7 @@ Build agent workflows that handle complex, multi-step tasks independently. Power
 - Enforcing consistent behavior patterns across Claude sessions
 
 **Key features:**
-- 6 built-in power commands (commit, review, test, deploy, and more)
+- 8 built-in power commands including `/orbit` (full autonomous pipeline)
 - Self-evolving skill system — learns from usage patterns and improves over time
 - Session guard hooks — prevents mistakes and maintains quality automatically
 
@@ -152,12 +154,54 @@ Gives AI coding agents on-demand access to your private project docs via MCP. Hy
 
 ---
 
+### velith
+
+**AI-Native Publishing System**
+
+Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF. Seven specialized agents handle structure, drafting, continuity, style, cover design, and marketing.
+
+**When to use:**
+- Writing structured long-form content (fiction, non-fiction, technical, academic)
+- Maintaining cross-chapter consistency and voice across a full book
+- Publishing to EPUB, PDF, MOBI, or Markdown
+
+**Key features:**
+- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
+- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
+- 5-stage editing pipeline with AI-slop detection
+- EPUB, PDF, MOBI, TXT, Markdown output via Pandoc + Calibre
+
+→ [Source & Docs](https://github.com/epicsagas/Velith)
+
+---
+
+### obscura
+
+**Headless Browser as MCP Tools**
+
+Gives AI agents direct access to the web via five MCP tools: fetch, scrape, serve, screenshot, and extract markdown. Auto-installs `obscura` and `obscura-worker` binaries on first load — no manual setup.
+
+**When to use:**
+- Agents that need to read web pages, scrape data, or run JS evals
+- Batch URL processing with parallel scraping
+- Providing a CDP WebSocket endpoint for Playwright/Puppeteer
+
+**Key features:**
+- Zero config — plugin auto-installs all required binaries
+- `obscura_scrape` with configurable concurrency via `obscura-worker`
+- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
+- Stealth mode for anti-detection + tracker blocking
+
+→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
 ## Contributing
 
 To submit a plugin or suggest improvements:
 
 1. Fork this repository
-2. Add your plugin entry to `.claude-plugin/marketplace.json`
+2. Add your plugin entry to `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`
 3. Open a Pull Request
 
 Plugins are maintained as independent GitHub repositories. This marketplace contains metadata only.

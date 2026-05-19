@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-3-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -19,6 +19,8 @@
 | [epic](#epic) | 自主代理框架 — 6 個強力指令、自我進化的技能，以及每個工作階段自動執行的隱形鉤子 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [transpile](#transpile) | 令牌最佳化文件閱讀器 — 靜默壓縮 `.md`、`.html`、`.txt` 檔案，上下文用量最多減少 40% | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP文件伺服器 — BM25+向量混合搜尋、lint檢查、專案文件的launchd生命週期管理 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
+| [velith](#velith) | AI原生出版系統 — 從構思到EPUB/PDF的自主多階段工作流程。像開發軟體一樣寫書。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [obscura](#obscura) | 無頭瀏覽器作為MCP工具 — fetch、scrape、提取Markdown、JS求值。零配置，自動安裝二進位檔。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 
 ---
 
@@ -29,11 +31,21 @@
 新增市場後安裝插件：
 
 ```bash
-claude plugin add epicsagas
-claude plugin install epicsagas/epic
-claude plugin install epicsagas/transpile
-claude plugin install epicsagas/alcove
+claude plugin marketplace add epicsagas/plugins
+claude plugin install epic@epicsagas
+claude plugin install transpile@epicsagas
+claude plugin install alcove@epicsagas
+claude plugin install velith@epicsagas
+claude plugin install obscura@epicsagas
 ```
+
+### Codex CLI
+
+```bash
+codex plugin marketplace add epicsagas/plugins
+```
+
+所有插件立即可用 — 無需額外設定。
 
 ### epic — 獨立安裝
 
@@ -144,6 +156,38 @@ cargo install alcove
 - macOS launchd 整合 — enable/disable/start/stop/restart 生命週期指令
 
 → [原始碼與文件](https://github.com/epicsagas/alcove)
+
+---
+
+### velith
+
+**AI-Native Publishing System**
+
+Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF.
+
+**Key features:**
+- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
+- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
+- 5-stage editing pipeline with AI-slop detection
+- EPUB, PDF, MOBI, TXT, Markdown output
+
+→ [Source & Docs](https://github.com/epicsagas/Velith)
+
+---
+
+### obscura
+
+**Headless Browser as MCP Tools**
+
+Gives AI agents direct access to the web via five MCP tools. Auto-installs required binaries on first load.
+
+**Key features:**
+- Zero config — plugin auto-installs all required binaries
+- `obscura_scrape` with configurable concurrency via `obscura-worker`
+- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
+- Stealth mode for anti-detection
+
+→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
 
 ---
 
