@@ -5,6 +5,58 @@
   },
   "plugins": [
     {
+      "name": "epic",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/epic-harness.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "transpile",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/llm-transpile.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "alcove",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/alcove.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "velith",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/book-forge.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "obscura",
       "source": {
         "source": "url",
