@@ -1,0 +1,21 @@
+{
+  "name": "epicsagas",
+  "interface": {
+    "displayName": "epicsagas Plugins"
+  },
+  "plugins": [
+    {
+      "name": "obscura",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/obscura-plugin.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
