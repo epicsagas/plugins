@@ -40,6 +40,14 @@
         "url": "https://github.com/epicsagas/book-forge.git"
       },
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
+    },
+    {
+      "name": "obscura",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/obscura-plugin.git"
+      },
+      "description": "Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load."
     }
   ]
 }
