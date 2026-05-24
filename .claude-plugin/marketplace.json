@@ -31,7 +31,7 @@
         "source": "url",
         "url": "https://github.com/epicsagas/alcove.git"
       },
-      "description": "MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs."
+      "description": "Local-first MCP memory server — hybrid BM25+vector search, vault management, and launchd lifecycle for persistent project knowledge."
     },
     {
       "name": "velith",
