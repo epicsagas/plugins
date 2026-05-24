@@ -15,7 +15,7 @@
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git"
       },
-      "description": "Autonomous agent harness — 6 power commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session."
+      "description": "3 commands + 19 auto-trigger skills + self-evolving agent harness. Autonomous /orbit pipeline, TDD enforcement, and hooks that guard every session."
     },
     {
       "name": "transpile",
