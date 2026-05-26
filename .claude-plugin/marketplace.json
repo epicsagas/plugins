@@ -48,6 +48,14 @@
         "url": "https://github.com/epicsagas/obscura-plugin.git"
       },
       "description": "Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load."
+    },
+    {
+      "name": "episteme",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/Episteme.git"
+      },
+      "description": "Software engineering knowledge graph — design patterns, laws, code smells, and refactorings with graph traversal and AI-powered code analysis."
     }
   ]
 }
