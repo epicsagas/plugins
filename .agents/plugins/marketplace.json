@@ -47,7 +47,7 @@
       "name": "velith",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/book-forge.git"
+        "url": "https://github.com/epicsagas/Velith.git"
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {

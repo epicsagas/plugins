@@ -37,7 +37,7 @@
       "name": "velith",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/book-forge.git"
+        "url": "https://github.com/epicsagas/Velith.git"
       },
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
     },
