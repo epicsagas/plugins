@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "epic",
+      "name": "epic-harness",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git"
@@ -18,7 +18,7 @@
       "description": "3 commands + 19 auto-trigger skills + self-evolving agent harness. Autonomous /orbit pipeline, TDD enforcement, and hooks that guard every session."
     },
     {
-      "name": "transpile",
+      "name": "llm-transpile",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/llm-transpile.git"
@@ -42,7 +42,7 @@
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
     },
     {
-      "name": "obscura",
+      "name": "obscura-plugin",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/obscura-plugin.git"

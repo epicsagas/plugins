@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "epic",
+      "name": "epic-harness",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git"
@@ -15,10 +15,10 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Harness"
     },
     {
-      "name": "transpile",
+      "name": "llm-transpile",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/llm-transpile.git"
@@ -28,7 +28,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Performance"
     },
     {
       "name": "alcove",
@@ -41,7 +41,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Knowledge Management"
     },
     {
       "name": "velith",
@@ -54,13 +54,39 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Publishing"
     },
     {
-      "name": "obscura",
+      "name": "obscura-plugin",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/obscura-plugin.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Web Automation"
+    },
+    {
+      "name": "episteme",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/Episteme.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Code Quality"
+    },
+    {
+      "name": "obsidian-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/obsidian-forge.git"
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
