@@ -12,7 +12,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Harness"
@@ -25,7 +25,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Performance"
@@ -38,7 +38,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Knowledge Management"
@@ -51,7 +51,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Publishing"
@@ -64,7 +64,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Web Automation"
@@ -77,7 +77,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Code Quality"
@@ -90,7 +90,7 @@
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
-        "installation": "AVAILABLE",
+        "installation": "INSTALLED_BY_DEFAULT",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
