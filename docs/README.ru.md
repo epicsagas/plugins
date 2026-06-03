@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -16,11 +16,12 @@
 
 | Плагин | Описание | Источник |
 |--------|----------|----------|
-| [epic](#epic) | Автономный агентский фреймворк — 6 мощных команд, самоэволюционирующие навыки и невидимые хуки, которые защищают, улучшают и анализируют каждую сессию. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | Оптимизированный по токенам считыватель документов — беззвучно сжимает файлы `.md`, `.html` и `.txt`, сокращая использование контекста до 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | Автономный агентский фреймворк — 6 мощных команд, самоэволюционирующие навыки и невидимые хуки, которые защищают, улучшают и анализируют каждую сессию. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | Оптимизированный по токенам считыватель документов — беззвучно сжимает файлы `.md`, `.html` и `.txt`, сокращая использование контекста до 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP-сервер документации — гибридный поиск BM25+векторный, линтинг и управление жизненным циклом launchd для проектной документации. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | ИИ-нативная издательская система — автономные многофазные рабочие процессы от идеи до EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | Безголовый браузер как MCP-инструменты — fetch, scrape, извлечение Markdown, JS eval. Без настройки, автоматическая установка. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | Безголовый браузер как MCP-инструменты — fetch, scrape, извлечение Markdown, JS eval. Без настройки, автоматическая установка. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | Граф знаний программной инженерии — шаблоны проектирования, код-смеллы, рефакторинги и анализ архитектуры с ИИ-ревью кода. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 Все плагины сразу доступны — дополнительная настройка не требуется.
 
-### epic — автономная установка
+### epic-harness — автономная установка
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — автономная установка
+### llm-transpile — автономная установка
 
 **cargo-binstall** (готовый бинарник):
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — автономная установка
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (готовый бинарник):
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (сборка из исходников):
+```bash
+cargo install episteme
+```
+
 ---
 
 ## Подробности о плагинах
 
-### epic
+### epic-harness
 
 **Автономный Агентский Фреймворк**
 
@@ -117,7 +136,7 @@ cargo install alcove
 
 ---
 
-### transpile
+### llm-transpile
 
 **Оптимизированный по Токенам Считыватель Документов**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**Граф знаний программной инженерии**
+
+Запрашиваемый граф знаний шаблонов проектирования, код-смеллов, рефакторингов и архитектурных законов. ИИ-анализ кода выявляет проблемы качества, предлагает улучшения и обосновывает каждую рекомендацию устоявшимися инженерными принципами.
+
+**Когда использовать:**
+- Ревью кода на неправильное использование паттернов, код-смеллы или архитектурные нарушения
+- Выбор стратегий рефакторинга с принципиальным анализом компромиссов
+- Изучение и применение законов программной инженерии (Закон Конвея, Закон Амдала, Закон Галла)
+
+**Ключевые возможности:**
+- Граф знаний с обходом между паттернами, смеллами, рефакторингами и законами
+- ИИ-анализ кода с обнаружением смеллов и ранжированными предложениями по рефакторингу
+- Несколько персон агентов — ревьюер кода, архитектурный аналитик, инженерный консультант
+
+→ [Исходный код и документация](https://github.com/epicsagas/Episteme)
 
 ---
 

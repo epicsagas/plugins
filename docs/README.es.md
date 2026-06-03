@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -16,11 +16,12 @@
 
 | Plugin | Descripción | Fuente |
 |--------|-------------|--------|
-| [epic](#epic) | Arnés de agente autónomo — 6 comandos potentes, habilidades auto-evolutivas y hooks invisibles que protegen, pulen y reflexionan en cada sesión. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | Lector de documentos optimizado en tokens — comprime silenciosamente archivos `.md`, `.html` y `.txt`, reduciendo el uso de contexto hasta un 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | Arnés de agente autónomo — 6 comandos potentes, habilidades auto-evolutivas y hooks invisibles que protegen, pulen y reflexionan en cada sesión. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | Lector de documentos optimizado en tokens — comprime silenciosamente archivos `.md`, `.html` y `.txt`, reduciendo el uso de contexto hasta un 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | Servidor MCP de documentación — búsqueda híbrida BM25+vectorial, lint y gestión del ciclo de vida launchd para documentos de proyecto | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | Sistema de publicación nativo de IA — flujos de trabajo autónomos multifase desde la ideación hasta EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | Navegador headless como herramientas MCP — fetch, scrape, extracción de markdown, eval JS. Sin configuración, instalación automática. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | Navegador headless como herramientas MCP — fetch, scrape, extracción de markdown, eval JS. Sin configuración, instalación automática. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | Grafo de conocimiento de ingenieria de software — patrones de diseno, code smells, refactorizaciones y analisis de arquitectura con revision de codigo impulsada por IA. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@ Agrega el marketplace y luego instala los plugins:
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 Todos los plugins listos para usar — sin configuración adicional.
 
-### epic — instalación independiente
+### epic-harness — instalación independiente
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — instalación independiente
+### llm-transpile — instalación independiente
 
 **cargo-binstall** (binario precompilado):
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — instalación independiente
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (binario precompilado):
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (compilar desde fuente):
+```bash
+cargo install episteme
+```
+
 ---
 
 ## Detalles de los plugins
 
-### epic
+### epic-harness
 
 **Arnés de Agente Autónomo**
 
@@ -117,7 +136,7 @@ Construye flujos de trabajo de agentes que manejan tareas complejas y de múltip
 
 ---
 
-### transpile
+### llm-transpile
 
 **Lector de Documentos Optimizado en Tokens**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**Grafo de Conocimiento de Ingenieria de Software**
+
+Un grafo de conocimiento consultable de patrones de diseno, code smells, refactorizaciones y leyes de arquitectura. El analisis de codigo impulsado por IA detecta problemas de calidad, sugiere mejoras y fundamenta cada recomendacion en principios de ingenieria establecidos.
+
+**Cuando usarlo:**
+- Revision de codigo por uso incorrecto de patrones, code smells o violaciones de arquitectura
+- Eleccion de estrategias de refactorizacion con analisis de compensaciones basado en principios
+- Aprendizaje y aplicacion de leyes de ingenieria de software (Ley de Conway, Ley de Amdahl, Ley de Gall)
+
+**Caracteristicas clave:**
+- Grafo de conocimiento con recorrido entre patrones, smells, refactorizaciones y leyes
+- Analisis de codigo IA con deteccion de smells y sugerencias de refactorizacion priorizadas
+- Multiples personalidades de agente — revisor de codigo, analista de arquitectura, asesor de ingenieria
+
+→ [Codigo fuente y documentacion](https://github.com/epicsagas/Episteme)
 
 ---
 

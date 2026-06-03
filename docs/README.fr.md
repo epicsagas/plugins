@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -16,11 +16,12 @@
 
 | Plugin | Description | Source |
 |--------|-------------|--------|
-| [epic](#epic) | Harnais d'agent autonome — 6 commandes puissantes, compétences auto-évolutives et hooks invisibles qui protègent, peaufinent et analysent chaque session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | Lecteur de documents optimisé en tokens — compresse silencieusement les fichiers `.md`, `.html` et `.txt`, réduisant l'utilisation du contexte jusqu'à 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | Harnais d'agent autonome — 6 commandes puissantes, compétences auto-évolutives et hooks invisibles qui protègent, peaufinent et analysent chaque session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | Lecteur de documents optimisé en tokens — compresse silencieusement les fichiers `.md`, `.html` et `.txt`, réduisant l'utilisation du contexte jusqu'à 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | Serveur MCP de documentation — recherche hybride BM25+vectorielle, lint et gestion du cycle de vie launchd pour les documents de projet. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | Système de publication natif IA — workflows multi-phases autonomes de l'idéation à l'EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | Navigateur headless comme outils MCP — fetch, scrape, extraction Markdown, éval JS. Zéro config, installation automatique des binaires. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | Navigateur headless comme outils MCP — fetch, scrape, extraction Markdown, éval JS. Zéro config, installation automatique des binaires. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | Graphe de connaissances en genie logiciel — patrons de conception, code smells, refactorisations et analyse d'architecture avec revue de code IA. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@ Ajoutez le marketplace puis installez les plugins :
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 Tous les plugins immédiatement disponibles — aucune configuration supplémentaire.
 
-### epic — installation autonome
+### epic-harness — installation autonome
 
 **Homebrew** (macOS) :
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — installation autonome
+### llm-transpile — installation autonome
 
 **cargo-binstall** (binaire précompilé) :
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — installation autonome
+
+**Homebrew** (macOS) :
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (binaire précompilé) :
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (compilation depuis les sources) :
+```bash
+cargo install episteme
+```
+
 ---
 
 ## Détails des plugins
 
-### epic
+### epic-harness
 
 **Harnais d'Agent Autonome**
 
@@ -117,7 +136,7 @@ Construisez des workflows d'agents capables de gérer des tâches complexes et m
 
 ---
 
-### transpile
+### llm-transpile
 
 **Lecteur de Documents Optimisé en Tokens**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**Graphe de Connaissances en Genie Logiciel**
+
+Un graphe de connaissances interrogeable de patrons de conception, code smells, refactorisations et lois d'architecture. L'analyse de code IA detecte les problemes de qualite, suggere des ameliorations et fonde chaque recommandation sur des principes d'ingenierie etablis.
+
+**Quand l'utiliser :**
+- Revue de code pour les mauvais usages de patrons, code smells ou violations d'architecture
+- Choix de strategies de refactorisation avec une analyse de compromis fondee sur des principes
+- Apprentissage et application des lois du genie logiciel (Loi de Conway, Loi d'Amdahl, Loi de Gall)
+
+**Fonctionnalites cles :**
+- Graphe de connaissances avec traversals entre patrons, smells, refactorisations et lois
+- Analyse de code IA avec detection de smells et suggestions de refactorisation classees
+- Plusieurs personas d'agents — referee de code, analyste d'architecture, conseiller en ingenierie
+
+→ [Source et documentation](https://github.com/epicsagas/Episteme)
 
 ---
 

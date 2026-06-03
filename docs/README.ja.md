@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -16,11 +16,12 @@
 
 | プラグイン | 説明 | ソース |
 |-----------|------|--------|
-| [epic](#epic) | 自律エージェントハーネス — 6つのパワーコマンド、自己進化スキル、毎セッション動作する不可視フック | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | トークン最適化ドキュメントリーダー — `.md`、`.html`、`.txt`ファイルを自動圧縮し、コンテキスト使用量を最大40%削減 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | 自律エージェントハーネス — 6つのパワーコマンド、自己進化スキル、毎セッション動作する不可視フック | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | トークン最適化ドキュメントリーダー — `.md`、`.html`、`.txt`ファイルを自動圧縮し、コンテキスト使用量を最大40%削減 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCPドキュメントサーバー — BM25+ベクトルハイブリッド検索、リント、プロジェクトドキュメント向けlaunchd管理 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AIネイティブ出版システム — アイデア出しからEPUB/PDFまで自律マルチフェーズワークフロー。ソフトウェアのように本を作ります。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | ヘッドレスブラウザをMCPツールとして — fetch、scrape、Markdown抽出、JS eval。設定不要、バイナリ自動インストール。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | ヘッドレスブラウザをMCPツールとして — fetch、scrape、Markdown抽出、JS eval。設定不要、バイナリ自動インストール。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | ソフトウェアエンジニアリングナレッジグラフ — デザインパターン、コードスメル、リファクタリング、アーキテクチャ分析とAI駆動コードレビュー。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 すべてのプラグインがすぐに利用可能 — 追加設定不要。
 
-### epic — スタンドアロンインストール
+### epic-harness — スタンドアロンインストール
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — スタンドアロンインストール
+### llm-transpile — スタンドアロンインストール
 
 **cargo-binstall** (ビルド済みバイナリ):
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — スタンドアロンインストール
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (ビルド済みバイナリ):
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (ソースからビルド):
+```bash
+cargo install episteme
+```
+
 ---
 
 ## プラグイン詳細
 
-### epic
+### epic-harness
 
 **自律エージェントハーネス**
 
@@ -117,7 +136,7 @@ cargo install alcove
 
 ---
 
-### transpile
+### llm-transpile
 
 **トークン最適化ドキュメントリーダー**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**ソフトウェアエンジニアリングナレッジグラフ**
+
+デザインパターン、コードスメル、リファクタリング、アーキテクチャ法則のクエリ可能なナレッジグラフ。AI駆動のコード分析により品質問題を検出し、改善提案を行い、確立されたエンジニアリング原則に基づいてすべての推奨事項を裏付けます。
+
+**活用タイミング:**
+- デザインパターンの誤用、コードスメル、アーキテクチャ違反のコードレビュー
+- 原則に基づいたトレードオフ分析によるリファクタリング戦略の選択
+- ソフトウェアエンジニアリングの法則（コンウェイの法則、アムダールの法則、ガルの法則）の学習と適用
+
+**主な機能:**
+- パターン、スメル、リファクタリング、法則間のグラフトラバーサル機能を持つナレッジグラフ
+- スメル検出とランク付けされたリファクタリング提案によるAIコード分析
+- 複数のエージェントペルソナ — コードレビューアー、アーキテクチャアナリスト、エンジニアリングアドバイザー
+
+→ [ソースとドキュメント](https://github.com/epicsagas/Episteme)
 
 ---
 

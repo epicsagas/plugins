@@ -16,11 +16,12 @@
 
 | 플러그인 | 설명 | 소스 |
 |---------|------|------|
-| [epic](#epic) | 자율 에이전트 하니스 — 6개의 파워 커맨드, 자가 진화 스킬, 세션마다 작동하는 보이지 않는 훅 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | 토큰 최적화 문서 리더 — `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 사용량 최대 40% 절감 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | 자율 에이전트 하니스 — 6개의 파워 커맨드, 자가 진화 스킬, 세션마다 작동하는 보이지 않는 훅 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | 토큰 최적화 문서 리더 — `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 사용량 최대 40% 절감 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP 문서 서버 — BM25+벡터 하이브리드 검색, 린트, 프로젝트 문서용 launchd 라이프사이클 관리 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI 네이티브 퍼블리싱 시스템 — 아이디에이션부터 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 소프트웨어처럼 책을 만드세요. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | 헤드리스 브라우저를 MCP 툴로 — fetch, scrape, 마크다운 추출, JS eval. 제로 설정, 바이너리 자동 설치. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | 헤드리스 브라우저를 MCP 툴로 — fetch, scrape, 마크다운 추출, JS eval. 제로 설정, 바이너리 자동 설치. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | 소프트웨어 엔지니어링 지식 그래프 — 디자인 패턴, 코드 스멜, 리팩토링 및 아키텍처 분석과 AI 기반 코드 리뷰. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 모든 플러그인을 바로 사용할 수 있습니다 — 추가 설정 불필요.
 
-### epic — 독립 설치
+### epic-harness — 독립 설치
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — 독립 설치
+### llm-transpile — 독립 설치
 
 **cargo-binstall** (사전 빌드 바이너리):
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — 독립 설치
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (사전 빌드 바이너리):
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (소스 빌드):
+```bash
+cargo install episteme
+```
+
 ---
 
 ## 플러그인 상세
 
-### epic
+### epic-harness
 
 **자율 에이전트 하니스**
 
@@ -117,7 +136,7 @@ cargo install alcove
 
 ---
 
-### transpile
+### llm-transpile
 
 **토큰 최적화 문서 리더**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**소프트웨어 엔지니어링 지식 그래프**
+
+디자인 패턴, 코드 스멜, 리팩토링, 아키텍처 법칙의 지식 그래프. AI 기반 코드 분석으로 품질 이슈를 감지하고, 개선 방안을 제안하며, 모든 권고를 확립된 엔지니어링 원칙에 근거합니다.
+
+**활용 시기:**
+- 디자인 패턴 오용, 코드 스멜, 아키텍처 위반에 대한 코드 리뷰
+- 원칙 기반 트레이드오프 분석으로 리팩토링 전략 선택
+- 소프트웨어 엔지니어링 법칙(콘웨이의 법칙, 암달의 법칙, 갈의 법칙) 학습 및 적용
+
+**주요 기능:**
+- 패턴, 스멜, 리팩토링, 법칙 간 그래프 탐색이 가능한 지식 그래프
+- 스멜 감지 및 순위별 리팩토링 제안을 제공하는 AI 기반 코드 분석
+- 다양한 에이전트 페르소나 — 코드 리뷰어, 아키텍처 분석가, 엔지니어링 어드바이저
+
+→ [소스 및 문서](https://github.com/epicsagas/Episteme)
 
 ---
 

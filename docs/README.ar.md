@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-5-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
+[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
 [![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
 
@@ -16,11 +16,12 @@
 
 | الإضافة | الوصف | المصدر |
 |---------|-------|--------|
-| [epic](#epic) | إطار عمل وكيل مستقل — 6 أوامر قوية، مهارات تتطور ذاتياً، وخطافات خفية تحمي وتُحسّن وتُراجع كل جلسة. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | قارئ مستندات مُحسَّن للرموز — يضغط ملفات `.md` و`.html` و`.txt` بصمت، مما يقلل استخدام السياق بنسبة تصل إلى 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | إطار عمل وكيل مستقل — 6 أوامر قوية، مهارات تتطور ذاتياً، وخطافات خفية تحمي وتُحسّن وتُراجع كل جلسة. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | قارئ مستندات مُحسَّن للرموز — يضغط ملفات `.md` و`.html` و`.txt` بصمت، مما يقلل استخدام السياق بنسبة تصل إلى 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | خادم MCP للتوثيق — بحث هجين BM25+متجهي، فحص الجودة وإدارة دورة حياة launchd لمستندات المشروع. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | نظام نشر أصيل للذكاء الاصطناعي — سير عمل متعدد المراحل من الفكرة إلى EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | متصفح بلا رأس كأدوات MCP — fetch وscrape واستخراج Markdown وتقييم JS. صفر إعداد، تثبيت تلقائي. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | متصفح بلا رأس كأدوات MCP — fetch وscrape واستخراج Markdown وتقييم JS. صفر إعداد، تثبيت تلقائي. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | رسم بياني للمعرفة بهندسة البرمجيات — أنماط التصميم، وروائح الكود، وإعادة البناء، وتحليل البنية مع مراجعة كود مدعومة بالذكاء الاصطناعي. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 جميع الإضافات جاهزة للاستخدام فوراً — لا حاجة لإعداد إضافي.
 
-### epic — تثبيت مستقل
+### epic-harness — تثبيت مستقل
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — تثبيت مستقل
+### llm-transpile — تثبيت مستقل
 
 **cargo-binstall** (ملف ثنائي مُجمَّع مسبقاً):
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — تثبيت مستقل
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall** (ملف ثنائي مُجمَّع مسبقاً):
+```bash
+cargo binstall episteme
+```
+
+**Cargo** (البناء من المصدر):
+```bash
+cargo install episteme
+```
+
 ---
 
 ## تفاصيل الإضافات
 
-### epic
+### epic-harness
 
 **إطار عمل الوكيل المستقل**
 
@@ -117,7 +136,7 @@ cargo install alcove
 
 ---
 
-### transpile
+### llm-transpile
 
 **قارئ المستندات المُحسَّن للرموز**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**رسم بياني للمعرفة بهندسة البرمجيات**
+
+رسم بياني قابل للاستعلام لأنماط التصميم وروائح الكود وإعادة البناء وقوانين البنية. تحليل الكود بالذكاء الاصطناعي يكشف مشاكل الجودة ويقترح تحسينات ويؤسس كل توصية على مبادئ هندسية راسخة.
+
+**متى تستخدم:**
+- مراجعة الكود لسوء استخدام أنماط التصميم أو روائح الكود أو انتهاكات البنية
+- اختيار استراتيجيات إعادة البناء بتحليل مقايضات مبني على المبادئ
+- تعريف وتطبيق قوانين هندسة البرمجيات (قانون كونواي، قانون أمدال، قانون غال)
+
+**الميزات الرئيسية:**
+- رسم بياني للمعرفة مع عبور بين الأنماط والروائح وإعادة البناء والقوانين
+- تحليل كود بالذكاء الاصطناعي مع كشف الروائح واقتراحات إعادة بناء مرتبة
+- شخصيات وكلاء متعددة — مراجع كود، محلل بنية، مستشار هندسي
+
+→ [المصدر والوثائق](https://github.com/epicsagas/Episteme)
 
 ---
 

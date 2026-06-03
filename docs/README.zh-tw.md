@@ -16,11 +16,12 @@
 
 | 插件 | 描述 | 原始碼 |
 |------|------|--------|
-| [epic](#epic) | 自主代理框架 — 6 個強力指令、自我進化的技能，以及每個工作階段自動執行的隱形鉤子 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | 令牌最佳化文件閱讀器 — 靜默壓縮 `.md`、`.html`、`.txt` 檔案，上下文用量最多減少 40% | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | 自主代理框架 — 6 個強力指令、自我進化的技能，以及每個工作階段自動執行的隱形鉤子 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | 令牌最佳化文件閱讀器 — 靜默壓縮 `.md`、`.html`、`.txt` 檔案，上下文用量最多減少 40% | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP文件伺服器 — BM25+向量混合搜尋、lint檢查、專案文件的launchd生命週期管理 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI原生出版系統 — 從構思到EPUB/PDF的自主多階段工作流程。像開發軟體一樣寫書。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | 無頭瀏覽器作為MCP工具 — fetch、scrape、提取Markdown、JS求值。零配置，自動安裝二進位檔。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | 無頭瀏覽器作為MCP工具 — fetch、scrape、提取Markdown、JS求值。零配置，自動安裝二進位檔。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | 軟體工程知識圖譜 — 設計模式、程式碼壞味道、重構和架構分析，結合AI驅動的程式碼審查。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 
 ---
 
@@ -32,11 +33,12 @@
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 ```
 
 ### Codex CLI
@@ -47,7 +49,7 @@ codex plugin marketplace add epicsagas/plugins
 
 所有插件立即可用 — 無需額外設定。
 
-### epic — 獨立安裝
+### epic-harness — 獨立安裝
 
 **Homebrew** (macOS):
 ```bash
@@ -64,7 +66,7 @@ cargo binstall epic-harness
 cargo install epic-harness
 ```
 
-### transpile — 獨立安裝
+### llm-transpile — 獨立安裝
 
 **cargo-binstall**（預建置二進位）：
 ```bash
@@ -93,11 +95,28 @@ cargo binstall alcove
 cargo install alcove
 ```
 
+### episteme — 獨立安裝
+
+**Homebrew** (macOS):
+```bash
+brew install epicsagas/tap/episteme
+```
+
+**cargo-binstall**（預建置二進位）：
+```bash
+cargo binstall episteme
+```
+
+**Cargo**（從原始碼建置）：
+```bash
+cargo install episteme
+```
+
 ---
 
 ## 插件詳情
 
-### epic
+### epic-harness
 
 **自主代理框架**
 
@@ -117,7 +136,7 @@ cargo install alcove
 
 ---
 
-### transpile
+### llm-transpile
 
 **令牌最佳化文件閱讀器**
 
@@ -175,7 +194,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -188,6 +207,26 @@ Gives AI agents direct access to the web via five MCP tools. Auto-installs requi
 - Stealth mode for anti-detection
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**軟體工程知識圖譜**
+
+可查詢的設計模式、程式碼壞味道、重構和架構法則知識圖譜。AI驅動的程式碼分析檢測品質問題，提出改進建議，並將每條建議建立在成熟的工程原則之上。
+
+**適用場景：**
+- 審查程式碼中的設計模式誤用、程式碼壞味道或架構違規
+- 基於原則的權衡分析來選擇重構策略
+- 學習和應用軟體工程法則（康威定律、阿姆達爾定律、蓋爾定律）
+
+**核心功能：**
+- 支援模式、壞味道、重構和法則之間圖譜遍歷的知識圖譜
+- 壞味道偵測和分級重構建議的AI程式碼分析
+- 多種智慧代理角色 — 程式碼審查員、架構分析師、工程顧問
+
+→ [原始碼與文件](https://github.com/epicsagas/Episteme)
 
 ---
 
