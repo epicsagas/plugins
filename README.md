@@ -21,11 +21,12 @@
 
 | Plugin | Description | Source |
 |--------|-------------|--------|
-| [epic](#epic) | Autonomous agent harness — 8 commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [transpile](#transpile) | Token-optimized document reader — silently compresses `.md`, `.html`, and `.txt` files on Read, cutting context usage by up to 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [epic-harness](#epic-harness) | Autonomous agent harness — 8 commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | Token-optimized document reader — silently compresses `.md`, `.html`, and `.txt` files on Read, cutting context usage by up to 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura](#obscura) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obscura-plugin](#obscura-plugin) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 
 ---
@@ -38,11 +39,12 @@ Register this marketplace once, then install any plugin:
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic@epicsagas
-claude plugin install transpile@epicsagas
+claude plugin install epic-harness@epicsagas
+claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura@epicsagas
+claude plugin install obscura-plugin@epicsagas
+claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 ```
 
@@ -90,6 +92,14 @@ cargo binstall obscura-plugin
 cargo install obscura-plugin
 ```
 
+### episteme
+
+```bash
+brew install epicsagas/tap/episteme
+cargo binstall episteme
+cargo install episteme
+```
+
 ### obsidian-forge
 
 ```bash
@@ -102,7 +112,7 @@ cargo install obsidian-forge
 
 ## Plugin Details
 
-### epic
+### epic-harness
 
 **Autonomous Agent Harness**
 
@@ -122,7 +132,7 @@ Build agent workflows that handle complex, multi-step tasks independently. Power
 
 ---
 
-### transpile
+### llm-transpile
 
 **Token-Optimized Document Reader**
 
@@ -185,7 +195,7 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura
+### obscura-plugin
 
 **Headless Browser as MCP Tools**
 
@@ -203,6 +213,26 @@ Gives AI agents direct access to the web via five MCP tools: fetch, scrape, serv
 - Stealth mode for anti-detection + tracker blocking
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### episteme
+
+**Software Engineering Knowledge Graph**
+
+A queryable knowledge graph of design patterns, code smells, refactorings, and architecture laws. AI-powered code analysis detects quality issues, suggests improvements, and grounds every recommendation in established engineering principles.
+
+**When to use:**
+- Reviewing code for design pattern misuse, code smells, or architecture violations
+- Choosing between refactoring strategies with principled trade-off analysis
+- Learning and applying software engineering laws (Conway's, Amdahl's, Gall's)
+
+**Key features:**
+- Knowledge graph with graph traversal across patterns, smells, refactorings, and laws
+- AI-powered code analysis with smell detection and ranked refactoring suggestions
+- Multiple agent personas — code reviewer, architecture analyst, engineering advisor
+
+→ [Source & Docs](https://github.com/epicsagas/Episteme)
 
 ---
 
