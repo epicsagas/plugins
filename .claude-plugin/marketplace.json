@@ -56,6 +56,14 @@
         "url": "https://github.com/epicsagas/Episteme.git"
       },
       "description": "Software engineering knowledge graph — design patterns, laws, code smells, and refactorings with graph traversal and AI-powered code analysis."
+    },
+    {
+      "name": "obsidian-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/obsidian-forge.git"
+      },
+      "description": "Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills."
     }
   ]
 }

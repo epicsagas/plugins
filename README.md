@@ -26,6 +26,7 @@
 | [alcove](#alcove) | MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [obscura](#obscura) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 
 ---
 
@@ -42,6 +43,7 @@ claude plugin install transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
 claude plugin install obscura@epicsagas
+claude plugin install obsidian-forge@epicsagas
 ```
 
 ### Codex CLI
@@ -86,6 +88,14 @@ cargo install alcove
 brew install epicsagas/tap/obscura-plugin
 cargo binstall obscura-plugin
 cargo install obscura-plugin
+```
+
+### obsidian-forge
+
+```bash
+brew install epicsagas/tap/obsidian-forge
+cargo binstall obsidian-forge
+cargo install obsidian-forge
 ```
 
 ---
@@ -193,6 +203,27 @@ Gives AI agents direct access to the web via five MCP tools: fetch, scrape, serv
 - Stealth mode for anti-detection + tracker blocking
 
 → [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+
+---
+
+### obsidian-forge
+
+**Obsidian Vault Lifecycle Management**
+
+Gives AI agents skill-driven access to Obsidian vault operations — AI-powered inbox classification with PARA routing, knowledge graph strengthening (backlinks, bridge notes, auto-tags), MOC regeneration, tag/link/frontmatter repair, and full sync cycles. Single Rust binary, multi-vault, zero config to start.
+
+**When to use:**
+- Managing an Obsidian vault (Second Brain, Zettelkasten, PARA) from AI agent sessions
+- Processing inbox notes with AI classification and automatic routing
+- Strengthening knowledge graph connections between projects and concepts
+
+**Key features:**
+- 5 agent skills — vault-health, vault-sync, graph-strengthen, inbox-process, vault-fix
+- AI-powered inbox classification with frontmatter injection and PARA routing
+- Knowledge graph strengthening with before/after metrics reporting
+- Multi-vault support with shared settings and background daemon (macOS)
+
+→ [Source & Docs](https://github.com/epicsagas/obsidian-forge)
 
 ---
 
