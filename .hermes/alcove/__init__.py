@@ -17,4 +17,4 @@ def register(ctx) -> None:
     for schema in ALL_SCHEMAS:
         name = schema["name"]
         handler = HANDLERS[name]
-        ctx.register_tool(name=name, schema=schema, handler=handler)
+        ctx.register_tool(name=name, toolset="alcove", schema=schema, handler=handler)

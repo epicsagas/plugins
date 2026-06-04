@@ -16,4 +16,6 @@ def register(ctx: Any) -> None:
     for schema in schemas.ALL_SCHEMAS:
         name = schema["name"]
         handler = tools.HANDLERS[name]
-        ctx.register_tool(schema, handler)
+        ctx.register_tool(
+            name, toolset="obsidian-forge", schema=schema, handler=handler
+        )

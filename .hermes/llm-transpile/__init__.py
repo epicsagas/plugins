@@ -19,4 +19,4 @@ def register(ctx):
     """
     for name, schema in TOOL_SCHEMAS.items():
         handler = _HANDLERS[name]
-        ctx.register_tool(name, schema, handler)
+        ctx.register_tool(name, toolset="llm-transpile", schema=schema, handler=handler)

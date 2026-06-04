@@ -24,4 +24,6 @@ def register(ctx):
     """Register all epic-harness memory tools with the Hermes context."""
     for tool_name, schema in SCHEMAS.items():
         handler = _HANDLERS[tool_name]
-        ctx.register_tool(tool_name, schema=schema, handler=handler)
+        ctx.register_tool(
+            tool_name, toolset="epic-harness", schema=schema, handler=handler
+        )
