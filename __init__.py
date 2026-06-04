@@ -61,7 +61,8 @@ def _install_skills(plugin_dir: Path) -> int:
 
     installed = 0
     for skill_file in skills_src.glob("*.SKILL.md"):
-        skill_name = skill_file.stem  # e.g. "orbit"
+        # "orbit.SKILL.md" → stem is "orbit.SKILL" → strip ".SKILL"
+        skill_name = skill_file.stem.removesuffix(".SKILL")
         dest_dir = _SKILLS_DIR / skill_name
         dest_file = dest_dir / "SKILL.md"
         if dest_file.exists():
