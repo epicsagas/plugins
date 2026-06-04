@@ -1,0 +1,9 @@
+name: epic-harness
+version: "0.5.0"
+description: Cross-agent unified memory — add, search, recall, and relate knowledge nodes across sessions via epic-harness CLI.
+provides_tools:
+  - harness_mem_add
+  - harness_mem_search
+  - harness_mem_recall
+  - harness_mem_list
+  - harness_mem_related

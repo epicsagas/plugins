@@ -56,6 +56,44 @@ codex plugin marketplace add epicsagas/plugins
 
 All plugins are available immediately — no further steps needed.
 
+### Hermes Agent
+
+One command installs the full epiccounty suite — 6 plugins, 24 tools:
+
+```bash
+hermes plugins install epicsagas/plugins --enable
+```
+
+Or install and enable individual plugins:
+
+```bash
+hermes plugins install epicsagas/plugins
+hermes plugins enable alcove
+hermes plugins enable episteme
+hermes plugins enable epic-harness
+hermes plugins enable llm-transpile
+hermes plugins enable obsidian-forge
+hermes plugins enable obscura
+```
+
+**Prerequisites:** Each plugin wraps a Rust CLI binary. Install the ones you need:
+
+```bash
+brew install epicsagas/tap/alcove          # alcove plugin
+brew install epicsagas/tap/episteme        # episteme plugin (also needs `epis serve` running)
+brew install epicsagas/tap/epic-harness    # epic-harness plugin
+brew install epicsagas/tap/llm-transpile   # llm-transpile plugin
+brew install epicsagas/tap/obsidian-forge  # obsidian-forge plugin
+brew install epicsagas/tap/obscura         # obscura plugin
+```
+
+**Quick start — install everything at once:**
+
+```bash
+curl -fsSL https://github.com/epicsagas/epiccounty.com/releases/latest/download/epiccounty-installer.sh | sh
+epiccounty install all
+```
+
 ---
 
 ## Standalone Install

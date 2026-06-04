@@ -1,0 +1,8 @@
+name: episteme
+version: "0.3.2"
+description: Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis via Episteme API.
+provides_tools:
+  - episteme_search_knowledge
+  - episteme_analyze_code
+  - episteme_suggest_refactorings
+  - episteme_get_entity

@@ -1,0 +1,9 @@
+name: obsidian-forge
+version: "0.2.4"
+description: Obsidian vault lifecycle management — AI inbox processing, graph strengthening, MOC regeneration, and full sync via obsidian-forge CLI.
+provides_tools:
+  - obsidian_vault_health
+  - obsidian_process_inbox
+  - obsidian_graph_strengthen
+  - obsidian_sync
+  - obsidian_update_mocs

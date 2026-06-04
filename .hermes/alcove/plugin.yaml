@@ -1,0 +1,9 @@
+name: alcove
+version: "0.11.6"
+description: Local-first documentation server — search, lint, validate, and manage project docs via alcove CLI.
+provides_tools:
+  - alcove_search_docs
+  - alcove_lint_docs
+  - alcove_validate_docs
+  - alcove_rebuild_index
+  - alcove_doctor
