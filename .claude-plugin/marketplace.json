@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "epic-harness",
+      "name": "epic",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git"
