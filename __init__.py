@@ -9,7 +9,19 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
+_PARENT_PKG = "epicsagas_plugins"
 _SUBPLUGINS_DIR = Path(__file__).parent / ".hermes"
+
+
+def _ensure_parent_package() -> None:
+    """Register the parent package so relative imports in sub-plugins resolve."""
+    import types
+
+    if _PARENT_PKG not in sys.modules:
+        parent = types.ModuleType(_PARENT_PKG)
+        parent.__path__ = []
+        parent.__package__ = _PARENT_PKG
+        sys.modules[_PARENT_PKG] = parent
 
 
 def _load_subplugin(ctx, plugin_dir: Path) -> None:
@@ -18,7 +30,7 @@ def _load_subplugin(ctx, plugin_dir: Path) -> None:
     if not init_file.exists():
         return
 
-    pkg_name = f"epicsagas_plugins.{plugin_dir.name.replace('-', '_')}"
+    pkg_name = f"{_PARENT_PKG}.{plugin_dir.name.replace('-', '_')}"
     spec = importlib.util.spec_from_file_location(
         pkg_name,
         init_file,
@@ -45,6 +57,7 @@ def register(ctx) -> None:
         logger.warning("epicsagas: .hermes/ directory not found")
         return
 
+    _ensure_parent_package()
     loaded = []
     for plugin_dir in sorted(_SUBPLUGINS_DIR.iterdir()):
         if plugin_dir.is_dir() and (plugin_dir / "plugin.yaml").exists():
