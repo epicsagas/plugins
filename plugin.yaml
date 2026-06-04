@@ -1,0 +1,38 @@
+name: epicsagas
+version: "1.0.0"
+description: >-
+  Epicsagas plugin suite — 6 plugins, 24 tools: autonomous agent harness,
+  token compression, documentation server, web scraping, knowledge graph,
+  and Obsidian vault management.
+author: epicsagas
+provides_tools:
+  # alcove
+  - alcove_search_docs
+  - alcove_lint_docs
+  - alcove_validate_docs
+  - alcove_rebuild_index
+  - alcove_doctor
+  # epic-harness
+  - harness_mem_add
+  - harness_mem_search
+  - harness_mem_recall
+  - harness_mem_list
+  - harness_mem_related
+  # episteme
+  - episteme_search_knowledge
+  - episteme_analyze_code
+  - episteme_suggest_refactorings
+  - episteme_get_entity
+  # llm-transpile
+  - transpile_file
+  - transpile_stats
+  # obscura
+  - obscura_fetch_page
+  - obscura_scrape_urls
+  - obscura_extract_markdown
+  # obsidian-forge
+  - obsidian_vault_health
+  - obsidian_process_inbox
+  - obsidian_graph_strengthen
+  - obsidian_sync
+  - obsidian_update_mocs
