@@ -1,7 +1,7 @@
 name: epicsagas
 version: "1.0.0"
 description: >-
-  Epicsagas plugin suite — 6 plugins, 24 tools: autonomous agent harness,
+  Epicsagas plugin suite — 6 plugins, 35 tools: autonomous agent harness,
   token compression, documentation server, web scraping, knowledge graph,
   and Obsidian vault management.
 author: epicsagas
@@ -18,6 +18,17 @@ provides_tools:
   - harness_mem_recall
   - harness_mem_list
   - harness_mem_related
+  - harness_mem_edit
+  - harness_mem_remove
+  - harness_mem_link
+  - harness_mem_context
+  - harness_mem_export
+  - harness_mem_validate
+  - harness_mem_graph_rebuild
+  - harness_team_list
+  - harness_team_show
+  - harness_team_sync
+  - harness_reflect_context
   # episteme
   - episteme_search_knowledge
   - episteme_analyze_code
