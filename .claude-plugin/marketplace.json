@@ -71,7 +71,7 @@
         "source": "url",
         "url": "https://github.com/epicsagas/epicsagas.git"
       },
-      "description": "Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), cognitive audit (bias detection, thinking pattern analysis), and OSS distribution readiness."
+      "description": "Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness."
     }
   ]
 }
