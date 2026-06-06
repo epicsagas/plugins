@@ -94,6 +94,19 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "epicsagas",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/epicsagas.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Skills"
     }
   ]
 }

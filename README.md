@@ -28,6 +28,7 @@
 | [obscura-plugin](#obscura-plugin) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 | [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
+| [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), cognitive audit (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
 
 ---
 
@@ -46,6 +47,7 @@ claude plugin install velith@epicsagas
 claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
+claude plugin install epicsagas@epicsagas
 ```
 
 ### Codex CLI
@@ -292,6 +294,26 @@ Gives AI agents skill-driven access to Obsidian vault operations — AI-powered 
 - Multi-vault support with shared settings and background daemon (macOS)
 
 → [Source & Docs](https://github.com/epicsagas/obsidian-forge)
+
+---
+
+### epicsagas
+
+**Personal Agent Skills**
+
+A curated set of agent skills for personal and team use — problem discovery, cognitive self-analysis, and OSS release readiness. No binary required; skills load directly from markdown files.
+
+**When to use:**
+- Discovering and defining real problems before building (individuals, teams, startups)
+- Analyzing your own thinking patterns and cognitive biases from conversation history
+- Auditing an OSS project's release readiness across community, README, distribution, and security
+
+**Key features:**
+- `discover` — 5 Whys, JTBD, Fishbone, Socratic questioning, Assumption mapping
+- `cognitive-audit` — evidence-based bias detection, decision-making analysis, 10 actionable routines
+- `oss-dist` — full release lifecycle: community standards, README, launch strategy, i18n, security
+
+→ [Source & Docs](https://github.com/epicsagas/epicsagas)
 
 ---
 

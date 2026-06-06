@@ -64,6 +64,14 @@
         "url": "https://github.com/epicsagas/obsidian-forge.git"
       },
       "description": "Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills."
+    },
+    {
+      "name": "epicsagas",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/epicsagas.git"
+      },
+      "description": "Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), cognitive audit (bias detection, thinking pattern analysis), and OSS distribution readiness."
     }
   ]
 }
