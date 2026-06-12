@@ -1,5 +1,5 @@
 name: episteme
-version: "0.3.2"
+version: "0.3.7"
 description: Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis via Episteme API.
 provides_tools:
   - episteme_search_knowledge
