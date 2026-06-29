@@ -72,6 +72,22 @@
         "url": "https://github.com/epicsagas/epicsagas.git"
       },
       "description": "Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness."
+    },
+    {
+      "name": "research",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/research-agent.git"
+      },
+      "description": "Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (research serve)."
+    },
+    {
+      "name": "byoh",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/BuildYourOwnHarness.git"
+      },
+      "description": "BuildYourOwnHarness — interactively collect a user's tacit knowledge and goals, then compile, deploy, and evolve a personalized AI agent harness from an interview."
     }
   ]
 }

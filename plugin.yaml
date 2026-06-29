@@ -1,9 +1,10 @@
 name: epicsagas
 version: "1.0.0"
 description: >-
-  Epicsagas plugin suite — 6 plugins, 35 tools: autonomous agent harness,
+  Epicsagas plugin suite — 8 plugins, 60 tools: autonomous agent harness,
   token compression, documentation server, web scraping, knowledge graph,
-  and Obsidian vault management.
+  Obsidian vault management, personal academic research, and a personalized
+  harness compiler/evolver.
 author: epicsagas
 provides_tools:
   # alcove
@@ -47,3 +48,30 @@ provides_tools:
   - obsidian_graph_strengthen
   - obsidian_sync
   - obsidian_update_mocs
+  # research
+  - research_init
+  - research_ingest
+  - research_index_rebuild
+  - research_query_papers
+  - research_analyze_gaps
+  - research_list_gaps
+  - research_generate_report
+  - research_topics_list
+  - research_topic_add
+  - research_state
+  - research_update_read
+  # byoh
+  - byoh_profile_create
+  - byoh_profile_scan
+  - byoh_profile_interview
+  - byoh_profile_confirm
+  - byoh_profile_read
+  - byoh_rag_index
+  - byoh_rag_search
+  - byoh_compile
+  - byoh_compile_dry_run
+  - byoh_evolve_cycle
+  - byoh_genre_list
+  - byoh_registry_clone_skill
+  - byoh_render_plugin
+  - byoh_install_plugin
