@@ -29,6 +29,8 @@
 | [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
+| [research](#research) | Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
+| [byoh](#byoh) | BuildYourOwnHarness — collect a user's tacit knowledge and goals via interview, then compile, deploy, and evolve a personalized AI agent harness. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 
 ---
 
@@ -48,6 +50,8 @@ claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
+claude plugin install research@epicsagas
+claude plugin install byoh@epicsagas
 ```
 
 ### Codex CLI
@@ -146,6 +150,22 @@ cargo install episteme
 brew install epicsagas/tap/obsidian-forge
 cargo binstall obsidian-forge
 cargo install obsidian-forge
+```
+
+### research
+
+```bash
+brew install epicsagas/tap/research-agent
+cargo binstall research-agent
+cargo install research-agent
+```
+
+### byoh
+
+```bash
+brew install epicsagas/tap/byoh
+cargo binstall byoh
+cargo install byoh
 ```
 
 ---
@@ -314,6 +334,46 @@ A curated set of agent skills for personal and team use — problem discovery, c
 - `oss-dist` — full release lifecycle: community standards, README, launch strategy, i18n, security
 
 → [Source & Docs](https://github.com/epicsagas/epicsagas)
+
+---
+
+### research
+
+**Personal Academic Research Assistant**
+
+A long-term research memory that indexes papers from arXiv, Semantic Scholar, and local PDFs, identifies knowledge gaps, and generates literature reports. Driven by an LLM agent via MCP tools (`research serve`) — the agent ingests, searches, analyzes gaps, and writes reports while you stay in the conversation.
+
+**When to use:**
+- Building a reading list or literature review on a topic
+- Tracking what you've read, what's missing, and what to read next
+- Letting an agent ingest and synthesize papers while you direct the research
+
+**Key features:**
+- 11 MCP tools: init · ingest · query_papers · analyze_gaps · list_gaps · generate_report · topics_list · topic_add · state · update_read · index_rebuild
+- Adaptive dispatch — MCP is the primary interface for agent hosts, CLI is the fallback for terminals/CI
+- Local SQLite index (FTS5) + real LLM via `~/.research/config.toml` `[llm]`
+
+→ [Source & Docs](https://github.com/epicsagas/research-agent)
+
+---
+
+### byoh
+
+**BuildYourOwnHarness**
+
+Generate a personalized AI agent harness from an interview. BYOH interactively collects your tacit knowledge, data sources, genre, and goals, then compiles, deploys, and evolves a unique harness — not a fixed template. The whole pipeline is gated by three safety gates (Critic / Seesaw / Stagnation) that can never be bypassed.
+
+**When to use:**
+- Bootstrapping a custom agent harness tuned to your domain and workflow
+- Evolving skills safely with measurable A/B evidence and rollback
+- Driving the whole profile → compile → evolve flow from an LLM agent via MCP tools
+
+**Key features:**
+- 14 MCP tools: profile_create/scan/interview/confirm/read · rag_index/search · compile · compile_dry_run · evolve_cycle · genre_list · registry_clone_skill · render_plugin · install_plugin
+- Agent-driven mode (`byoh serve`) — control inversion, CLI is secondary
+- Native RAG (local embeddings + quantized vector index) behind a feature flag
+
+→ [Source & Docs](https://github.com/epicsagas/BuildYourOwnHarness)
 
 ---
 
