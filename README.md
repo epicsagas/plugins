@@ -369,9 +369,9 @@ Generate a personalized AI agent harness from an interview. BYOH interactively c
 - Driving the whole profile → compile → evolve flow from an LLM agent via MCP tools
 
 **Key features:**
-- 14 MCP tools: profile_create/scan/interview/confirm/read · rag_index/search · compile · compile_dry_run · evolve_cycle · genre_list · registry_clone_skill · render_plugin · install_plugin
+- 14 MCP tools: profile_create/scan/interview/confirm/read · compile · compile_dry_run · evolve_cycle · genre_list · registry_clone_skill · render_plugin · install_plugin · catalog_search · catalog_vendor
 - Agent-driven mode (`byoh serve`) — control inversion, CLI is secondary
-- Native RAG (local embeddings + quantized vector index) behind a feature flag
+- No embedded knowledge base — point the generated harness at a doc server like [alcove](https://github.com/epicsagas/alcove) for retrieval
 
 → [Source & Docs](https://github.com/epicsagas/BuildYourOwnHarness)
 

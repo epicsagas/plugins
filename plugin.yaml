@@ -66,8 +66,6 @@ provides_tools:
   - byoh_profile_interview
   - byoh_profile_confirm
   - byoh_profile_read
-  - byoh_rag_index
-  - byoh_rag_search
   - byoh_compile
   - byoh_compile_dry_run
   - byoh_evolve_cycle
