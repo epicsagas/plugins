@@ -96,6 +96,14 @@
         "url": "https://github.com/epicsagas/toefl-prep.git"
       },
       "description": "TOEFL iBT study plugin — fully offline grading of all 4 sections (Reading/Listening/Speaking/Writing) with a local LLM (Ollama) + whisper.cpp. Customizable schedule, 10-language README. Claude Code · Codex · agy."
+    },
+    {
+      "name": "plugin-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/plugin-forge.git"
+      },
+      "description": "Multi-host plugin manager — scaffold, doctor, install-validate, publish Claude Code / Codex / agy plugins."
     }
   ]
 }
