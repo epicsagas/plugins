@@ -107,6 +107,58 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Skills"
+    },
+    {
+      "name": "research",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/research-agent.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "byoh",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/BuildYourOwnHarness.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Harness"
+    },
+    {
+      "name": "toefl-prep",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/toefl-prep.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    },
+    {
+      "name": "plugin-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/plugin-forge.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
