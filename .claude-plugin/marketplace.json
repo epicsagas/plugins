@@ -88,6 +88,14 @@
         "url": "https://github.com/epicsagas/BuildYourOwnHarness.git"
       },
       "description": "BuildYourOwnHarness — build, deploy, and evolve a personalized AI agent harness from an interview. Synthesis recombines vetted skills/agents under 3 safety gates."
+    },
+    {
+      "name": "toefl-prep",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/toefl-prep.git"
+      },
+      "description": "TOEFL iBT study plugin — fully offline grading of all 4 sections (Reading/Listening/Speaking/Writing) with a local LLM (Ollama) + whisper.cpp. Customizable schedule, 10-language README. Claude Code · Codex · agy."
     }
   ]
 }
