@@ -1,0 +1,5 @@
+name: cc-smalltv
+version: "0.1.1"
+description: Turn a GeekMagic SmallTV into a live agent status display — working/approval/done plus model, context usage, and token counts, pushed over WiFi.
+provides_skills:
+  - cc-smalltv
