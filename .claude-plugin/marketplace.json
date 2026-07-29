@@ -106,10 +106,10 @@
       "description": "Multi-host plugin manager — scaffold, doctor, install-validate, publish Claude Code / Codex / agy plugins."
     },
     {
-      "name": "cc-smalltv",
+      "name": "agent-glance",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/cc-smalltv.git"
+        "url": "https://github.com/epicsagas/AgentGlance.git"
       },
       "description": "Turn a GeekMagic SmallTV into a live agent status display — working/approval/done plus model, context usage, and token counts, pushed over WiFi. Claude Code, Codex, and agy."
     }

@@ -161,10 +161,10 @@
       "category": "Productivity"
     },
     {
-      "name": "cc-smalltv",
+      "name": "agent-glance",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/cc-smalltv.git"
+        "url": "https://github.com/epicsagas/AgentGlance.git"
       },
       "pluginManifest": "./.codex-plugin/plugin.json",
       "policy": {
