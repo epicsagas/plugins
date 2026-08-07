@@ -112,6 +112,14 @@
         "url": "https://github.com/epicsagas/AgentGlance.git"
       },
       "description": "Turn a GeekMagic SmallTV into a live agent status display — working/approval/done plus model, context usage, and token counts, pushed over WiFi. Claude Code, Codex, and agy."
+    },
+    {
+      "name": "design-isms",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/design-isms.git"
+      },
+      "description": "TEST for lidge-jun/design-isms before merging. 35 design -isms visual reference board with AI mockups, live examples, prompts, and component-level dev notes."
     }
   ]
 }
