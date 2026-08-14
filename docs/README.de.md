@@ -1,35 +1,43 @@
 # epicsagas Plugins
 
-> Handgefertigte Plugins für ernsthaftes KI-unterstütztes Entwickeln — autonome Agenten, Kontextkomprimierung und Werkzeuge, die nicht im Weg stehen.
+> Handgefertigte Plugins für professionelle KI-gestützte Entwicklung — autonome Agenten, Kontextkomprimierung und Werkzeuge, die nicht im Weg stehen.
 
-[![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
-[![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
+<p align="center">
+  <a href="https://github.com/epicsagas/plugins/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=ffd700&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=2ecc71&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/issues"><img alt="Issues" src="https://img.shields.io/github/issues/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=ff6b6b&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=58a6ff&logo=git&logoColor=white" /></a>
+</p>
+<p align="center">
+  <a href="../LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-3fb950?style=for-the-badge&labelColor=0d1117" /></a>
+  <a href="https://buymeacoffee.com/epicsaga"><img alt="Buy Me a Coffee" src="https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&labelColor=0d1117&logo=buymeacoffee&logoColor=black" /></a>
+</p>
 
-**Übersetzungen:** [English](../README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-cn.md) · [繁體中文](README.zh-tw.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
+**Translations:** [English](../README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-cn.md) · [繁體中文](README.zh-tw.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
 ---
 
-## Plugins
+## Plugin-Übersicht
 
 | Plugin | Beschreibung | Quelle |
-|--------|--------------|--------|
-| [epic-harness](#epic-harness) | Autonomes Agenten-Harness — 6 leistungsstarke Befehle, selbstevolvierende Skills und unsichtbare Hooks, die jede Session schützen, verfeinern und reflektieren. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [llm-transpile](#llm-transpile) | Token-optimierter Dokumentenleser — komprimiert `.md`-, `.html`- und `.txt`-Dateien lautlos und reduziert die Kontextnutzung um bis zu 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
-| [alcove](#alcove) | MCP-Dokumentationsserver — hybride BM25+Vektorsuche, Lint und launchd-Lebenszyklusverwaltung für Projektdokumentation. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | KI-natives Publikationssystem — autonome Mehrphasen-Workflows von der Ideenfindung bis zu EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura-plugin](#obscura-plugin) | Headless-Browser als MCP-Tools — fetch, scrape, Markdown-Extraktion, JS-Auswertung. Null Konfiguration, automatische Binärinstallation. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
-| [episteme](#episteme) | Software-Engineering-Wissensgraph — Entwurfsmuster, Code-Smells, Refactorings und Architekturanalyse mit KI-gestutzter Code-Review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
+|--------|-------------|--------|
+| [epic-harness](#epic-harness) | Autonomes Agenten-Harness — 8 Befehle, selbstentwickelnde Fähigkeiten und unsichtbare Session-Hooks. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | Token-optimierter Dokumentenleser — komprimiert `.md`, `.html`, `.txt` automatisch und spart bis zu 40% Kontext. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [alcove](#alcove) | MCP-Dokumentationsserver — hybride BM25+Vektorsuche, semantischer Linter und launchd-Lebenszyklusverwaltung. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
+| [velith](#velith) | KI-natives Publikationssystem — autonomer mehrphasiger Workflow von der Idee bis zum fertigen EPUB/PDF. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [obscura-plugin](#obscura-plugin) | Headless-Browser als MCP-Tools — Fetch, Scrape, Markdown-Extraktion und JS-Ausführung ohne Konfiguration. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | Software-Engineering-Wissensgraph — Entwurfsmuster, Code Smells, Refactorings und KI-Code-Review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
+| [obsidian-forge](#obsidian-forge) | Obsidian-Vault-Management — KI-Posteingangsklassifizierung, Wissensgraph-Verstärkung und Multi-Vault-Synchronisation. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
+| [epicsagas](#epicsagas) | Persönliche Agentenfähigkeiten — Problemerkennung (5 Whys, JTBD), kognitive Selbstanalyse und OSS-Release-Audits. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
+| [research](#research) | Akademischer Forschungsassistent — Indizierung von Artikeln (arXiv/Semantic Scholar/PDF), Lückenanalyse und Berichte. | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
+| [byoh](#byoh) | BuildYourOwnHarness — extrahiert implizites Wissen durch Interviews zur Erstellung maßgeschneiderter Harnesses. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
+| [kanban-dev-lane](#kanban-dev-lane) | Autonome Multi-Engine-Entwicklungsspur — Delegation in isolierte Git-Worktrees mit Failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
 ## Installation
 
-### Über Claude Code (empfohlen)
-
-Marketplace hinzufügen und dann Plugins installieren:
+### Claude Code (empfohlen)
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
@@ -39,206 +47,36 @@ claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
 claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
+claude plugin install obsidian-forge@epicsagas
+claude plugin install epicsagas@epicsagas
+claude plugin install research@epicsagas
+claude plugin install byoh@epicsagas
 ```
 
-### Codex CLI
+### Hermes Agent
 
 ```bash
-codex plugin marketplace add epicsagas/plugins
-```
-
-Alle Plugins sofort einsatzbereit — keine weitere Konfiguration erforderlich.
-
-### epic-harness — Eigenständige Installation
-
-**Homebrew** (macOS):
-```bash
-brew install epicsagas/tap/epic-harness
-```
-
-**cargo-binstall** (vorkompiliertes Binary):
-```bash
-cargo binstall epic-harness
-```
-
-**Cargo** (aus Quellcode bauen):
-```bash
-cargo install epic-harness
-```
-
-### llm-transpile — Eigenständige Installation
-
-**cargo-binstall** (vorkompiliertes Binary):
-```bash
-cargo binstall llm-transpile
-```
-
-**Cargo** (aus Quellcode bauen):
-```bash
-cargo install llm-transpile
-```
-
-### alcove — Eigenständige Installation
-
-**Homebrew** (macOS):
-```bash
-brew install epicsagas/tap/alcove
-```
-
-**cargo-binstall** (vorkompiliertes Binary):
-```bash
-cargo binstall alcove
-```
-
-**Cargo** (aus Quellcode bauen):
-```bash
-cargo install alcove
-```
-
-### episteme — Eigenständige Installation
-
-**Homebrew** (macOS):
-```bash
-brew install epicsagas/tap/episteme
-```
-
-**cargo-binstall** (vorkompiliertes Binary):
-```bash
-cargo binstall episteme
-```
-
-**Cargo** (aus Quellcode bauen):
-```bash
-cargo install episteme
+hermes plugins install epicsagas/plugins --enable
+hermes plugins enable kanban-dev-lane
 ```
 
 ---
 
 ## Plugin-Details
 
-### epic-harness
+### kanban-dev-lane
 
-**Autonomes Agenten-Harness**
+**Autonome Multi-Engine-Implementierungsspur für Hermes Kanban**
 
-Erstellen Sie Agenten-Workflows, die komplexe, mehrstufige Aufgaben selbstständig bewältigen. Ausgestattet mit 6 integrierten leistungsstarken Befehlen, entwickeln sich Skills mit der Nutzung weiter. Session-Hooks laufen automatisch, um Ihren Code zu schützen, die Ausgabe zu verfeinern und jede Session zu reflektieren.
+Delegiert Entwicklungs- und Refactoring-Aufgaben an isolierte Git-Worktrees mit einer automatischen **3-stufigen Ausfallkette** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`) bei Erreichen von Kontingentgrenzen oder 429-Fehlern.
 
-**Wann verwenden:**
-- Automatisierung wiederkehrender Code-Review-, Commit- und Testzyklen
-- Definition projektspezifischer benutzerdefinierter Workflows
-- Durchsetzung konsistenter Verhaltensmuster in Claude-Sessions
+**Hauptmerkmale:**
+- Automatische Erkennung von 429- und Quotenfehlern mit nahtloser Umschaltung
+- Verwaltung isolierter Git-Worktrees
+- Strikte Hermes-Kontrolle über Kanban-Status, Diffs und Tests
+- Enthaltenes Skript: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
-**Hauptfunktionen:**
-- 6 integrierte leistungsstarke Befehle (commit, review, test, deploy und mehr)
-- Selbstevolvierendes Skill-System — lernt aus Nutzungsmustern und verbessert sich kontinuierlich
-- Session-Guard-Hooks — verhindert Fehler und erhält Qualität automatisch
-
-→ [Quelle & Dokumentation](https://github.com/epicsagas/epic-harness)
-
----
-
-### llm-transpile
-
-**Token-Optimierter Dokumentenleser**
-
-Komprimiert automatisch `.md`-, `.html`- und `.txt`-Dateien bei jedem Read-Tool-Aufruf und reduziert die Kontexttoken-Nutzung um bis zu 40%. Sofortige Wirkung ohne Workflow-Änderungen.
-
-**Wann verwenden:**
-- Projekte, die häufig große Dokumente oder Spezifikationen referenzieren
-- Wenn Sie regelmäßig Kontextfenstergrenzen erreichen
-- Zur Reduzierung von Tokenkosten in langen Sessions
-
-**Hauptfunktionen:**
-- Lautlose Komprimierung — gleiche Ausgabe, bis zu 40% weniger Token
-- Erkennt automatisch `.md` / `.html` / `.txt`-Formate
-- Vollständig kompatibel mit bestehenden Read-Tool-Workflows
-
-→ [Quelle & Dokumentation](https://github.com/epicsagas/llm-transpile)
-
----
-
-### alcove
-
-**MCP-Dokumentationsserver**
-
-Bietet KI-Coding-Agenten On-Demand-Zugriff auf Ihre privaten Projektdokumente via MCP. Hybride BM25+Vektorsuche, semantisches Lint, Dokumentenvalidierung und HTTP-Hintergrundserver mit Proxy-Modus für sofortige Antwort.
-
-**Wann verwenden:**
-- Verwaltung privater Projektdokumentation über mehrere KI-Agenten hinweg
-- Suche nach Architekturentscheidungen, PRDs und Runbooks von jedem MCP-kompatiblen Agenten
-- Durchsetzung von Dokumentationsstandards mit Policy-Validierung und semantischem Lint
-
-**Hauptfunktionen:**
-- Hybride Suche — BM25 + Vektor-Ähnlichkeit mit Reciprocal Rank Fusion
-- Ein Doc-Repo, jeder Agent — Claude Code, Cursor, Gemini CLI, Codex und über 5 weitere
-- Hintergrundserver mit Proxy-Modus — eliminiert Kaltstartlatenz bei neuen Sessions
-- Semantisches Lint — defekte Links, verwaiste Dateien, veraltete Marker, überholte Datumsangaben
-- macOS launchd-Integration — enable/disable/start/stop/restart Lebenszyklus-Befehle
-
-→ [Quelle & Dokumentation](https://github.com/epicsagas/alcove)
-
----
-
-### velith
-
-**AI-Native Publishing System**
-
-Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF.
-
-**Key features:**
-- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
-- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
-- 5-stage editing pipeline with AI-slop detection
-- EPUB, PDF, MOBI, TXT, Markdown output
-
-→ [Source & Docs](https://github.com/epicsagas/Velith)
-
----
-
-### obscura-plugin
-
-**Headless Browser as MCP Tools**
-
-Gives AI agents direct access to the web via five MCP tools. Auto-installs required binaries on first load.
-
-**Key features:**
-- Zero config — plugin auto-installs all required binaries
-- `obscura_scrape` with configurable concurrency via `obscura-worker`
-- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
-- Stealth mode for anti-detection
-
-→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
-
----
-
-### episteme
-
-**Software-Engineering-Wissensgraph**
-
-Ein abfragbarer Wissensgraph zu Entwurfsmustern, Code-Smells, Refactorings und Architekturgesetzen. KI-gestutzte Code-Analyse erkennt Qualitatsprobleme, schlagt Verbesserungen vor und fundiert jede Empfehlung auf etablierten Engineering-Prinzipien.
-
-**Einsatzbereiche:**
-- Code-Review auf Entwurfsmuster-Missbrauch, Code-Smells oder Architekturverletzungen
-- Wahl von Refactoring-Strategien mit prinzipienbasierter Trade-off-Analyse
-- Lernen und Anwenden von Software-Engineering-Gesetzen (Conways Gesetz, Amdahls Gesetz, Galls Gesetz)
-
-**Hauptfunktionen:**
-- Wissensgraph mit Graphtraversierung uber Muster, Smells, Refactorings und Gesetze
-- KI-Code-Analyse mit Smell-Erkennung und priorisierten Refactoring-Vorschlagen
-- Mehrere Agenten-Personas — Code-Reviewer, Architektur-Analyst, Engineering-Berater
-
-→ [Quellcode und Dokumentation](https://github.com/epicsagas/Episteme)
-
----
-
-## Mitwirken
-
-Plugin einreichen oder Verbesserungen vorschlagen:
-
-1. Dieses Repository forken
-2. Plugin-Eintrag in `.claude-plugin/marketplace.json` hinzufügen
-3. Pull Request öffnen
-
-Plugins werden als unabhängige GitHub-Repositories gepflegt. Dieser Marketplace enthält nur Metadaten.
+→ [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
 
 ---
 

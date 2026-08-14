@@ -1,14 +1,19 @@
 # epicsagas プラグイン
 
-> 本格的なAI支援開発のための手作りプラグイン — 自律エージェント、コンテキスト圧縮、邪魔にならないツール群。
+> AI駆動の本格開発のための高品質プラグイン集 — 自律エージェント、コンテキスト圧縮、邪魔にならないツール群。
 
-[![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat)](../LICENSE)
-[![Maintained](https://img.shields.io/badge/Maintained-yes-green?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![Plugins](https://img.shields.io/badge/Plugins-6-blueviolet?style=flat)](https://github.com/epicsagas/claude-plugins)
-[![GitHub Stars](https://img.shields.io/github/stars/epicsagas/claude-plugins?style=flat)](https://github.com/epicsagas/claude-plugins/stargazers)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/epicsaga)
+<p align="center">
+  <a href="https://github.com/epicsagas/plugins/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=ffd700&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=2ecc71&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/issues"><img alt="Issues" src="https://img.shields.io/github/issues/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=ff6b6b&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/epicsagas/plugins/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/epicsagas/plugins?style=for-the-badge&labelColor=0d1117&color=58a6ff&logo=git&logoColor=white" /></a>
+</p>
+<p align="center">
+  <a href="../LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-3fb950?style=for-the-badge&labelColor=0d1117" /></a>
+  <a href="https://buymeacoffee.com/epicsaga"><img alt="Buy Me a Coffee" src="https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&labelColor=0d1117&logo=buymeacoffee&logoColor=black" /></a>
+</p>
 
-**翻訳:** [English](../README.md) · [한국어](README.ko.md) · [简体中文](README.zh-cn.md) · [繁體中文](README.zh-tw.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
+**Translations:** [English](../README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-cn.md) · [繁體中文](README.zh-tw.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
 ---
 
@@ -16,20 +21,25 @@
 
 | プラグイン | 説明 | ソース |
 |-----------|------|--------|
-| [epic-harness](#epic-harness) | 自律エージェントハーネス — 6つのパワーコマンド、自己進化スキル、毎セッション動作する不可視フック | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
-| [llm-transpile](#llm-transpile) | トークン最適化ドキュメントリーダー — `.md`、`.html`、`.txt`ファイルを自動圧縮し、コンテキスト使用量を最大40%削減 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
-| [alcove](#alcove) | MCPドキュメントサーバー — BM25+ベクトルハイブリッド検索、リント、プロジェクトドキュメント向けlaunchd管理 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AIネイティブ出版システム — アイデア出しからEPUB/PDFまで自律マルチフェーズワークフロー。ソフトウェアのように本を作ります。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura-plugin](#obscura-plugin) | ヘッドレスブラウザをMCPツールとして — fetch、scrape、Markdown抽出、JS eval。設定不要、バイナリ自動インストール。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
-| [episteme](#episteme) | ソフトウェアエンジニアリングナレッジグラフ — デザインパターン、コードスメル、リファクタリング、アーキテクチャ分析とAI駆動コードレビュー。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
+| [epic-harness](#epic-harness) | 自律エージェントハーネス — 8つのコマンド、自己進化スキル、各セッションを守護するフック。 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
+| [llm-transpile](#llm-transpile) | トークン最適化ドキュメントリーダー — `.md`, `.html`, `.txt` を自動圧縮し、コンテキスト使用量を最大40%削減。 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
+| [alcove](#alcove) | MCPドキュメントサーバー — BM25+ベクトルハイブリッド検索、リント、launchdライフサイクル管理。 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
+| [velith](#velith) | AIネイティブ出版システム — アイデア出しからEPUB/PDFまで自律マルチフェーズワークフロー。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [obscura-plugin](#obscura-plugin) | ヘッドレスブラウザMCPツール — fetch、scrape、Markdown抽出、JS実行。設定不要で自動インストール。 | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
+| [episteme](#episteme) | ソフトウェアエンジニアリング知識グラフ — デザインパターン、コードスメル、リファクタリング、AIコードレビュー。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
+| [obsidian-forge](#obsidian-forge) | Obsidian Vaultライフサイクル管理 — AI受信トレイ分類、ナレッジグラフ強化、MOC再生成、Vault同期。 | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
+| [epicsagas](#epicsagas) | 個人エージェントスキル集 — 問題発見（5 Whys, JTBD）、自己認知分析、OSS公開準備性チェック。 | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
+| [research](#research) | 学術研究アシスタント — arXiv/Semantic Scholar/PDF論文の収集、ギャップ分析、レポート生成。 | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
+| [byoh](#byoh) | BuildYourOwnHarness — 対話形式で暗黙知と目標を抽出し、専用AIエージェントハーネスを構築・進化。 | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
+| [kanban-dev-lane](#kanban-dev-lane) | 自律マルチエンジン開発レーン — 隔離Git Worktreeで自動フォールバック（Claudy ➔ Codex ➔ AGYD）委譲。 | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
 ## インストール
 
-### Claude Code を使う（推奨）
+### Claude Code（推奨）
 
-マーケットプレイスを追加してからプラグインをインストール:
+マーケットプレイスを追加し、必要なプラグインをインストールします：
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
@@ -39,6 +49,10 @@ claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
 claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
+claude plugin install obsidian-forge@epicsagas
+claude plugin install epicsagas@epicsagas
+claude plugin install research@epicsagas
+claude plugin install byoh@epicsagas
 ```
 
 ### Codex CLI
@@ -47,198 +61,42 @@ claude plugin install episteme@epicsagas
 codex plugin marketplace add epicsagas/plugins
 ```
 
-すべてのプラグインがすぐに利用可能 — 追加設定不要。
+### Hermes Agent
 
-### epic-harness — スタンドアロンインストール
-
-**Homebrew** (macOS):
 ```bash
-brew install epicsagas/tap/epic-harness
+hermes plugins install epicsagas/plugins --enable
 ```
 
-**cargo-binstall** (ビルド済みバイナリ):
+または個別プラグインの有効化：
+
 ```bash
-cargo binstall epic-harness
-```
-
-**Cargo** (ソースからビルド):
-```bash
-cargo install epic-harness
-```
-
-### llm-transpile — スタンドアロンインストール
-
-**cargo-binstall** (ビルド済みバイナリ):
-```bash
-cargo binstall llm-transpile
-```
-
-**Cargo** (ソースからビルド):
-```bash
-cargo install llm-transpile
-```
-
-### alcove — スタンドアロンインストール
-
-**Homebrew** (macOS):
-```bash
-brew install epicsagas/tap/alcove
-```
-
-**cargo-binstall** (ビルド済みバイナリ):
-```bash
-cargo binstall alcove
-```
-
-**Cargo** (ソースからビルド):
-```bash
-cargo install alcove
-```
-
-### episteme — スタンドアロンインストール
-
-**Homebrew** (macOS):
-```bash
-brew install epicsagas/tap/episteme
-```
-
-**cargo-binstall** (ビルド済みバイナリ):
-```bash
-cargo binstall episteme
-```
-
-**Cargo** (ソースからビルド):
-```bash
-cargo install episteme
+hermes plugins install epicsagas/plugins
+hermes plugins enable alcove
+hermes plugins enable episteme
+hermes plugins enable epic-harness
+hermes plugins enable llm-transpile
+hermes plugins enable obsidian-forge
+hermes plugins enable obscura
+hermes plugins enable kanban-dev-lane
 ```
 
 ---
 
 ## プラグイン詳細
 
-### epic-harness
+### kanban-dev-lane
 
-**自律エージェントハーネス**
+**Hermes Kanban 向け自律マルチエンジン実装レーン**
 
-複雑なマルチステップタスクを独立して処理するエージェントワークフローを構築します。6つの組み込みパワーコマンドを備え、スキルは使用するほど自己進化します。セッションフックが自動実行され、コードを保護し、出力を洗練し、各セッションを振り返ります。
+Hermes Kanbanワーカーの実装・リファクタリング作業を隔離されたGitワークツリーに委譲し、外部プロバイダーのクォータ枯渇やレート制限（429）発生時に自動**3段階フォールバック**（`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`）を実行します。
 
-**使用場面:**
-- コードレビュー、コミット、テストサイクルの繰り返し自動化
-- プロジェクト固有のカスタムワークフロー定義
-- Claudeセッション全体での一貫した動作パターンの適用
+**主な特徴:**
+- 429・クォータ枯渇の自動検知とシームレスなエンジン切り替え
+- 隔離Git Worktreeのライフサイクル管理
+- Hermesワーカーによる厳格なレビュー、Diff検証、テスト再実行
+- 同梱ランナー: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
-**主な機能:**
-- 6つの組み込みパワーコマンド（commit、review、test、deployなど）
-- 自己進化スキルシステム — 使用パターンを学習して継続的に改善
-- セッションガードフック — ミスを防ぎ品質を自動維持
-
-→ [ソース & ドキュメント](https://github.com/epicsagas/epic-harness)
-
----
-
-### llm-transpile
-
-**トークン最適化ドキュメントリーダー**
-
-Readツール呼び出し時に`.md`、`.html`、`.txt`ファイルを自動圧縮し、コンテキストトークン使用量を最大40%削減します。ワークフローの変更なしに即効果が現れます。
-
-**使用場面:**
-- 大規模ドキュメントや仕様書を頻繁に参照するプロジェクト
-- コンテキストウィンドウの上限に頻繁に達する場合
-- 長いセッションでのトークンコスト削減
-
-**主な機能:**
-- サイレント圧縮 — 同じ出力、最大40%少ないトークン
-- `.md` / `.html` / `.txt`フォーマットの自動検出
-- 既存のReadツールワークフローと完全互換
-
-→ [ソース & ドキュメント](https://github.com/epicsagas/llm-transpile)
-
----
-
-### alcove
-
-**MCPドキュメントサーバー**
-
-AIコーディングエージェントにMCPを通じてプライベートプロジェクトドキュメントへのオンデマンドアクセスを提供します。BM25+ベクトルハイブリッド検索、セマンティックリント、ドキュメント検証、プロキシモード対応のバックグラウンドHTTPサーバーで即座に応答します。
-
-**使用場面:**
-- 複数のAIエージェント間でプライベートプロジェクトドキュメントを管理する場合
-- MCP対応エージェントからアーキテクチャ決定、PRD、ランブックを検索する場合
-- ポリシー検証とセマンティックリントでドキュメント標準を適用する場合
-
-**主な機能:**
-- ハイブリッド検索 — BM25 + ベクトル類似度とReciprocal Rank Fusion
-- 1つのドキュメントリポジトリ、あらゆるエージェント — Claude Code、Cursor、Gemini CLI、Codex、その他5つ以上に対応
-- プロキシモード対応バックグラウンドサーバー — 新しいセッションのコールドスタート遅延を解消
-- セマンティックリント — 壊れたリンク、孤立ファイル、古いマーカー、日付関連の主張を検査
-- macOS launchd統合 — enable/disable/start/stop/restartライフサイクルコマンド
-
-→ [ソース & ドキュメント](https://github.com/epicsagas/alcove)
-
----
-
-### velith
-
-**AI-Native Publishing System**
-
-Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF.
-
-**Key features:**
-- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
-- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
-- 5-stage editing pipeline with AI-slop detection
-- EPUB, PDF, MOBI, TXT, Markdown output
-
-→ [Source & Docs](https://github.com/epicsagas/Velith)
-
----
-
-### obscura-plugin
-
-**Headless Browser as MCP Tools**
-
-Gives AI agents direct access to the web via five MCP tools. Auto-installs required binaries on first load.
-
-**Key features:**
-- Zero config — plugin auto-installs all required binaries
-- `obscura_scrape` with configurable concurrency via `obscura-worker`
-- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
-- Stealth mode for anti-detection
-
-→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
-
----
-
-### episteme
-
-**ソフトウェアエンジニアリングナレッジグラフ**
-
-デザインパターン、コードスメル、リファクタリング、アーキテクチャ法則のクエリ可能なナレッジグラフ。AI駆動のコード分析により品質問題を検出し、改善提案を行い、確立されたエンジニアリング原則に基づいてすべての推奨事項を裏付けます。
-
-**活用タイミング:**
-- デザインパターンの誤用、コードスメル、アーキテクチャ違反のコードレビュー
-- 原則に基づいたトレードオフ分析によるリファクタリング戦略の選択
-- ソフトウェアエンジニアリングの法則（コンウェイの法則、アムダールの法則、ガルの法則）の学習と適用
-
-**主な機能:**
-- パターン、スメル、リファクタリング、法則間のグラフトラバーサル機能を持つナレッジグラフ
-- スメル検出とランク付けされたリファクタリング提案によるAIコード分析
-- 複数のエージェントペルソナ — コードレビューアー、アーキテクチャアナリスト、エンジニアリングアドバイザー
-
-→ [ソースとドキュメント](https://github.com/epicsagas/Episteme)
-
----
-
-## コントリビューション
-
-プラグインの提出や改善提案:
-
-1. このリポジトリをフォーク
-2. `.claude-plugin/marketplace.json`にプラグイン情報を追加
-3. Pull Requestを作成
-
-プラグインは独立したGitHubリポジトリで管理され、マーケットプレイスはメタデータのみを含みます。
+→ [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
 
 ---
 
