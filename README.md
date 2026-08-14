@@ -81,6 +81,7 @@ hermes plugins enable epic-harness
 hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable obscura
+hermes plugins enable kanban-dev-lane
 ```
 
 **Prerequisites:** Each plugin wraps a Rust CLI binary. Install the ones you need:
@@ -375,6 +376,20 @@ Generate a personalized AI agent harness from an interview. BYOH interactively c
 - No embedded knowledge base — point the generated harness at a doc server like [alcove](https://github.com/epicsagas/alcove) for retrieval
 
 → [Source & Docs](https://github.com/epicsagas/BuildYourOwnHarness)
+
+### kanban-dev-lane
+
+**Autonomous Multi-Engine Implementation Lane for Hermes Kanban**
+
+Delegates bounded implementation and refactoring tasks from a Hermes Kanban worker into an isolated git worktree with an automated **3-tier failover chain** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`), ensuring continuous progress even when external provider quotas/rate-limits are reached.
+
+**Key features:**
+- Automatic 429 & quota exhaustion detection with zero-downtime failover
+- Isolated git worktree lifecycle management
+- Hermes keeps strict ownership of Kanban state, diff reconciliation, and regression testing
+- Bundled CLI runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
+
+→ [Plugin Directory](.hermes/kanban-dev-lane)
 
 ---
 
