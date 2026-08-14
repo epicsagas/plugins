@@ -31,7 +31,7 @@
 | [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
 | [research](#research) | Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
 | [byoh](#byoh) | BuildYourOwnHarness — collect a user's tacit knowledge and goals via interview, then compile, deploy, and evolve a personalized AI agent harness. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
-| [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins](https://github.com/epicsagas/plugins) |
+| [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -389,7 +389,7 @@ Delegates bounded implementation and refactoring tasks from a Hermes Kanban work
 - Hermes keeps strict ownership of Kanban state, diff reconciliation, and regression testing
 - Bundled CLI runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
-→ [Plugin Directory](.hermes/kanban-dev-lane)
+→ [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
 
 ---
 
