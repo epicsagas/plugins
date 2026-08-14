@@ -125,7 +125,7 @@
       "name": "kanban-dev-lane",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/kanban-dev-lane.git"
+        "url": "https://github.com/epicsagas/plugins.git"
       },
       "description": "Hermes Kanban worker multi-engine implementation lane with automatic fallback across Claudy -> Codex (--yolo) -> AGYD (agy --dangerously-skip-permissions) -> Hermes direct on quota exhaustion."
     }

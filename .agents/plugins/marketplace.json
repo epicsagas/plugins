@@ -177,7 +177,7 @@
       "name": "kanban-dev-lane",
       "source": {
         "source": "url",
-        "url": "https://github.com/epicsagas/kanban-dev-lane.git"
+        "url": "https://github.com/epicsagas/plugins.git"
       },
       "pluginManifest": "./.hermes/kanban-dev-lane/plugin.yaml",
       "policy": {
