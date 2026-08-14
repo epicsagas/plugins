@@ -7,7 +7,7 @@ license: Apache-2.0
 metadata:
   hermes:
     tags: [kanban, dev-lane, claudy, codex, agy, agyd, fallback-lane, autonomous-agents, worktrees]
-    related_skills: [kanban-worker, kanban-claudy-lane, hermes-agent]
+    related_skills: [kanban-worker, hermes-agent]
 ---
 
 # Kanban Dev Lane (Multi-Engine Autonomous Implementation Lane)
