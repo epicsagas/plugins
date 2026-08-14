@@ -1,0 +1,17 @@
+name: kanban-dev-lane
+version: "1.0.0"
+description: >-
+  Hermes Kanban worker multi-engine implementation delegation lane.
+  Executes bounded coding tasks in isolated git worktrees with an automatic
+  failover chain across claudy -> codex (--yolo) -> agyd (agy --dangerously-skip-permissions)
+  upon quota exhaustion, rate limits (429), or execution errors.
+author: epicsagas
+license: Apache-2.0
+provides_skills:
+  - kanban-dev-lane
+compatibility:
+  hermes: ">=1.0"
+  optional_cli:
+    - claudy
+    - codex
+    - agy

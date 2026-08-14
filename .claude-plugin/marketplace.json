@@ -120,6 +120,14 @@
         "url": "https://github.com/epicsagas/design-isms.git"
       },
       "description": "TEST for lidge-jun/design-isms before merging. 35 design -isms visual reference board with AI mockups, live examples, prompts, and component-level dev notes."
+    },
+    {
+      "name": "kanban-dev-lane",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/kanban-dev-lane.git"
+      },
+      "description": "Hermes Kanban worker multi-engine implementation lane with automatic fallback across Claudy -> Codex (--yolo) -> AGYD (agy --dangerously-skip-permissions) -> Hermes direct on quota exhaustion."
     }
   ]
 }
