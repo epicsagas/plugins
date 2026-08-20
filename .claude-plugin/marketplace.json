@@ -128,6 +128,14 @@
         "url": "https://github.com/epicsagas/plugins.git"
       },
       "description": "Hermes Kanban worker multi-engine implementation lane with automatic fallback across Claudy -> Codex (--yolo) -> AGYD (agy --dangerously-skip-permissions) -> Hermes direct on quota exhaustion."
+    },
+    {
+      "name": "site-harvester",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/site-harvester.git"
+      },
+      "description": "Authenticated website content harvester: recon an SPA's hidden API, harvest OAuth tokens via Playwright, then collect all content human-paced, resumable, cron-scheduled"
     }
   ]
 }

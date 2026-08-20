@@ -185,6 +185,19 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Autonomous Agents"
+    },
+    {
+      "name": "site-harvester",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/site-harvester.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
