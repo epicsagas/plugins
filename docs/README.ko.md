@@ -32,6 +32,7 @@
 | [research](#research) | 학술 연구 어시스턴트 — arXiv/Semantic Scholar/PDF 논문 수집, LLM 갭 분석 및 리포트 작성 (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
 | [byoh](#byoh) | BuildYourOwnHarness — 인터뷰를 통해 암묵지와 목표를 수집하고 맞춤형 AI 에이전트 하니스를 컴파일/진화. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 | [kanban-dev-lane](#kanban-dev-lane) | 자율 멀티 엔진 구현 레인 — 격리된 Git 워크트리에서 자동 폴백(Claudy ➔ Codex ➔ AGYD)으로 코딩 위임. | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
+| [site-harvester](#site-harvester) | 로그인 필요 콘텐츠 수집기 — 사이트의 숨은 JSON API를 찾아 본인 구독 토큰으로, 사람 속도로 전부 프라이빗 로컬 볼트에 수집. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
 
 ---
 
@@ -53,6 +54,7 @@ claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
 claude plugin install research@epicsagas
 claude plugin install byoh@epicsagas
+claude plugin install site-harvester@epicsagas
 ```
 
 ### Codex CLI
@@ -384,6 +386,20 @@ Hermes Kanban 워커의 구현 및 리팩토링 작업을 격리된 Git 워크�
 - 내장 CLI 러너: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
 → [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
+
+### site-harvester
+
+**로그인 필요 콘텐츠 수집기**
+
+회원제 사이트를 로컬 재개 가능 데이터 파이프라인으로 바꿉니다. SPA의 숨은 JSON API를 리콘하고, 실제 브라우저 로그인 한 번으로 본인 OAuth 토큰을 얻은 뒤, 평범한 API 호출로 전부 수집합니다 — 사람 속도(30–120초), 크래시 후에도 이어서, 신규 콘텐츠는 cron으로. 법률 가드레일이 내장되어 있습니다.
+
+**주요 기능:**
+- 사이트 JS 번들에서 숨은 API 리콘 — 수집 중 페이지 로드 없음
+- 아이템 단위 재개 상태, flock 중복 실행 방지, 수집 기간 만료 자동 종료
+- 설계부터 가드레일: 약관 확인 게이트, 속도 하한, 차단 시 정지, 공개 리포 커밋 거부 — CAPTCHA 우회·안티봇 회피·IP 로테이션·결제벽 우회 없음
+- 원본 API JSON을 커밋된 원천 데이터로, 노트와 localhost 전용 사이트는 여기서 파생
+
+→ [Source & Docs](https://github.com/epicsagas/site-harvester)
 
 ---
 

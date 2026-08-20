@@ -32,6 +32,7 @@
 | [research](#research) | Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
 | [byoh](#byoh) | BuildYourOwnHarness — collect a user's tacit knowledge and goals via interview, then compile, deploy, and evolve a personalized AI agent harness. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 | [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
+| [site-harvester](#site-harvester) | Login-walled content harvester — find the site's hidden JSON API, use your own subscription token, collect everything human-paced into a private local vault. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
 
 ---
 
@@ -53,6 +54,7 @@ claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
 claude plugin install research@epicsagas
 claude plugin install byoh@epicsagas
+claude plugin install site-harvester@epicsagas
 ```
 
 ### Codex CLI
@@ -390,6 +392,20 @@ Delegates bounded implementation and refactoring tasks from a Hermes Kanban work
 - Bundled CLI runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
 → [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
+
+### site-harvester
+
+**Login-Walled Content Harvester**
+
+Turns a membership site into a local, resumable data pipeline: recon the SPA's hidden JSON API, harvest your own OAuth token once via a real browser login, then collect everything through plain API calls — human-paced (30–120s), resumable after any crash, cron-scheduled for new content. Legal guardrails are built in.
+
+**Key features:**
+- Hidden-API recon from the site's JS bundle — no page loads during collection
+- Per-item resume state, flock-guarded runs, collection-window auto-expiry
+- Guardrails by design: terms-of-service check, pacing floor, block-and-stop handling, public-repo commit refusal; no CAPTCHA solving, no anti-bot evasion, no IP rotation, no paywall bypass
+- Raw API JSON as the committed source of truth; notes and localhost-only sites derive from it
+
+→ [Source & Docs](https://github.com/epicsagas/site-harvester)
 
 ---
 
