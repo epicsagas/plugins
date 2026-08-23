@@ -198,6 +198,19 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "upbit-investor",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/upbit-invester.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

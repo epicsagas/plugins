@@ -33,6 +33,7 @@
 | [byoh](#byoh) | BuildYourOwnHarness — collect a user's tacit knowledge and goals via interview, then compile, deploy, and evolve a personalized AI agent harness. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 | [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 | [site-harvester](#site-harvester) | Login-walled content harvester — find the site's hidden JSON API, use your own subscription token, collect everything human-paced into a private local vault. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
+| [upbit-investor](#upbit-investor) | Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution. | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) |
 
 ---
 
@@ -55,6 +56,7 @@ claude plugin install epicsagas@epicsagas
 claude plugin install research@epicsagas
 claude plugin install byoh@epicsagas
 claude plugin install site-harvester@epicsagas
+claude plugin install upbit-investor@epicsagas
 ```
 
 ### Codex CLI
@@ -406,6 +408,20 @@ Turns a membership site into a local, resumable data pipeline: recon the SPA's h
 - Raw API JSON as the committed source of truth; notes and localhost-only sites derive from it
 
 → [Source & Docs](https://github.com/epicsagas/site-harvester)
+
+### upbit-investor
+
+**Upbit Coin Investment Analyst**
+
+One sentence — "Analyze KRW-BTC" — runs an 8-stage role-separated pipeline: snapshot (candles, orderbook, indicators, news, past decisions), market analyst, a two-round bull/bear debate, a research-manager verdict, 6-gate risk checks with position sizing, a portfolio-manager final call that recalls its own past decisions, and a trader proposal. Orders never fire automatically; every execution passes a user-confirmation gate, and withdrawals are not supported at all.
+
+**Key features:**
+- 7 skills (analysis, market data, indicators, screening, backtest, portfolio, trade) and 7 sub-agents, packaged for Claude Code, Codex, Antigravity, and Hermes Agent
+- Stdlib-only Python scripts — Upbit REST wrapper, indicator engine (RSI/MACD/Bollinger/ATR/ADX/Williams/CCI), crix-ZIP full-history loader, screener, fee-aware backtester
+- Decision journal with recall: every verdict is remembered and re-checked for consistency on the next analysis
+- Risk gates: single-coin weight, total exposure, overheat block, order rate, daily-loss kill switch (hard)
+
+→ [Source & Docs](https://github.com/epicsagas/upbit-invester)
 
 ---
 

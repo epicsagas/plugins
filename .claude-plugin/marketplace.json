@@ -136,6 +136,14 @@
         "url": "https://github.com/epicsagas/site-harvester.git"
       },
       "description": "Authenticated website content harvester: recon an SPA's hidden API, harvest OAuth tokens via Playwright, then collect all content human-paced, resumable, cron-scheduled"
+    },
+    {
+      "name": "upbit-investor",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/upbit-invester.git"
+      },
+      "description": "Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution"
     }
   ]
 }

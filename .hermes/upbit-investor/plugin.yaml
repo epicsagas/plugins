@@ -1,0 +1,11 @@
+name: upbit-investor
+version: "0.1.0"
+description: Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution
+provides_skills:
+  - upbit-investor
+  - upbit-market-data
+  - upbit-technical
+  - upbit-screen
+  - upbit-backtest
+  - upbit-portfolio
+  - upbit-trade
