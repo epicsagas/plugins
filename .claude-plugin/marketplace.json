@@ -144,6 +144,14 @@
         "url": "https://github.com/epicsagas/upbit-invester.git"
       },
       "description": "Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution"
+    },
+    {
+      "name": "tech-event-scout",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/tech-event-scout.git"
+      },
+      "description": "AI/tech event intelligence — a stdlib-only aggregator deterministically collects 9 sources (COEX/KINTEX/BEXCO calendars, AWS, Luma, Korean community feeds); the LLM reads a compact summary and reports. ~90% fewer tokens than search-based scouting."
     }
   ]
 }

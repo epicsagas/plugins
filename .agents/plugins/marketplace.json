@@ -211,6 +211,14 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "tech-event-scout",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/tech-event-scout.git"
+      },
+      "category": "Productivity"
     }
   ]
 }

@@ -34,6 +34,7 @@
 | [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 | [site-harvester](#site-harvester) | Login-walled content harvester — find the site's hidden JSON API, use your own subscription token, collect everything human-paced into a private local vault. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
 | [upbit-investor](#upbit-investor) | Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution. | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) |
+| [tech-event-scout](#tech-event-scout) | AI/tech event intelligence — stdlib-only aggregator collects 9 sources deterministically (COEX/KINTEX/BEXCO, AWS, Luma, Korean community feeds); LLM reads a compact summary and reports. | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) |
 
 ---
 
@@ -422,6 +423,24 @@ One sentence — "Analyze KRW-BTC" — runs an 8-stage role-separated pipeline: 
 - Risk gates: single-coin weight, total exposure, overheat block, order rate, daily-loss kill switch (hard)
 
 → [Source & Docs](https://github.com/epicsagas/upbit-invester)
+
+---
+
+### tech-event-scout
+
+AI/tech event intelligence with a code-first architecture: a Python-stdlib aggregator
+deterministically collects and filters 9 sources — COEX/KINTEX/BEXCO venue calendars
+(date queries + pagination), AWS Summits, SLEXN, Dev-Event, onoffmix, and Luma Seoul —
+then the LLM reads a compact summary (~3k tokens) and synthesizes the report. JS-only
+sources are emitted as WebFetch stubs. ~90% fewer input tokens than search-based scouting;
+investigation tool cost ≈ $0.05 per run.
+
+**Key features:**
+- Declarative source registry → one adapter pipeline (fetch/parse/filter/dedupe); adding a source is one dict entry
+- Date-window and keyword filters in code, with venue-specific query params (KINTEX `searchStartDt`, BEXCO `schStartDate`, COEX date range + `var_page`)
+- Multi-host: Claude Code, Codex, agy, hermes
+
+→ [Source & Docs](https://github.com/epicsagas/tech-event-scout)
 
 ---
 
