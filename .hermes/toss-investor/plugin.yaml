@@ -1,0 +1,11 @@
+name: toss-investor
+version: "0.1.0"
+description: KRX stock investment analyst — multi-agent bull/bear debate pipeline with investor-flow and short-selling evidence, 6-gate risk checks, KRX tick/price-limit rules, and confirmation-gated order execution
+provides_skills:
+  - toss-analyze
+  - toss-market-data
+  - toss-technical
+  - toss-screen
+  - toss-backtest
+  - toss-portfolio
+  - toss-trade

@@ -34,6 +34,7 @@
 | [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 | [site-harvester](#site-harvester) | Login-walled content harvester — find the site's hidden JSON API, use your own subscription token, collect everything human-paced into a private local vault. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
 | [upbit-investor](#upbit-investor) | Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution. | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) |
+| [toss-investor](#toss-investor) | KRX stock investment analyst — same 8-stage bull/bear debate architecture as upbit-investor, with investor-flow/short-selling evidence, KRX tick and price-limit rules, via the Toss Securities Open API. | [epicsagas/toss-invester](https://github.com/epicsagas/toss-invester) |
 | [tech-event-scout](#tech-event-scout) | AI/tech event intelligence — stdlib-only aggregator collects 9 sources deterministically (COEX/KINTEX/BEXCO, AWS, Luma, Korean community feeds); LLM reads a compact summary and reports. | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) |
 
 ---
@@ -58,6 +59,7 @@ claude plugin install research@epicsagas
 claude plugin install byoh@epicsagas
 claude plugin install site-harvester@epicsagas
 claude plugin install upbit-investor@epicsagas
+claude plugin install toss-investor@epicsagas
 ```
 
 ### Codex CLI
@@ -423,6 +425,20 @@ One sentence — "Analyze KRW-BTC" — runs an 8-stage role-separated pipeline: 
 - Risk gates: single-coin weight, total exposure, overheat block, order rate, daily-loss kill switch (hard)
 
 → [Source & Docs](https://github.com/epicsagas/upbit-invester)
+
+### toss-investor
+
+**KRX Stock Investment Analyst**
+
+The Korean-equity sibling of upbit-investor: "Analyze Samsung Electronics" runs the same 8-stage role-separated pipeline — snapshot, market analyst, two-round bull/bear debate, research-manager 5-tier verdict, 6-gate risk checks with position sizing, portfolio-manager final call with past-decision recall, and a trader proposal. Every debate claim must cite a snapshot number, including investor net-buy flows and short-selling ratios; KRX specifics (tick-size snapping, ±30% price limits, warning/VI blocks, integer shares) are handled automatically. Orders never fire automatically — user confirmation gate, daily-loss kill switch.
+
+**Key features:**
+- 7 skills (analyze, market data, indicators, screening, backtest, portfolio, trade) and 7 sub-agents, packaged for Claude Code, Codex, Antigravity, and Hermes Agent
+- Stdlib-only Python scripts — Toss Open API wrapper (OAuth2, token cache, read-only and order subcommands), indicator engine, rankings-based screener, fee-aware backtester
+- KRX-native risk: investor-flow/short-selling evidence, tick/price-limit validation, 투자유의/VI warning block, ≥100M KRW high-value reconfirmation
+- Decision journal with recall at ~/.toss-investor/decisions.jsonl — flags momentum-chasing and concentration patterns
+
+→ [Source & Docs](https://github.com/epicsagas/toss-invester)
 
 ---
 
