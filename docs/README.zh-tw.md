@@ -312,21 +312,6 @@ claude plugin install <plugin>@<plugin>
 
 ---
 
-### kanban-dev-lane
-
-**Hermes Kanban 的自主多引擎實作通道**
-
-把 Hermes Kanban worker 中範圍受限的實作與重構任務委派到隔離的 git worktree,搭配自動 **3 級故障轉移鏈** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`),即使外部供應商配額/限流也能持續推進。
-
-**主要特性:**
-- 自動偵測 429 與配額耗盡,零停機故障轉移
-- 隔離的 git worktree 生命週期管理
-- Hermes 嚴格持有 Kanban 狀態、diff 調節與回歸測試
-- 內建 CLI 執行器: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [原始碼與文件](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## 貢獻
 

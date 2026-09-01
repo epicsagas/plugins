@@ -312,21 +312,6 @@ AI 에이전트에게 스킬 기반 옵시디언 볼트 조작을 제공 — PAR
 
 ---
 
-### kanban-dev-lane
-
-**Hermes Kanban용 자율 멀티 엔진 구현 레인**
-
-Hermes Kanban 워커의 경계가 지정된 구현·리팩토링 작업을 격리된 Git 워크트리에 위임하고, 자동 **3단계 폴백 체인**(`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`)으로 외부 제공자 쿼터/레이트리밋 도달에도 진행을 지속합니다.
-
-**주요 기능:**
-- 429 및 쿼터 소진 자동 감지, 무중단 폴백
-- 격리된 Git 워크트리 라이프사이클 관리
-- Hermes가 Kanban 상태, diff 조정, 회귀 테스트의 엄격한 소유권 유지
-- 내장 CLI 러너: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [소스 & 문서](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## 기여하기
 

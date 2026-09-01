@@ -312,21 +312,6 @@ claude plugin install <plugin>@<plugin>
 
 ---
 
-### kanban-dev-lane
-
-**مسار تنفيذ متعدد المحركات مستقل لـ Hermes Kanban**
-
-يفوّض مهام التنفيذ وإعادة الهيكلة المحدودة من عامل Hermes Kanban إلى git worktree معزول مع **سلسلة تجاوز أعطال من 3 مستويات** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`) بما يضمن تقدمًا مستمرًا حتى عند استنفاد حصص المزودين الخارجيين.
-
-**الميزات الرئيسية:**
-- كشف تلقائي لخطأ 429 واستنفاد الحصة مع تجاوز بلا توقف
-- إدارة دورة حياة git worktree المعزولة
-- Hermes يحتفظ بملكية صارمة لحالة Kanban ومطابقة الفروقات واختبارات الانحدار
-- مشغل CLI مضمّن: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [المصدر والتوثيق](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## المساهمة
 

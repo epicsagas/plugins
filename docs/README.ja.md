@@ -312,21 +312,6 @@ AIエージェントにスキル駆動のObsidianボールト操作を提供 —
 
 ---
 
-### kanban-dev-lane
-
-**Hermes Kanban用自律マルチエンジン実装レーン**
-
-Hermes Kanbanワーカーの境界付けされた実装・リファクタリングタスクを分離されたGitワークツリーに委譲し、自動 **3段階フェイルオーバーチェーン** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`) により、外部プロバイダのクォータ/レート制限到達時も進行を継続します。
-
-**主な機能:**
-- 429およびクォータ枯渇の自動検出、ダウンタイムゼロのフェイルオーバー
-- 分離されたGitワークツリーのライフサイクル管理
-- HermesがKanban状態、diff調整、回帰テストの厳格な所有権を維持
-- 同梱CLIランナー: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [ソース & ドキュメント](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## コントリビュート
 

@@ -312,21 +312,6 @@ Um conjunto curado de skills de agente para uso pessoal e em equipe — descober
 
 ---
 
-### kanban-dev-lane
-
-**Faixa de implementação multimotor autônoma para Hermes Kanban**
-
-Delega tarefas limitadas de implementação e refactoring de um worker Hermes Kanban para um git worktree isolado com uma **cadeia de failover de 3 níveis** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`), garantindo progresso contínuo mesmo ao esgotar cotas de provedores externos.
-
-**Recursos-chave:**
-- Detecção automática de 429 e esgotamento de cota com failover sem tempo de inatividade
-- Gestão de ciclo de vida de git worktrees isolados
-- Hermes mantém posse estrita do estado Kanban, reconciliação de diffs e testes de regressão
-- Runner CLI incluído: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [Fonte e documentação](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## Contribuindo
 

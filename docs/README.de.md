@@ -312,21 +312,6 @@ Eine kuratierte Sammlung von Agenten-Skills für persönliche und Team-Nutzung �
 
 ---
 
-### kanban-dev-lane
-
-**Autonome Multi-Engine-Implementierungsspur für Hermes Kanban**
-
-Delegiert begrenzte Implementierungs- und Refactoring-Aufgaben aus einem Hermes-Kanban-Worker in einen isolierten Git-Worktree mit automatischer **3-Stufen-Failover-Kette** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`) und stellt so auch bei erschöpften Kontingenten externer Anbieter kontinuierlichen Fortschritt sicher.
-
-**Zentrale Funktionen:**
-- Automatische 429- und Kontingent-Erkennung mit Failover ohne Ausfallzeit
-- Lebenszyklusverwaltung isolierter Git-Worktrees
-- Hermes behält die strikte Hoheit über Kanban-State, Diff-Abgleich und Regressionstests
-- Mitgeliefertes CLI-Runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [Quelle & Dokumentation](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## Mitwirken
 
