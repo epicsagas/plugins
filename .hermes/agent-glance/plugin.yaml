@@ -1,5 +1,0 @@
-name: agent-glance
-version: "0.1.3"
-description: Turn a GeekMagic SmallTV into a live agent status display — working/approval/done plus model, context usage, and token counts, pushed over WiFi.
-provides_skills:
-  - agent-glance

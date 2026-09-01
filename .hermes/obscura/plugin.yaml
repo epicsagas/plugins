@@ -1,7 +1,0 @@
-name: obscura
-version: "1.0.0"
-description: Headless browser as tools — fetch web pages, scrape URLs, extract content via obscura CLI.
-provides_tools:
-  - obscura_fetch_page
-  - obscura_scrape_urls
-  - obscura_extract_markdown

@@ -19,20 +19,18 @@
 
 ## 플러그인 목록
 
+이 허브는 epiccounty 코어 라인업만 담습니다. 나머지는 각자의 레포지토리에 플러그인과 동일한 이름의 독립 마켓플레이스를 두고 분리 관리됩니다 ([개별화된 플러그인](#개별화된-플러그인) 참고).
+
 | 플러그인 | 설명 | 소스 |
 |--------|------|------|
 | [epic-harness](#epic-harness) | 자율 에이전트 하니스 — 8개의 파워 커맨드, 자가 진화 스킬, 매 세션을 보호하고 성찰하는 보이지 않는 훅. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | 토큰 최적화 문서 리더 — `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 사용량을 최대 40% 절감. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP 문서 서버 — BM25+벡터 하이브리드 검색, 린트, 프로젝트 문서를 위한 launchd 라이프사이클 관리. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI 네이티브 퍼블리싱 시스템 — 아이디에이션부터 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 소프트웨어처럼 책을 제작. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura-plugin](#obscura-plugin) | 헤드리스 브라우저 MCP 도구 — fetch, scrape, 마크다운 추출, JS eval. 무설정, 첫 로드 시 바이너리 자동 설치. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 | [episteme](#episteme) | 소프트웨어 엔지니어링 지식 그래프 — 디자인 패턴, 코드 스멜, 리팩토링 및 아키텍처 원칙과 AI 기반 코드 리뷰. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | 옵시디언 볼트 라이프사이클 관리 — AI 인박스 분류, 지식 그래프 강화, MOC 재생성, 다중 볼트 동기화 스킬. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 개인 에이전트 스킬 컬렉션 — 문제 발견(5 Whys, JTBD, Fishbone), 인지 자기 분석, 오픈소스 출시 준비성 검사. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [research](#research) | 학술 연구 어시스턴트 — arXiv/Semantic Scholar/PDF 논문 수집, LLM 갭 분석 및 리포트 작성 (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
-| [byoh](#byoh) | BuildYourOwnHarness — 인터뷰를 통해 암묵지와 목표를 수집하고 맞춤형 AI 에이전트 하니스를 컴파일/진화. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 | [kanban-dev-lane](#kanban-dev-lane) | 자율 멀티 엔진 구현 레인 — 격리된 Git 워크트리에서 자동 폴백(Claudy ➔ Codex ➔ AGYD)으로 코딩 위임. | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
-| [site-harvester](#site-harvester) | 로그인 필요 콘텐츠 수집기 — 사이트의 숨은 JSON API를 찾아 본인 구독 토큰으로, 사람 속도로 전부 프라이빗 로컬 볼트에 수집. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
 
 ---
 
@@ -48,13 +46,10 @@ claude plugin install epic-harness@epicsagas
 claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install research@epicsagas
-claude plugin install byoh@epicsagas
-claude plugin install site-harvester@epicsagas
+claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -67,7 +62,7 @@ codex plugin marketplace add epicsagas/plugins
 
 ### Hermes Agent
 
-한 번의 명령으로 전체 epiccounty 스위트(6개 플러그인, 24개 도구)를 설치합니다:
+한 번의 명령으로 epiccounty 스위트(6개 플러그인, 32개 도구)를 설치합니다:
 
 ```bash
 hermes plugins install epicsagas/plugins --enable
@@ -82,11 +77,10 @@ hermes plugins enable episteme
 hermes plugins enable epic-harness
 hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
-hermes plugins enable obscura
 hermes plugins enable kanban-dev-lane
 ```
 
-**사전 요구사항:** 각 플러그인은 Rust CLI 바이너리를 래핑합니다:
+**사전 요구사항:** 각 플러그인은 Rust CLI 바이너리를 래핑합니다. 필요한 것만 설치하세요:
 
 ```bash
 brew install epicsagas/tap/alcove          # alcove 플러그인
@@ -94,10 +88,9 @@ brew install epicsagas/tap/episteme        # episteme 플러그인 (`epis serve`
 brew install epicsagas/tap/epic-harness    # epic-harness 플러그인
 brew install epicsagas/tap/llm-transpile   # llm-transpile 플러그인
 brew install epicsagas/tap/obsidian-forge  # obsidian-forge 플러그인
-brew install epicsagas/tap/obscura         # obscura 플러그인
 ```
 
-**원클릭 전체 설치:**
+**빠른 시작 — 한 번에 전부 설치:**
 
 ```bash
 curl -fsSL https://github.com/epicsagas/epiccounty.com/releases/latest/download/epiccounty-installer.sh | sh
@@ -106,16 +99,18 @@ epiccounty install all
 
 ---
 
-## 단독 설치 (Standalone)
+## 단독 설치
 
 ### epic
+
 ```bash
 brew install epicsagas/tap/epic-harness
 cargo binstall epic-harness   # 사전 빌드 바이너리
-cargo install epic-harness    # 소스 빌드
+cargo install epic-harness    # 소스에서 빌드
 ```
 
 ### transpile
+
 ```bash
 brew install epicsagas/tap/llm-transpile
 cargo binstall llm-transpile
@@ -123,20 +118,15 @@ cargo install llm-transpile
 ```
 
 ### alcove
+
 ```bash
 brew install epicsagas/tap/alcove
 cargo binstall alcove
 cargo install alcove
 ```
 
-### obscura
-```bash
-brew install epicsagas/tap/obscura-plugin
-cargo binstall obscura-plugin
-cargo install obscura-plugin
-```
-
 ### episteme
+
 ```bash
 brew install epicsagas/tap/episteme
 cargo binstall episteme
@@ -144,47 +134,57 @@ cargo install episteme
 ```
 
 ### obsidian-forge
+
 ```bash
 brew install epicsagas/tap/obsidian-forge
 cargo binstall obsidian-forge
 cargo install obsidian-forge
 ```
 
-### research
+---
+
+## 개별화된 플러그인
+
+허브에서 분리된 플러그인입니다. 각 레포지토리는 플러그인 자체와 동일한 이름의 마켓플레이스를 포함하고 있어 단독 설치가 가능합니다:
+
 ```bash
-brew install epicsagas/tap/research-agent
-cargo binstall research-agent
-cargo install research-agent
+claude plugin marketplace add epicsagas/<repo>
+claude plugin install <plugin>@<plugin>
 ```
 
-### byoh
-```bash
-brew install epicsagas/tap/byoh
-cargo binstall byoh
-cargo install byoh
-```
+| 플러그인 | 레포지토리 | 설명 |
+|--------|------------|------|
+| obscura-plugin | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) | 헤드리스 브라우저 MCP 도구 — fetch, scrape, 마크다운 추출, JS eval. |
+| byoh | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) | 인터뷰로 맞춤형 AI 에이전트 하니스를 컴파일하고 진화. |
+| plugin-forge | [epicsagas/plugin-forge](https://github.com/epicsagas/plugin-forge) | 멀티 호스트 플러그인 관리자 — 스캐폴드, 닥터, 설치 검증, 퍼블리시. |
+| agent-glance | [epicsagas/AgentGlance](https://github.com/epicsagas/AgentGlance) | GeekMagic SmallTV를 라이브 에이전트 상태 디스플레이로. |
+| site-harvester | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) | 로그인 필요 콘텐츠 수집기 — 숨은 API 정찰, 사람 속도 수집. |
+| upbit-investor | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) | 업비트 코인 투자 분석가 — 불/베어 토론 파이프라인과 리스크 게이트. |
+| toss-investor | [epicsagas/toss-invester](https://github.com/epicsagas/toss-invester) | KRX 주식 투자 분석가 — 투자자금/공매도 증거와 KRX 규칙을 반영한 불/베어 토론 구조, 토스증권 Open API 기반. |
+| tech-event-scout | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) | AI/테크 행사 인텔리전스 — 9개 소스 결정론적 수집기. |
+| toefl-prep | [epicsagas/toefl-prep](https://github.com/epicsagas/toefl-prep) | 로컬 LLM으로 TOEFL iBT 4개 섹션 오프라인 채점. |
 
 ---
 
-## 플러그인 상세 안내
+## 플러그인 상세
 
 ### epic-harness
 
 **자율 에이전트 하니스**
 
-복잡한 다단계 작업을 독립적으로 처리하는 에이전트 워크플로우를 구축합니다. 8개의 내장 파워 커맨드와 자율 `/orbit` 파이프라인으로 구동되며, 사용할수록 스킬이 진화합니다. 세션 훅이 자동으로 작동하여 코드를 보호하고 출력을 다듬으며 세션을 성찰합니다.
+복잡한 다단계 작업을 독립적으로 처리하는 에이전트 워크플로우를 구축합니다. 8개 내장 파워 커맨드와 자율 `/orbit` 파이프라인 기반. 스킬은 사용할수록 진화하며, 세션 훅이 코드를 보호하고 결과를 다듬고 세션을 성찰합니다.
 
-**사용 시점:**
-- 반복적인 코드 리뷰, 커밋, 테스트 주기 자동화
-- 프로젝트별 맞춤형 워크플로우 정의
-- Claude 세션 전반에서 일관된 행동 규칙 적용
+**활용 시점:**
+- 반복적인 코드 리뷰, 커밋, 테스트 사이클 자동화
+- 프로젝트별 커스텀 워크플로우 정의
+- Claude 세션 전반의 일관된 동작 패턴 강제
 
 **주요 기능:**
-- `/orbit`을 포함한 8개의 내장 파워 커맨드
-- 자가 진화 스킬 시스템 — 사용 패턴을 학습하여 지속적 개선
-- 세션 가드 훅 — 실수 방지 및 품질 자동 유지
+- `/orbit`(완전 자율 파이프라인) 포함 8개 파워 커맨드
+- 자가 진화 스킬 시스템 — 사용 패턴에서 학습하며 지속 개선
+- 세션 가드 훅 — 실수를 방지하고 품질을 자동 유지
 
-→ [Source & Docs](https://github.com/epicsagas/epic-harness)
+→ [소스 & 문서](https://github.com/epicsagas/epic-harness)
 
 ---
 
@@ -192,19 +192,19 @@ cargo install byoh
 
 **토큰 최적화 문서 리더**
 
-Read 도구 호출 시 `.md`, `.html`, `.txt` 파일을 자동으로 압축하여 컨텍스트 토큰 사용량을 최대 40% 절감합니다. 워크플로우 변경 없이 즉시 적용됩니다.
+Read 도구 호출 시 `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 토큰 사용량을 최대 40% 절감합니다. 워크플로우 변경 없이 즉시 적용됩니다.
 
-**사용 시점:**
-- 대규모 문서나 사양서를 자주 참조하는 프로젝트
-- 컨텍스트 윈도우 한계에 자주 부딪힐 때
-- 장시간 세션에서 토큰 비용 절감
+**활용 시점:**
+- 대형 문서나 스펙을 자주 참조하는 프로젝트
+- 컨텍스트 윈도우 한도에 자주 걸리는 경우
+- 긴 세션의 토큰 비용 절감
 
 **주요 기능:**
-- 무음 압축 — 동일한 정보 전달, 최대 40% 토큰 절약
+- 무음 압축 — 동일한 출력, 최대 40% 적은 토큰
 - `.md` / `.html` / `.txt` 형식 자동 감지
-- 기존 Read 도구 워크플로우 완벽 호환
+- 기존 Read 도구 워크플로우와 완전 호환
 
-→ [Source & Docs](https://github.com/epicsagas/llm-transpile)
+→ [소스 & 문서](https://github.com/epicsagas/llm-transpile)
 
 ---
 
@@ -212,21 +212,21 @@ Read 도구 호출 시 `.md`, `.html`, `.txt` 파일을 자동으로 압축하�
 
 **MCP 문서 서버**
 
-MCP를 통해 AI 코딩 에이전트에게 비공개 프로젝트 문서에 대한 즉각적인 접근 권한을 제공합니다. BM25+벡터 하이브리드 검색, 시맨틱 린트, 문서 유효성 검사, 백그라운드 프록시 서버를 지원합니다.
+MCP를 통해 AI 코딩 에이전트에게 프라이빗 프로젝트 문서에 대한 온디맨드 접근을 제공합니다. BM25+벡터 하이브리드 검색, 시맨틱 린트, 문서 검증, 즉시 응답을 위한 프록시 모드 백그라운드 HTTP 서버.
 
-**사용 시점:**
-- 여러 AI 에이전트 간 비공개 프로젝트 문서 공유
-- MCP 호환 에이전트에서 아키텍처 결정(ADR), PRD, 런북 검색
-- 정책 검증 및 시맨틱 린트로 문서 품질 표준 유지
+**활용 시점:**
+- 여러 AI 에이전트에 걸친 프라이빗 프로젝트 문서 관리
+- 아키텍처 결정, PRD, 런북을 MCP 호환 에이전트에서 검색
+- 정책 검증과 시맨틱 린트로 문서 표준 강제
 
 **주요 기능:**
-- 하이브리드 검색 — Reciprocal Rank Fusion 기반 BM25 + 벡터 유사도
-- 단일 문서 저장소, 모든 에이전트 지원 — Claude Code, Cursor, Gemini CLI, Codex 등
-- 프록시 모드 백그라운드 서버 — 콜드 스타트 지연 제거
-- 시맨틱 린트 — 깨진 링크, 고립 파일, 오래된 주장 자동 탐지
-- macOS launchd 연동 — 라이프사이클 관리
+- 하이브리드 검색 — BM25 + 벡터 유사도, Reciprocal Rank Fusion
+- 하나의 문서 레포, 모든 에이전트 — Claude Code, Cursor, Gemini CLI, Codex 등 5종 이상
+- 프록시 모드 백그라운드 서버 — 신규 세션 콜드스타트 지연 제거
+- 시맨틱 린트 — 깨진 링크, 고아 파일, 스테일 마커, 만료된 날짜 표기
+- macOS launchd 통합 — enable/disable/start/stop/restart 라이프사이클 명령
 
-→ [Source & Docs](https://github.com/epicsagas/alcove)
+→ [소스 & 문서](https://github.com/epicsagas/alcove)
 
 ---
 
@@ -234,41 +234,20 @@ MCP를 통해 AI 코딩 에이전트에게 비공개 프로젝트 문서에 대�
 
 **AI 네이티브 퍼블리싱 시스템**
 
-소프트웨어 개발 방식으로 책을 집필합니다. 백지 상태에서 출판 가능한 EPUB/PDF까지 자율 멀티페이즈 워크플로우를 제공하며, 7개의 특화 에이전트가 구조, 초안, 일관성, 스타일, 표지 디자인, 마케팅을 전담합니다.
+소프트웨어처럼 책을 제작하세요. 백지에서 출판 가능한 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 7개 전문 에이전트가 구조, 드래프팅, 연속성, 스타일, 표지 디자인, 마케팅을 담당합니다.
 
-**사용 시점:**
-- 구조화된 긴 글 작성 (소설, 논픽션, 기술서, 학술 논문)
-- 전체 도서에 걸친 챕터 간 일관성 및 문체 유지
-- EPUB, PDF, MOBI, Markdown 출력
-
-**주요 기능:**
-- 6단계 파이프라인: 온보딩 ➔ 아이디에이션 ➔ 아웃라인 ➔ 집필 ➔ 교정 ➔ 출판
-- 7개 장르 템플릿 (소설, 비문학, 기술서, 각본, 시, 게임 시나리오, 학술)
-- AI 상투어(slop) 감지 기능을 갖춘 5단계 교정 파이프라인
-- Pandoc + Calibre 기반 멀티 포맷 출력
-
-→ [Source & Docs](https://github.com/epicsagas/Velith)
-
----
-
-### obscura-plugin
-
-**헤드리스 브라우저 MCP 도구**
-
-fetch, scrape, serve, screenshot, extract_markdown의 5개 MCP 도구를 통해 AI 에이전트에게 웹 접근 권한을 부여합니다. 첫 로드 시 바이너리가 자동 설치되므로 별도 설정이 필요 없습니다.
-
-**사용 시점:**
-- 웹페이지 조회, 데이터 스크래핑, JS 실행이 필요한 에이전트
-- 병렬 스크래핑을 통한 대량 URL 처리
-- Playwright/Puppeteer를 위한 CDP WebSocket 엔드포인트 제공
+**활용 시점:**
+- 구조화된 장문 콘텐츠 집필 (소설, 논픽션, 기술, 학술)
+- 책 전체의 챕터 간 일관성과 문체 유지
+- EPUB, PDF, MOBI, Markdown 출판
 
 **주요 기능:**
-- 무설정 자동 설치
-- `obscura-worker`를 통한 동시성 제어 스크래핑
-- Playwright/Puppeteer용 CDP WebSocket 서버 제공
-- 봇 감지 방지 및 트래커 차단 스텔스 모드
+- 6단계 파이프라인: 온보딩 → 아이디에이션 → 아웃라인 → 드래프팅 → 에디팅 → 퍼블리싱
+- 7개 장르 템플릿 (소설, 논픽션, 기술, 시나리오, 시, 게임, 학술)
+- AI-slop 탐지를 포함한 5단계 에디팅 파이프라인
+- Pandoc + Calibre를 통한 EPUB, PDF, MOBI, TXT, Markdown 출력
 
-→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
+→ [소스 & 문서](https://github.com/epicsagas/Velith)
 
 ---
 
@@ -276,19 +255,19 @@ fetch, scrape, serve, screenshot, extract_markdown의 5개 MCP 도구를 통해 
 
 **소프트웨어 엔지니어링 지식 그래프**
 
-디자인 패턴, 코드 스멜, 리팩토링, 아키텍처 원칙을 질의할 수 있는 지식 그래프입니다. AI 코드 분석을 통해 품질 이슈를 감지하고 검증된 공학 원칙에 기반한 개선안을 제시합니다.
+디자인 패턴, 코드 스멜, 리팩토링, 아키텍처 법칙의 쿼리 가능한 지식 그래프. AI 기반 코드 분석이 품질 이슈를 탐지하고 개선안을 제안하며, 모든 권고를 확립된 엔지니어링 원칙에 근거합니다.
 
-**사용 시점:**
-- 디자인 패턴 오용, 코드 스멜, 아키텍처 위반 검토
-- 트레이드오프 분석을 기반으로 리팩토링 전략 선택
-- 소프트웨어 공학 법칙(콘웨이, 암달, 갈의 법칙) 학습 및 적용
+**활용 시점:**
+- 디자인 패턴 오용, 코드 스멜, 아키텍처 위반 코드 리뷰
+- 원칙 기반 트레이드오프 분석으로 리팩토링 전략 선택
+- 소프트웨어 엔지니어링 법칙(Conway, Amdahl, Gall) 학습과 적용
 
 **주요 기능:**
-- 패턴, 스멜, 리팩토링, 법칙 간 그래프 탐색
-- 스멜 감지 및 우선순위 리팩토링 제안
-- 코드 리뷰어, 아키텍처 분석가 등 다중 에이전트 페르소나
+- 패턴, 스멜, 리팩토링, 법칙을 관통하는 그래프 순회 지식 그래프
+- 스멜 탐지와 랭킹된 리팩토링 제안을 포함한 AI 코드 분석
+- 다중 에이전트 페르소나 — 코드 리뷰어, 아키텍처 애널리스트, 엔지니어링 어드바이저
 
-→ [Source & Docs](https://github.com/epicsagas/Episteme)
+→ [소스 & 문서](https://github.com/epicsagas/Episteme)
 
 ---
 
@@ -296,118 +275,68 @@ fetch, scrape, serve, screenshot, extract_markdown의 5개 MCP 도구를 통해 
 
 **옵시디언 볼트 라이프사이클 관리**
 
-AI 에이전트가 옵시디언 볼트 작업을 스킬로 실행할 수 있도록 합니다. PARA 기반 AI 인박스 분류, 지식 그래프 강화(백링크, 브릿지 노트, 자동 태그), MOC 재생성, 태그/링크 복구, 완전한 동기화 주기를 지원합니다.
+AI 에이전트에게 스킬 기반 옵시디언 볼트 조작을 제공 — PARA 라우팅을 통한 AI 인박스 분류, 지식 그래프 강화(백링크, 브리지 노트, 자동 태그), MOC 재생성, 태그/링크/프론트매터 수리, 전체 동기화 사이클. 단일 Rust 바이너리, 다중 볼트, 무설정 시작.
 
-**사용 시점:**
-- AI 세션에서 옵시디언 볼트(Second Brain, Zettelkasten, PARA) 관리
-- AI 자동 분류 및 라우팅을 통한 인박스 정리
+**활용 시점:**
+- AI 에이전트 세션에서 옵시디언 볼트(세컨드 브레인, 젤텔카스텐, PARA) 관리
+- AI 분류와 자동 라우팅으로 인박스 노트 처리
 - 프로젝트와 개념 간 지식 그래프 연결 강화
 
 **주요 기능:**
-- 5대 에이전트 스킬: vault-health, vault-sync, graph-strengthen, inbox-process, vault-fix
-- 프론트매터 주입 및 PARA 라우팅 인박스 분류
-- 전/후 메트릭 보고를 통한 지식 그래프 강화
-- 다중 볼트 및 백그라운드 데몬(macOS) 지원
+- 5개 에이전트 스킬 — vault-health, vault-sync, graph-strengthen, inbox-process, vault-fix
+- 프론트매터 주입과 PARA 라우팅을 통한 AI 인박스 분류
+- 전/후 메트릭 리포트를 포함한 지식 그래프 강화
+- 공유 설정과 백그라운드 데몬(macOS)을 지원하는 다중 볼트
 
-→ [Source & Docs](https://github.com/epicsagas/obsidian-forge)
+→ [소스 & 문서](https://github.com/epicsagas/obsidian-forge)
 
 ---
 
 ### epicsagas
 
-**개인 에이전트 스킬 컬렉션**
+**개인 에이전트 스킬**
 
-개인 및 팀을 위한 선별된 에이전트 스킬 모음입니다. 문제 발견, 인지적 자기 분석, 오픈소스 릴리스 준비성을 평가합니다. 바이너리 없이 마크다운에서 직접 로드됩니다.
+개인 및 팀 사용을 위한 엄선된 에이전트 스킬 모음 — 문제 발견, 인지 자기 분석, 오픈소스 출시 준비성. 바이너리 불필요, 마크다운 파일에서 직접 로드.
 
-**사용 시점:**
-- 개발 전 진짜 문제 정의 (개인, 팀, 스타트업)
-- 대화 기록 분석을 통한 사고 패턴 및 인지 편향 감지
-- 커뮤니티, 리드미, 배포, 보안에 걸친 OSS 출시 준비성 감사
-
-**주요 기능:**
-- `discover` — 5 Whys, JTBD, Fishbone, 소크라테스식 질문, 가설 매핑
-- `cognitive-audit` — 증거 기반 편향 감지 및 10가지 실천 루틴
-- `oss-dist` — 커뮤니티 표준, 문서, 출시 전략, 보안 감사
-
-→ [Source & Docs](https://github.com/epicsagas/epicsagas)
-
----
-
-### research
-
-**학술 연구 어시스턴트**
-
-arXiv, Semantic Scholar, 로컬 PDF 논문을 인덱싱하고 지식 공백을 식별하며 문헌 리포트를 작성하는 장기 연구 메모리입니다. MCP 도구(`research serve`)를 통해 에이전트가 주도적으로 논문을 수집하고 분석합니다.
-
-**사용 시점:**
-- 특정 주제의 추천 읽기 목록 또는 문헌 검토 구축
-- 읽은 논문 추적 및 다음 읽을 논문 식별
-- 에이전트에게 논문 수집 및 종합 위임
+**활용 시점:**
+- 빌드 전에 진짜 문제를 발견하고 정의하기 (개인, 팀, 스타트업)
+- 대화 이력에서 자신의 사고 패턴과 인지 편향 분석
+- 커뮤니티, README, 배포, 보안에 걸친 오픈소스 출시 준비성 감사
 
 **주요 기능:**
-- 11개 MCP 도구: init, ingest, query_papers, analyze_gaps, generate_report 등
-- 적응형 디스패치 — MCP 기본 인터페이스, CLI 폴백
-- 로컬 SQLite (FTS5) 인덱스 + LLM 연동
+- `discover` — 5 Whys, JTBD, Fishbone, 소크라테스식 질문, 가정 매핑
+- `cognitive-audit` — 근거 기반 편향 탐지, 의사결정 분석, 실행 가능한 루틴 10종
+- `oss-dist` — 커뮤니티 표준, README, 런칭 전략, i18n, 보안을 포함한 전체 출시 라이프사이클
 
-→ [Source & Docs](https://github.com/epicsagas/research-agent)
-
----
-
-### byoh
-
-**BuildYourOwnHarness**
-
-인터뷰를 통해 맞춤형 AI 에이전트 하니스를 생성합니다. 암묵지, 데이터 소스, 장르, 목표를 수집하여 고유한 하니스를 컴파일, 배포, 진화시킵니다. 3대 안전 게이트(Critic / Seesaw / Stagnation)로 보호됩니다.
-
-**사용 시점:**
-- 도메인과 워크플로우에 특화된 커스텀 에이전트 하니스 구축
-- A/B 증거와 롤백을 통한 안전한 스킬 진화
-- MCP 도구를 통한 프로필 ➔ 컴파일 ➔ 진화 전체 제어
-
-**주요 기능:**
-- 14개 MCP 도구 제공
-- 에이전트 주도 모드 (`byoh serve`)
-- 외부 문서 서버([alcove](https://github.com/epicsagas/alcove)) 연동 지원
-
-→ [Source & Docs](https://github.com/epicsagas/BuildYourOwnHarness)
+→ [소스 & 문서](https://github.com/epicsagas/epicsagas)
 
 ---
 
 ### kanban-dev-lane
 
-**Hermes Kanban 자율 멀티 엔진 구현 레인**
+**Hermes Kanban용 자율 멀티 엔진 구현 레인**
 
-Hermes Kanban 워커의 구현 및 리팩토링 작업을 격리된 Git 워크트리에 위임하며, 외부 공급자의 쿼터/속도 제한 발생 시 자동 **3단계 폴백 체인**(`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`)으로 무중단 개발을 보장합니다.
+Hermes Kanban 워커의 경계가 지정된 구현·리팩토링 작업을 격리된 Git 워크트리에 위임하고, 자동 **3단계 폴백 체인**(`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`)으로 외부 제공자 쿼터/레이트리밋 도달에도 진행을 지속합니다.
 
 **주요 기능:**
-- 429 및 쿼터 소진 자동 감지 및 무중단 엔진 전환
-- 격리된 Git 워크트리 생명주기 관리
-- Hermes 워커의 엄격한 칸반 상태 관리, Diff 검증, 테스트 재실행
+- 429 및 쿼터 소진 자동 감지, 무중단 폴백
+- 격리된 Git 워크트리 라이프사이클 관리
+- Hermes가 Kanban 상태, diff 조정, 회귀 테스트의 엄격한 소유권 유지
 - 내장 CLI 러너: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
-→ [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
-### site-harvester
-
-**로그인 필요 콘텐츠 수집기**
-
-회원제 사이트를 로컬 재개 가능 데이터 파이프라인으로 바꿉니다. SPA의 숨은 JSON API를 리콘하고, 실제 브라우저 로그인 한 번으로 본인 OAuth 토큰을 얻은 뒤, 평범한 API 호출로 전부 수집합니다 — 사람 속도(30–120초), 크래시 후에도 이어서, 신규 콘텐츠는 cron으로. 법률 가드레일이 내장되어 있습니다.
-
-**주요 기능:**
-- 사이트 JS 번들에서 숨은 API 리콘 — 수집 중 페이지 로드 없음
-- 아이템 단위 재개 상태, flock 중복 실행 방지, 수집 기간 만료 자동 종료
-- 설계부터 가드레일: 약관 확인 게이트, 속도 하한, 차단 시 정지, 공개 리포 커밋 거부 — CAPTCHA 우회·안티봇 회피·IP 로테이션·결제벽 우회 없음
-- 원본 API JSON을 커밋된 원천 데이터로, 노트와 localhost 전용 사이트는 여기서 파생
-
-→ [Source & Docs](https://github.com/epicsagas/site-harvester)
+→ [소스 & 문서](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
 
 ---
 
 ## 기여하기
 
-1. 본 저장소를 Fork합니다.
-2. `.claude-plugin/marketplace.json` 및 `.agents/plugins/marketplace.json`에 플러그인 항목을 추가합니다.
-3. Pull Request를 생성합니다.
+플러그인을 제출하거나 개선을 제안하려면:
+
+1. 이 레포지토리를 포크합니다
+2. `.claude-plugin/marketplace.json`과 `.agents/plugins/marketplace.json`에 플러그인 엔트리를 추가합니다
+3. Pull Request를 엽니다
+
+플러그인은 독립적인 GitHub 레포지토리로 유지보수됩니다. 이 마켓플레이스는 메타데이터만 담습니다.
 
 ---
 

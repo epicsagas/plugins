@@ -57,19 +57,6 @@
       "category": "Publishing"
     },
     {
-      "name": "obscura-plugin",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/obscura-plugin.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Web Automation"
-    },
-    {
       "name": "episteme",
       "source": {
         "source": "url",
@@ -109,71 +96,6 @@
       "category": "Skills"
     },
     {
-      "name": "research",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/research-agent.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research"
-    },
-    {
-      "name": "byoh",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/BuildYourOwnHarness.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Harness"
-    },
-    {
-      "name": "toefl-prep",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/toefl-prep.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Education"
-    },
-    {
-      "name": "plugin-forge",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/plugin-forge.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "agent-glance",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/AgentGlance.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
       "name": "kanban-dev-lane",
       "source": {
         "source": "url",
@@ -185,53 +107,6 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Autonomous Agents"
-    },
-    {
-      "name": "site-harvester",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/site-harvester.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "upbit-investor",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/upbit-invester.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "tech-event-scout",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/tech-event-scout.git"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "toss-investor",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/toss-invester.git"
-      },
-      "pluginManifest": "./.codex-plugin/plugin.json",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
     }
   ]
 }

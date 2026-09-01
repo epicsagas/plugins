@@ -19,23 +19,18 @@
 
 ## Plugins
 
+The hub carries the core epiccounty lineup. Everything else lives in its own repository with a same-named standalone marketplace (see [Individualized plugins](#individualized-plugins)).
+
 | Plugin | Description | Source |
 |--------|-------------|--------|
 | [epic-harness](#epic-harness) | Autonomous agent harness — 8 commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | Token-optimized document reader — silently compresses `.md`, `.html`, and `.txt` files on Read, cutting context usage by up to 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
 | [velith](#velith) | AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
-| [obscura-plugin](#obscura-plugin) | Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load. | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) |
 | [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [research](#research) | Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (`research serve`). | [epicsagas/research-agent](https://github.com/epicsagas/research-agent) |
-| [byoh](#byoh) | BuildYourOwnHarness — collect a user's tacit knowledge and goals via interview, then compile, deploy, and evolve a personalized AI agent harness. | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) |
 | [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
-| [site-harvester](#site-harvester) | Login-walled content harvester — find the site's hidden JSON API, use your own subscription token, collect everything human-paced into a private local vault. | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) |
-| [upbit-investor](#upbit-investor) | Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution. | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) |
-| [toss-investor](#toss-investor) | KRX stock investment analyst — same 8-stage bull/bear debate architecture as upbit-investor, with investor-flow/short-selling evidence, KRX tick and price-limit rules, via the Toss Securities Open API. | [epicsagas/toss-invester](https://github.com/epicsagas/toss-invester) |
-| [tech-event-scout](#tech-event-scout) | AI/tech event intelligence — stdlib-only aggregator collects 9 sources deterministically (COEX/KINTEX/BEXCO, AWS, Luma, Korean community feeds); LLM reads a compact summary and reports. | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) |
 
 ---
 
@@ -51,15 +46,10 @@ claude plugin install epic-harness@epicsagas
 claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
-claude plugin install obscura-plugin@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install research@epicsagas
-claude plugin install byoh@epicsagas
-claude plugin install site-harvester@epicsagas
-claude plugin install upbit-investor@epicsagas
-claude plugin install toss-investor@epicsagas
+claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -72,7 +62,7 @@ All plugins are available immediately — no further steps needed.
 
 ### Hermes Agent
 
-One command installs the full epiccounty suite — 6 plugins, 24 tools:
+One command installs the epiccounty suite — 6 plugins, 32 tools:
 
 ```bash
 hermes plugins install epicsagas/plugins --enable
@@ -87,7 +77,6 @@ hermes plugins enable episteme
 hermes plugins enable epic-harness
 hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
-hermes plugins enable obscura
 hermes plugins enable kanban-dev-lane
 ```
 
@@ -99,7 +88,6 @@ brew install epicsagas/tap/episteme        # episteme plugin (also needs `epis s
 brew install epicsagas/tap/epic-harness    # epic-harness plugin
 brew install epicsagas/tap/llm-transpile   # llm-transpile plugin
 brew install epicsagas/tap/obsidian-forge  # obsidian-forge plugin
-brew install epicsagas/tap/obscura         # obscura plugin
 ```
 
 **Quick start — install everything at once:**
@@ -137,14 +125,6 @@ cargo binstall alcove
 cargo install alcove
 ```
 
-### obscura
-
-```bash
-brew install epicsagas/tap/obscura-plugin
-cargo binstall obscura-plugin
-cargo install obscura-plugin
-```
-
 ### episteme
 
 ```bash
@@ -161,21 +141,28 @@ cargo binstall obsidian-forge
 cargo install obsidian-forge
 ```
 
-### research
+---
+
+## Individualized plugins
+
+These plugins moved out of the hub. Each repository ships its own marketplace named after the plugin itself, so it installs standalone:
 
 ```bash
-brew install epicsagas/tap/research-agent
-cargo binstall research-agent
-cargo install research-agent
+claude plugin marketplace add epicsagas/<repo>
+claude plugin install <plugin>@<plugin>
 ```
 
-### byoh
-
-```bash
-brew install epicsagas/tap/byoh
-cargo binstall byoh
-cargo install byoh
-```
+| Plugin | Repository | What it does |
+|--------|------------|--------------|
+| obscura-plugin | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) | Headless browser as MCP tools — fetch, scrape, extract markdown, JS evals. |
+| byoh | [epicsagas/BuildYourOwnHarness](https://github.com/epicsagas/BuildYourOwnHarness) | Interview → compile → evolve a personalized AI agent harness. |
+| plugin-forge | [epicsagas/plugin-forge](https://github.com/epicsagas/plugin-forge) | Multi-host plugin manager — scaffold, doctor, install-validate, publish. |
+| agent-glance | [epicsagas/AgentGlance](https://github.com/epicsagas/AgentGlance) | GeekMagic SmallTV as a live agent status display. |
+| site-harvester | [epicsagas/site-harvester](https://github.com/epicsagas/site-harvester) | Login-walled content harvester — hidden-API recon, human-paced collection. |
+| upbit-investor | [epicsagas/upbit-invester](https://github.com/epicsagas/upbit-invester) | Upbit coin investment analyst — bull/bear debate pipeline with risk gates. |
+| toss-investor | [epicsagas/toss-invester](https://github.com/epicsagas/toss-invester) | KRX stock investment analyst — same bull/bear debate architecture with investor-flow/short-selling evidence and KRX rules, via the Toss Securities Open API. |
+| tech-event-scout | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) | AI/tech event intelligence — deterministic 9-source aggregator. |
+| toefl-prep | [epicsagas/toefl-prep](https://github.com/epicsagas/toefl-prep) | Offline TOEFL iBT grading across all 4 sections with a local LLM. |
 
 ---
 
@@ -264,27 +251,6 @@ Build books like software. Autonomous multi-phase workflows from blank page to p
 
 ---
 
-### obscura-plugin
-
-**Headless Browser as MCP Tools**
-
-Gives AI agents direct access to the web via five MCP tools: fetch, scrape, serve, screenshot, and extract markdown. Auto-installs `obscura` and `obscura-worker` binaries on first load — no manual setup.
-
-**When to use:**
-- Agents that need to read web pages, scrape data, or run JS evals
-- Batch URL processing with parallel scraping
-- Providing a CDP WebSocket endpoint for Playwright/Puppeteer
-
-**Key features:**
-- Zero config — plugin auto-installs all required binaries
-- `obscura_scrape` with configurable concurrency via `obscura-worker`
-- `obscura_serve` exposes a CDP WebSocket server for Playwright/Puppeteer
-- Stealth mode for anti-detection + tracker blocking
-
-→ [Source & Docs](https://github.com/epicsagas/obscura-plugin)
-
----
-
 ### episteme
 
 **Software Engineering Knowledge Graph**
@@ -346,44 +312,6 @@ A curated set of agent skills for personal and team use — problem discovery, c
 
 ---
 
-### research
-
-**Personal Academic Research Assistant**
-
-A long-term research memory that indexes papers from arXiv, Semantic Scholar, and local PDFs, identifies knowledge gaps, and generates literature reports. Driven by an LLM agent via MCP tools (`research serve`) — the agent ingests, searches, analyzes gaps, and writes reports while you stay in the conversation.
-
-**When to use:**
-- Building a reading list or literature review on a topic
-- Tracking what you've read, what's missing, and what to read next
-- Letting an agent ingest and synthesize papers while you direct the research
-
-**Key features:**
-- 11 MCP tools: init · ingest · query_papers · analyze_gaps · list_gaps · generate_report · topics_list · topic_add · state · update_read · index_rebuild
-- Adaptive dispatch — MCP is the primary interface for agent hosts, CLI is the fallback for terminals/CI
-- Local SQLite index (FTS5) + real LLM via `~/.research/config.toml` `[llm]`
-
-→ [Source & Docs](https://github.com/epicsagas/research-agent)
-
----
-
-### byoh
-
-**BuildYourOwnHarness**
-
-Generate a personalized AI agent harness from an interview. BYOH interactively collects your tacit knowledge, data sources, genre, and goals, then compiles, deploys, and evolves a unique harness — not a fixed template. The whole pipeline is gated by three safety gates (Critic / Seesaw / Stagnation) that can never be bypassed.
-
-**When to use:**
-- Bootstrapping a custom agent harness tuned to your domain and workflow
-- Evolving skills safely with measurable A/B evidence and rollback
-- Driving the whole profile → compile → evolve flow from an LLM agent via MCP tools
-
-**Key features:**
-- 14 MCP tools: profile_create/scan/interview/confirm/read · compile · compile_dry_run · evolve_cycle · genre_list · registry_clone_skill · render_plugin · install_plugin · catalog_search · catalog_vendor
-- Agent-driven mode (`byoh serve`) — control inversion, CLI is secondary
-- No embedded knowledge base — point the generated harness at a doc server like [alcove](https://github.com/epicsagas/alcove) for retrieval
-
-→ [Source & Docs](https://github.com/epicsagas/BuildYourOwnHarness)
-
 ### kanban-dev-lane
 
 **Autonomous Multi-Engine Implementation Lane for Hermes Kanban**
@@ -397,66 +325,6 @@ Delegates bounded implementation and refactoring tasks from a Hermes Kanban work
 - Bundled CLI runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
 
 → [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
-### site-harvester
-
-**Login-Walled Content Harvester**
-
-Turns a membership site into a local, resumable data pipeline: recon the SPA's hidden JSON API, harvest your own OAuth token once via a real browser login, then collect everything through plain API calls — human-paced (30–120s), resumable after any crash, cron-scheduled for new content. Legal guardrails are built in.
-
-**Key features:**
-- Hidden-API recon from the site's JS bundle — no page loads during collection
-- Per-item resume state, flock-guarded runs, collection-window auto-expiry
-- Guardrails by design: terms-of-service check, pacing floor, block-and-stop handling, public-repo commit refusal; no CAPTCHA solving, no anti-bot evasion, no IP rotation, no paywall bypass
-- Raw API JSON as the committed source of truth; notes and localhost-only sites derive from it
-
-→ [Source & Docs](https://github.com/epicsagas/site-harvester)
-
-### upbit-investor
-
-**Upbit Coin Investment Analyst**
-
-One sentence — "Analyze KRW-BTC" — runs an 8-stage role-separated pipeline: snapshot (candles, orderbook, indicators, news, past decisions), market analyst, a two-round bull/bear debate, a research-manager verdict, 6-gate risk checks with position sizing, a portfolio-manager final call that recalls its own past decisions, and a trader proposal. Orders never fire automatically; every execution passes a user-confirmation gate, and withdrawals are not supported at all.
-
-**Key features:**
-- 7 skills (analysis, market data, indicators, screening, backtest, portfolio, trade) and 7 sub-agents, packaged for Claude Code, Codex, Antigravity, and Hermes Agent
-- Stdlib-only Python scripts — Upbit REST wrapper, indicator engine (RSI/MACD/Bollinger/ATR/ADX/Williams/CCI), crix-ZIP full-history loader, screener, fee-aware backtester
-- Decision journal with recall: every verdict is remembered and re-checked for consistency on the next analysis
-- Risk gates: single-coin weight, total exposure, overheat block, order rate, daily-loss kill switch (hard)
-
-→ [Source & Docs](https://github.com/epicsagas/upbit-invester)
-
-### toss-investor
-
-**KRX Stock Investment Analyst**
-
-The Korean-equity sibling of upbit-investor: "Analyze Samsung Electronics" runs the same 8-stage role-separated pipeline — snapshot, market analyst, two-round bull/bear debate, research-manager 5-tier verdict, 6-gate risk checks with position sizing, portfolio-manager final call with past-decision recall, and a trader proposal. Every debate claim must cite a snapshot number, including investor net-buy flows and short-selling ratios; KRX specifics (tick-size snapping, ±30% price limits, warning/VI blocks, integer shares) are handled automatically. Orders never fire automatically — user confirmation gate, daily-loss kill switch.
-
-**Key features:**
-- 7 skills (analyze, market data, indicators, screening, backtest, portfolio, trade) and 7 sub-agents, packaged for Claude Code, Codex, Antigravity, and Hermes Agent
-- Stdlib-only Python scripts — Toss Open API wrapper (OAuth2, token cache, read-only and order subcommands), indicator engine, rankings-based screener, fee-aware backtester
-- KRX-native risk: investor-flow/short-selling evidence, tick/price-limit validation, 투자유의/VI warning block, ≥100M KRW high-value reconfirmation
-- Decision journal with recall at ~/.toss-investor/decisions.jsonl — flags momentum-chasing and concentration patterns
-
-→ [Source & Docs](https://github.com/epicsagas/toss-invester)
-
----
-
-### tech-event-scout
-
-AI/tech event intelligence with a code-first architecture: a Python-stdlib aggregator
-deterministically collects and filters 9 sources — COEX/KINTEX/BEXCO venue calendars
-(date queries + pagination), AWS Summits, SLEXN, Dev-Event, onoffmix, and Luma Seoul —
-then the LLM reads a compact summary (~3k tokens) and synthesizes the report. JS-only
-sources are emitted as WebFetch stubs. ~90% fewer input tokens than search-based scouting;
-investigation tool cost ≈ $0.05 per run.
-
-**Key features:**
-- Declarative source registry → one adapter pipeline (fetch/parse/filter/dedupe); adding a source is one dict entry
-- Date-window and keyword filters in code, with venue-specific query params (KINTEX `searchStartDt`, BEXCO `schStartDate`, COEX date range + `var_page`)
-- Multi-host: Claude Code, Codex, agy, hermes
-
-→ [Source & Docs](https://github.com/epicsagas/tech-event-scout)
 
 ---
 

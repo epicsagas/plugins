@@ -42,14 +42,6 @@
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
     },
     {
-      "name": "obscura-plugin",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/obscura-plugin.git"
-      },
-      "description": "Headless browser as MCP tools — fetch, scrape, extract markdown, and run JS evals. Zero config, auto-installs binaries on first load."
-    },
-    {
       "name": "episteme",
       "source": {
         "source": "url",
@@ -74,92 +66,12 @@
       "description": "Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness."
     },
     {
-      "name": "research",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/research-agent.git"
-      },
-      "description": "Personal academic research assistant — ingest arXiv/Semantic-Scholar/PDF papers, run LLM gap analysis and reports, all driven by an LLM agent via MCP tools (research serve)."
-    },
-    {
-      "name": "byoh",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/BuildYourOwnHarness.git"
-      },
-      "description": "BuildYourOwnHarness — build, deploy, and evolve a personalized AI agent harness from an interview. Synthesis recombines vetted skills/agents under 3 safety gates."
-    },
-    {
-      "name": "toefl-prep",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/toefl-prep.git"
-      },
-      "description": "TOEFL iBT study plugin — fully offline grading of all 4 sections (Reading/Listening/Speaking/Writing) with a local LLM (Ollama) + whisper.cpp. Customizable schedule, 10-language README. Claude Code · Codex · agy."
-    },
-    {
-      "name": "plugin-forge",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/plugin-forge.git"
-      },
-      "description": "Multi-host plugin manager — scaffold, doctor, install-validate, publish Claude Code / Codex / agy plugins."
-    },
-    {
-      "name": "agent-glance",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/AgentGlance.git"
-      },
-      "description": "Turn a GeekMagic SmallTV into a live agent status display — working/approval/done plus model, context usage, and token counts, pushed over WiFi. Claude Code, Codex, and agy."
-    },
-    {
-      "name": "design-isms",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/design-isms.git"
-      },
-      "description": "TEST for lidge-jun/design-isms before merging. 35 design -isms visual reference board with AI mockups, live examples, prompts, and component-level dev notes."
-    },
-    {
       "name": "kanban-dev-lane",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/plugins.git"
       },
       "description": "Hermes Kanban worker multi-engine implementation lane with automatic fallback across Claudy -> Codex (--yolo) -> AGYD (agy --dangerously-skip-permissions) -> Hermes direct on quota exhaustion."
-    },
-    {
-      "name": "site-harvester",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/site-harvester.git"
-      },
-      "description": "Authenticated website content harvester: recon an SPA's hidden API, harvest OAuth tokens via Playwright, then collect all content human-paced, resumable, cron-scheduled"
-    },
-    {
-      "name": "upbit-investor",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/upbit-invester.git"
-      },
-      "description": "Upbit coin investment analyst — multi-agent bull/bear debate pipeline with 6-gate risk checks, screening, backtesting, and confirmation-gated order execution"
-    },
-    {
-      "name": "tech-event-scout",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/tech-event-scout.git"
-      },
-      "description": "AI/tech event intelligence — a stdlib-only aggregator deterministically collects 9 sources (COEX/KINTEX/BEXCO calendars, AWS, Luma, Korean community feeds); the LLM reads a compact summary and reports. ~90% fewer tokens than search-based scouting."
-    },
-    {
-      "name": "toss-investor",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/toss-invester.git"
-      },
-      "description": "KRX stock investment analyst — multi-agent bull/bear debate pipeline with investor-flow and short-selling evidence, 6-gate risk checks, KRX tick/price-limit rules, and confirmation-gated order execution"
     }
   ]
 }
