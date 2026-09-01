@@ -42,7 +42,7 @@ Register this marketplace once, then install any plugin:
 
 ```bash
 claude plugin marketplace add epicsagas/plugins
-claude plugin install epic-harness@epicsagas
+claude plugin install epic@epicsagas
 claude plugin install llm-transpile@epicsagas
 claude plugin install alcove@epicsagas
 claude plugin install velith@epicsagas
