@@ -30,7 +30,6 @@ El hub lleva solo el lineup central de epiccounty. El resto vive en su propio re
 | [episteme](#episteme) | Grafo de conocimiento de ingeniería de software — patrones, code smells, refactorings y análisis arquitectónico con revisión de código por IA. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Gestión del ciclo de vida de bóvedas Obsidian — clasificación de bandeja con IA, refuerzo del grafo, regeneración de MOCs y sincronización multibóveda. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Colección de habilidades de agente personales — descubrimiento de problemas (5 Whys, JTBD, Fishbone), introspección y preparación para publicar OSS. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [kanban-dev-lane](#kanban-dev-lane) | Carril de implementación multimotor autónomo — delega código en worktrees aislados con conmutación automática (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -49,7 +48,6 @@ claude plugin install velith@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -79,6 +77,8 @@ hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable kanban-dev-lane
 ```
+
+> `kanban-dev-lane` es exclusivo de Hermes — incluido en `.hermes/` de este repo, no se publica en los marketplaces de Claude/Codex.
 
 **Requisitos previos:** Cada plugin envuelve un binario CLI de Rust. Instala los que necesites:
 

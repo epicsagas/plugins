@@ -30,7 +30,6 @@ The hub carries the core epiccounty lineup. Everything else lives in its own rep
 | [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [kanban-dev-lane](#kanban-dev-lane) | Autonomous multi-engine implementation lane — delegates coding work into isolated git worktrees with automatic failover (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -49,7 +48,6 @@ claude plugin install velith@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -79,6 +77,8 @@ hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable kanban-dev-lane
 ```
+
+> `kanban-dev-lane` is Hermes-only — bundled in `.hermes/` in this repo, not published to the Claude/Codex marketplaces.
 
 **Prerequisites:** Each plugin wraps a Rust CLI binary. Install the ones you need:
 
@@ -312,21 +312,6 @@ A curated set of agent skills for personal and team use — problem discovery, c
 
 ---
 
-### kanban-dev-lane
-
-**Autonomous Multi-Engine Implementation Lane for Hermes Kanban**
-
-Delegates bounded implementation and refactoring tasks from a Hermes Kanban worker into an isolated git worktree with an automated **3-tier failover chain** (`Claudy` ➔ `Codex --yolo` ➔ `AGYD` ➔ `Hermes Direct`), ensuring continuous progress even when external provider quotas/rate-limits are reached.
-
-**Key features:**
-- Automatic 429 & quota exhaustion detection with zero-downtime failover
-- Isolated git worktree lifecycle management
-- Hermes keeps strict ownership of Kanban state, diff reconciliation, and regression testing
-- Bundled CLI runner: `python3 .hermes/kanban-dev-lane/scripts/lane_runner.py`
-
-→ [Source & Docs](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane)
-
----
 
 ## Contributing
 

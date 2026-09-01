@@ -30,7 +30,6 @@
 | [episteme](#episteme) | ソフトウェアエンジニアリングナレッジグラフ — デザインパターン、コードスメル、リファクタリング、アーキテクチャ原則とAIコードレビュー。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidianボールトライフサイクル管理 — AIインボックス分類、ナレッジグラフ強化、MOC再生成、マルチボールト同期スキル。 | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 個人エージェントスキルコレクション — 問題発見(5 Whys, JTBD, Fishbone)、認知自己分析、OSS公開準備チェック。 | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [kanban-dev-lane](#kanban-dev-lane) | 自律マルチエンジン実装レーン — 分離されたGitワークツリーで自動フェイルオーバー(Claudy ➔ Codex ➔ AGYD)によりコーディングを委譲。 | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -49,7 +48,6 @@ claude plugin install velith@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -79,6 +77,8 @@ hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable kanban-dev-lane
 ```
+
+> `kanban-dev-lane` は Hermes 専用 — このリポジトリの `.hermes/` にバンドルされ、Claude/Codex のマーケットプレイスには登録されません。
 
 **前提条件:** 各プラグインはRust CLIバイナリをラップします。必要なものだけインストールしてください:
 

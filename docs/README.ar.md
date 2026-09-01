@@ -30,7 +30,6 @@
 | [episteme](#episteme) | شبكة معرفية لهندسة البرمجيات — أنماط تصميم وروائح كود وإعادة هيكلة وتحليل معماري مع مراجعة كود بالذكاء الاصطناعي. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | إدارة دورة حياة خزنات Obsidian — تصنيف صادر بالذكاء الاصطناعي وتقوية الشبكة وتجديد MOC ومزامنة متعددة الخزنات كمهارات وكيل. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | مجموعة مهارات وكيل شخصية — اكتشاف المشكلات (5 Whys, JTBD, Fishbone) وتحليل ذاتي معرفي وجاهزية نشر OSS. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [kanban-dev-lane](#kanban-dev-lane) | مسار تنفيذ متعدد المحركات مستقل — يفوّض البرمجة إلى git worktree معزول مع تجاوز تلقائي للأعطال (Claudy ➔ Codex ➔ AGYD). | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -49,7 +48,6 @@ claude plugin install velith@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -79,6 +77,8 @@ hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable kanban-dev-lane
 ```
+
+> `kanban-dev-lane` حصري لـ Hermes — مضمّن في `.hermes/` بهذا المستودع ولا يُنشر في أسواق Claude/Codex.
 
 **المتطلبات المسبقة:** كل إضافة تغلّف ثنائي CLI بلغة Rust. ثبّت ما تحتاجه فقط:
 

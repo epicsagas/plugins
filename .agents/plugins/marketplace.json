@@ -94,19 +94,6 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Skills"
-    },
-    {
-      "name": "kanban-dev-lane",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/plugins.git"
-      },
-      "pluginManifest": "./.hermes/kanban-dev-lane/plugin.yaml",
-      "policy": {
-        "installation": "INSTALLED_BY_DEFAULT",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Autonomous Agents"
     }
   ]
 }

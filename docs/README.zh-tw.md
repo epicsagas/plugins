@@ -30,7 +30,6 @@
 | [episteme](#episteme) | 軟體工程知識圖譜 — 設計模式、程式碼壞味道、重構與架構法則,搭配 AI 程式碼審查。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian 庫生命週期管理 — AI 收件匣分類、圖譜強化、MOC 再生、多庫同步技能。 | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 個人智能體技能集 — 問題發現(5 Whys、JTBD、Fishbone)、認知自我分析、OSS 發布就緒檢查。 | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
-| [kanban-dev-lane](#kanban-dev-lane) | 自主多引擎實作通道 — 在隔離的 git worktree 中以自動故障轉移(Claudy ➔ Codex ➔ AGYD)委派編碼。 | [epicsagas/plugins/.hermes/kanban-dev-lane](https://github.com/epicsagas/plugins/tree/main/.hermes/kanban-dev-lane) |
 
 ---
 
@@ -49,7 +48,6 @@ claude plugin install velith@epicsagas
 claude plugin install episteme@epicsagas
 claude plugin install obsidian-forge@epicsagas
 claude plugin install epicsagas@epicsagas
-claude plugin install kanban-dev-lane@epicsagas
 ```
 
 ### Codex CLI
@@ -79,6 +77,8 @@ hermes plugins enable llm-transpile
 hermes plugins enable obsidian-forge
 hermes plugins enable kanban-dev-lane
 ```
+
+> `kanban-dev-lane` 為 Hermes 專用 — 打包在本儲存庫 `.hermes/` 中,不發布到 Claude/Codex 市集。
 
 **前置需求:** 每個外掛包裝一個 Rust CLI 二進位檔。按需安裝:
 
