@@ -39,7 +39,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git",
-        "sha": "561e20644834971bb3a1f5b4579747ee3d5fe355"
+        "sha": "2bf252712dbe56cf704917fb443181e6b8598586"
       },
       "homepage": "https://github.com/epicsagas/epic-harness",
       "keywords": [
