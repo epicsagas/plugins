@@ -1,5 +1,5 @@
 {
-  "name": "plugins",
+  "name": "epicsagas-plugins",
   "description": "epicsagas multi-host plugin marketplace (claude, codex, grok)",
   "owner": {
     "name": "epicsagas"
