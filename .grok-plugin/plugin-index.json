@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "plugins": {
+    "velith": {
+      "sha": "918bf4fc29d89b5e18a895f522e7407672a23be2",
+      "version": "0.6.0",
+      "components": {
+        "skills": [
+          {
+            "name": "book-academic",
+            "description": "Academic writing patterns — IMRAD structure, literature review, argument chains, citation practices…"
+          },
+          {
+            "name": "book-draft",
+            "description": "Phase 3: Drafting. Plan-Then-Execute chapter generation with parallel writing and continuity valida…"
+          },
+          {
+            "name": "book-edit",
+            "description": "Phase 4: Editing. 5-stage pipeline — editorial assessment, developmental edit, line edit, copy edit…"
+          },
+          {
+            "name": "book-fiction",
+            "description": "Fiction-specific patterns — Save the Cat! 15-beat, Snowflake Method, Hero's Journey, character bibl…"
+          },
+          {
+            "name": "book-game",
+            "description": "Game scenario patterns — quest/event trees, branching dialogue, world-building, character arcs acro…"
+          },
+          {
+            "name": "book-genre-creator",
+            "description": "Meta-skill that references all available genres, agents, and skills to help users define and create…"
+          },
+          {
+            "name": "book-ideation",
+            "description": "Phase 1: Ideation. Concept validation, market gap analysis, competitive matrix, final concept selec…"
+          },
+          {
+            "name": "book-illustrate",
+            "description": "Generate interior illustrations for book chapters. Analyzes scenes, creates style-consistent illust…"
+          },
+          {
+            "name": "book-init",
+            "description": "Phase 0: Onboarding. Initialize new book project — define genre, audience, language, scope, generat…"
+          },
+          {
+            "name": "book-nonfiction",
+            "description": "Non-fiction patterns — problem-solution structure, learner personas, evidence hierarchy, argument s…"
+          },
+          {
+            "name": "book-outline",
+            "description": "Phase 2: Outlining. Apply genre-specific structures, generate per-chapter specs, cross-reference ma…"
+          },
+          {
+            "name": "book-poetry",
+            "description": "Poetry patterns — form types (sonnet/haiku/free verse), stanza structure, meter/rhythm, imagery sys…"
+          },
+          {
+            "name": "book-publish",
+            "description": "Phase 5: Publishing. Convert to EPUB/PDF/MOBI/TXT/Markdown, cover design, metadata, title candidate…"
+          },
+          {
+            "name": "book-screenplay",
+            "description": "Screenplay patterns — 3-act film structure, sequence method, scene/cut formatting, dialogue rules, …"
+          },
+          {
+            "name": "book-status",
+            "description": "Book project status and progress dashboard. Writes status.json for the web UI."
+          },
+          {
+            "name": "book-technical",
+            "description": "Technical book patterns — concept progression gradient, code block rules, diagrams, API reference f…"
+          },
+          {
+            "name": "loom",
+            "description": "AI-native publishing system: autonomous multi-phase workflows from ideation to export. Fiction, non…"
+          }
+        ],
+        "agents": [
+          {
+            "name": "book-architect",
+            "description": "Book structure validation, outline generation, concept flow and inter-chapter dependency analysis. …"
+          },
+          {
+            "name": "chapter-writer",
+            "description": "Per-chapter draft generation. Writes from outline spec + style guide + sources with self-QA."
+          },
+          {
+            "name": "continuity-editor",
+            "description": "Cross-chapter consistency checker. Validates terminology, references, characters, timelines, prereq…"
+          },
+          {
+            "name": "cover-designer",
+            "description": "Book cover design. Analyzes genre/audience/title → 3-5 concepts with image generation prompts. Supp…"
+          },
+          {
+            "name": "illustrator",
+            "description": "Scene-level illustration generation. Decomposes chapters into key visual scenes, generates style-co…"
+          },
+          {
+            "name": "marketing-expert",
+            "description": "Book marketing strategy. Reader personas, channel strategy, 12-week calendar, launch campaign. Phas…"
+          },
+          {
+            "name": "scene-generator",
+            "description": "Scene-level generation. Decomposes chapter outline + character bible into GMC+RDD scenes. Fiction o…"
+          },
+          {
+            "name": "style-doctor",
+            "description": "Style consistency agent. Detects AI-slop patterns, style drift, tone violations, prohibited pattern…"
+          }
+        ]
+      }
+    },
+    "epic": {
+      "sha": "561e20644834971bb3a1f5b4579747ee3d5fe355",
+      "version": "0.8.2",
+      "components": {
+        "skills": [
+          {
+            "name": "_critic",
+            "description": "HarnessX Critic (Tier 2.1) — adversarial review of evolved-skill proposals against trace evidence. …"
+          },
+          {
+            "name": "_dispatch",
+            "description": "Core router. Always active. Auto-invokes matching skill before every response. Runs confusion proto…"
+          },
+          {
+            "name": "agent-introspection",
+            "description": "Loop-breaking self-diagnosis. Use when 3+ consecutive failures occur, circular retries persist, or …"
+          },
+          {
+            "name": "audit",
+            "description": "Audit phase. Parallel review: code quality + security + tests. Semantic dedup of cross-mode finding…"
+          },
+          {
+            "name": "commit",
+            "description": "Conventional Commits 1.0 generator. Stages relevant files, infers type(scope): description, never u…"
+          },
+          {
+            "name": "context",
+            "description": "Working-state snapshot guidance. Restates task/files/decisions in one block so state survives conte…"
+          },
+          {
+            "name": "council",
+            "description": "4-voice parallel deliberation (Architect · Skeptic · Pragmatist · Critic) for architecture, tech se…"
+          },
+          {
+            "name": "debug",
+            "description": "Systematic root-cause isolation for test failures, runtime errors, or unexpected behavior. Narrow h…"
+          },
+          {
+            "name": "discover",
+            "description": "Trigger: vague/unfocused request or solution-without-problem. Also invoked via /discover command. R…"
+          },
+          {
+            "name": "document",
+            "description": "Documentation generator for public APIs, functions, and modules. Use when exports, signatures, or n…"
+          },
+          {
+            "name": "eval",
+            "description": "Quality and performance evaluation with baseline comparison. Sub-modes: correctness, performance, q…"
+          },
+          {
+            "name": "evolve",
+            "description": "Ring 3 evolution engine. Analyzes session observations, generates and improves evolved skills, show…"
+          },
+          {
+            "name": "go",
+            "description": "Go phase. Reads the approved SPEC file, maps Requirements to tasks (plan), executes via TDD (build)…"
+          },
+          {
+            "name": "orbit",
+            "description": "State-persisted autonomous pipeline: spec → go → audit → eval → ship → evolve in one command. Auto-…"
+          },
+          {
+            "name": "orchestrate",
+            "description": "Trigger: active multi-agent run. Handles inbox reading, dep resolution, message formatting, handoff…"
+          },
+          {
+            "name": "perf",
+            "description": "Performance optimizer for loops, DB queries, rendering, and batch operations. Catches N+1 queries, …"
+          },
+          {
+            "name": "reflect",
+            "description": "On-demand human self-assessment of AI usage quality. Scores 5 dimensions from session data. Not age…"
+          },
+          {
+            "name": "secure",
+            "description": "Security review checklist with optional engagement scoping. Use when auth, DB, API, infra, or secre…"
+          },
+          {
+            "name": "ship",
+            "description": "Ship phase. Runs isolated integration test in a fresh worktree, creates a PR with full spec + audit…"
+          },
+          {
+            "name": "simplify",
+            "description": "Code simplification for high-complexity files. Targets deep nesting, copy-paste patterns, and god f…"
+          },
+          {
+            "name": "spec",
+            "description": "Spec phase. Converts user requirements into a numbered Requirements + Acceptance Criteria document …"
+          },
+          {
+            "name": "tdd",
+            "description": "Test-Driven Development enforcer. Red→Green→Refactor cycle with no production code without a failin…"
+          },
+          {
+            "name": "team",
+            "description": "Org-level agent team designer via `epic team` CLI (cross-project, append-merge). Subcommands: list,…"
+          },
+          {
+            "name": "threat-model",
+            "description": "Threat modeling and attack surface analysis. Use when assessing security boundaries, modeling threa…"
+          },
+          {
+            "name": "triage",
+            "description": "Adversarial validation of vulnerability findings. Use when triaging security findings, validating v…"
+          },
+          {
+            "name": "verify",
+            "description": "Pre-merge verification gate. Build, test, and lint must all pass before marking done or shipping."
+          },
+          {
+            "name": "vuln-scan",
+            "description": "Systematic vulnerability scan across injection, auth, data exposure, and dependencies — traced by r…"
+          }
+        ],
+        "hooks": [
+          {
+            "name": "SessionStart"
+          },
+          {
+            "name": "PreToolUse"
+          },
+          {
+            "name": "PostToolUse"
+          },
+          {
+            "name": "PreCompact"
+          },
+          {
+            "name": "SessionEnd"
+          }
+        ]
+      }
+    },
+    "llm-transpile": {
+      "sha": "587ef5dadeb9e632f349d75fae00c6fec5febc1b",
+      "version": "0.4.1",
+      "components": {
+        "hooks": [
+          {
+            "name": "SessionStart"
+          },
+          {
+            "name": "PostToolUse"
+          }
+        ]
+      }
+    },
+    "alcove": {
+      "sha": "431ab4a8d7066818ab84bc2f69cf62872c8dadc1",
+      "version": "0.12.1",
+      "components": {
+        "hooks": [
+          {
+            "name": "SessionStart"
+          },
+          {
+            "name": "SessionEnd"
+          }
+        ]
+      }
+    },
+    "episteme": {
+      "sha": "009611abffd832e2812219f9c7ae041f6bfa8f4e",
+      "version": "0.3.9",
+      "components": {
+        "hooks": [
+          {
+            "name": "SessionStart"
+          }
+        ]
+      }
+    },
+    "obsidian-forge": {
+      "sha": "1090c4cd673288cd97760362ff0e13dff86567e3",
+      "version": "0.2.4",
+      "components": {
+        "skills": [
+          {
+            "name": "graph-strengthen",
+            "description": "Knowledge graph strengthening pipeline — runs `of graph health` then `of strengthen-graph` to add b…"
+          },
+          {
+            "name": "inbox-process",
+            "description": "AI inbox classification pipeline — runs `of process-all` to classify inbox notes with AI, inject fr…"
+          },
+          {
+            "name": "obsidian-forge",
+            "description": "obsidian-forge (alias `of`) CLI skill for creating and managing Obsidian vaults, processing inbox n…"
+          },
+          {
+            "name": "vault-fix",
+            "description": "Batch vault repair — runs `of check-tags --fix`, `of check-links --fix`, and `of normalize-frontmat…"
+          },
+          {
+            "name": "vault-health",
+            "description": "Obsidian vault diagnostics — runs `of doctor` and reports vault status, AI connectivity, inbox stat…"
+          },
+          {
+            "name": "vault-sync",
+            "description": "Full vault sync cycle — runs `of sync` to rebuild MOCs, strengthen graph, and commit to git. Trigge…"
+          }
+        ]
+      }
+    },
+    "epicsagas": {
+      "sha": "d6da0e37ba057348d6483902ce90b90b7875f3ce",
+      "version": "0.6.2",
+      "components": {
+        "skills": [
+          {
+            "name": "asymmetric-learning",
+            "description": "Recommends and structures learning from a field completely outside the user's expertise. Generates …"
+          },
+          {
+            "name": "biz-risk",
+            "description": "Business-first risk evaluation before writing code. Forces quantification of how a technical decisi…"
+          },
+          {
+            "name": "code-port",
+            "description": "Faithfully ports one source file in one language to a target language — a draft in Phase A (logic-c…"
+          },
+          {
+            "name": "devils-advocate",
+            "description": "Generates adversarial counter-arguments against the user's strongest technical convictions. Forces …"
+          },
+          {
+            "name": "discover",
+            "description": "Problem discovery for individuals, teams, and startups. Reframes vague ideas, solution-first thinki…"
+          },
+          {
+            "name": "env-test",
+            "description": "Tests that tools and products work outside the user's optimized development environment. Generates …"
+          },
+          {
+            "name": "five-whys",
+            "description": "Forces 5-level root-cause questioning on any technical decision or justification. Reveals whether t…"
+          },
+          {
+            "name": "git-workspace",
+            "description": "Git workspace manager — sync repos, bump versions, project health dashboard. Works in submodule mon…"
+          },
+          {
+            "name": "introspect",
+            "description": "Cold analysis of user's thinking patterns from conversation history — cognitive biases, logical bli…"
+          },
+          {
+            "name": "korean-cohesion",
+            "description": "Checks Korean sentence/paragraph cohesion: subject-predicate agreement across long relative clauses…"
+          },
+          {
+            "name": "korean-norm-lint",
+            "description": "Deterministic Korean orthography linter (국립국어원 어문규범): 띄어쓰기 (의존명사/조사/관형사/-어지다), 조사 호응 (로써/로서, 에/에게, …"
+          },
+          {
+            "name": "korean-polish",
+            "description": "Orchestrates a staged Korean prose-polishing (윤문) pass over a document, coordinating the translatio…"
+          },
+          {
+            "name": "korean-register",
+            "description": "Normalizes Korean academic register to how Korean scholars actually write (grounded in real 경제학/CS …"
+          },
+          {
+            "name": "korean-translationese",
+            "description": "Detects and repairs English→Korean translation interference (번역투) in Korean prose: inanimate subjec…"
+          },
+          {
+            "name": "korean-verbosity",
+            "description": "Trims Korean 만연체 (verbosity): splits overlong multi-clause sentences, turns empty-verb nominalizati…"
+          },
+          {
+            "name": "mvp-force",
+            "description": "Forces minimum viable implementation check — can the project ship at 50% of current technical capab…"
+          },
+          {
+            "name": "non-tech-feedback",
+            "description": "Generates a plain-language project explanation for non-technical audiences and collects comprehensi…"
+          },
+          {
+            "name": "oss-dist",
+            "description": "Audits and guides OSS project release readiness across the full lifecycle: community standards, REA…"
+          },
+          {
+            "name": "ship-over-perfect",
+            "description": "Forces monthly external release of incomplete work. Generates a shipping checklist that prioritizes…"
+          },
+          {
+            "name": "skill-optimize",
+            "description": "Uses SkillOpt (text-space optimizer) to train and evolve natural-language skill documents for froze…"
+          },
+          {
+            "name": "system-diet",
+            "description": "Forces removal of 20% of active tools, plugins, and automation pipelines to prevent complexity stag…"
+          },
+          {
+            "name": "tech-debt-scan",
+            "description": "Scans codebase for technical debt markers (TODO, FIXME, HACK, XXX) and quantifies risk by severity,…"
+          }
+        ]
+      }
+    },
+    "agent-glance": {
+      "sha": "a0c5464a87269e9ce258ea994e9f8145002e6e47",
+      "version": "0.1.12",
+      "components": {
+        "skills": [
+          {
+            "name": "agent-glance",
+            "description": "Connect a GeekMagic SmallTV (SD_RU/SDPro ESP8266 or SmallTV Ultra stock firmware — auto-detected) a…"
+          }
+        ],
+        "commands": [
+          {
+            "name": "restore",
+            "description": "Revert the SmallTV to the clock/themes it had before the monitor took it over"
+          },
+          {
+            "name": "setup",
+            "description": "Onboard and set up the GeekMagic SmallTV as an agent status monitor — finds the device, saves its I…"
+          },
+          {
+            "name": "status",
+            "description": "Health check for the SmallTV monitor — device reachability, display state, config, and recent errors"
+          },
+          {
+            "name": "test",
+            "description": "Push a test frame (working / waiting / done) to the SmallTV to check rendering"
+          },
+          {
+            "name": "theme",
+            "description": "Switch the SmallTV screen — weather, forecast, clocks, or back to the monitor"
+          }
+        ],
+        "hooks": [
+          {
+            "name": "UserPromptSubmit"
+          },
+          {
+            "name": "Notification"
+          },
+          {
+            "name": "Stop"
+          }
+        ]
+      }
+    }
+  }
+}
