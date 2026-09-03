@@ -156,26 +156,6 @@
         "proofreading",
         "code-porting"
       ]
-    },
-    {
-      "name": "agent-glance",
-      "description": "GeekMagic SmallTV (SD_RU/SDPro ESP8266 or SmallTV Ultra, auto-detected) as a status monitor — renders model/context/tokens to the device via hooks.",
-      "version": "0.1.12",
-      "category": "development",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/epicsagas/AgentGlance.git",
-        "sha": "a0c5464a87269e9ce258ea994e9f8145002e6e47"
-      },
-      "homepage": "https://github.com/epicsagas/AgentGlance",
-      "keywords": [
-        "geekmagic",
-        "smalltv",
-        "status-monitor",
-        "esp8266",
-        "hooks",
-        "display"
-      ]
     }
   ]
 }
