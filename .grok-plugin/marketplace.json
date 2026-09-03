@@ -30,6 +30,132 @@
         "game-scenario",
         "academic-writing"
       ]
+    },
+    {
+      "name": "epic",
+      "description": "3 commands + 25 auto-trigger skills + self-evolving agent harness. Less to remember, more automation.",
+      "version": "0.8.2",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/epic-harness.git",
+        "sha": "561e20644834971bb3a1f5b4579747ee3d5fe355"
+      },
+      "homepage": "https://github.com/epicsagas/epic-harness",
+      "keywords": [
+        "harness",
+        "self-evolving",
+        "skills",
+        "hooks",
+        "tdd",
+        "code-review",
+        "automation"
+      ]
+    },
+    {
+      "name": "llm-transpile",
+      "description": "Auto-compress .md, .html, .txt files read by Claude Code via PostToolUse hook.",
+      "version": "0.4.1",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/llm-transpile.git",
+        "sha": "587ef5dadeb9e632f349d75fae00c6fec5febc1b"
+      },
+      "homepage": "https://github.com/epicsagas/llm-transpile",
+      "keywords": [
+        "transpile",
+        "compression",
+        "llm",
+        "context",
+        "token"
+      ]
+    },
+    {
+      "name": "alcove",
+      "description": "Local-first memory server — hybrid BM25+vector search, vault management, lint, and launchd lifecycle for project knowledge.",
+      "version": "0.12.1",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/alcove.git",
+        "sha": "431ab4a8d7066818ab84bc2f69cf62872c8dadc1"
+      },
+      "homepage": "https://github.com/epicsagas/alcove",
+      "keywords": [
+        "memory",
+        "knowledge",
+        "search",
+        "rag",
+        "bm25",
+        "vector",
+        "vault",
+        "lint",
+        "launchd"
+      ]
+    },
+    {
+      "name": "episteme",
+      "description": "Software engineering knowledge graph — design patterns, laws, refactorings, and code smells with graph traversal and AI-powered code analysis.",
+      "version": "0.3.9",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/Episteme.git",
+        "sha": "009611abffd832e2812219f9c7ae041f6bfa8f4e"
+      },
+      "homepage": "https://github.com/epicsagas/Episteme",
+      "keywords": [
+        "knowledge-graph",
+        "design-patterns",
+        "code-smells",
+        "refactoring",
+        "architecture"
+      ]
+    },
+    {
+      "name": "obsidian-forge",
+      "description": "Obsidian vault lifecycle management — inbox AI classification, graph strengthening, MOC regeneration, and multi-vault sync.",
+      "version": "0.2.4",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/obsidian-forge.git",
+        "sha": "1090c4cd673288cd97760362ff0e13dff86567e3"
+      },
+      "homepage": "https://github.com/epicsagas/obsidian-forge",
+      "keywords": [
+        "obsidian",
+        "vault",
+        "pkm",
+        "zettelkasten",
+        "graph",
+        "moc",
+        "para"
+      ]
+    },
+    {
+      "name": "epicsagas",
+      "description": "Personal skill collection — problem discovery, cognitive audit, corrective routines, OSS distribution readiness, git workspace management, Korean prose polishing (윤문), and cross-language code porting.",
+      "version": "0.6.2",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/epicsagas.git",
+        "sha": "d6da0e37ba057348d6483902ce90b90b7875f3ce"
+      },
+      "homepage": "https://github.com/epicsagas/epicsagas",
+      "keywords": [
+        "skills",
+        "problem-discovery",
+        "cognitive-audit",
+        "oss",
+        "skill-optimization",
+        "korean-writing",
+        "yunmun",
+        "proofreading",
+        "code-porting"
+      ]
     }
   ]
 }
