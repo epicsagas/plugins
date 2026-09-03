@@ -163,6 +163,7 @@ claude plugin install <plugin>@<plugin>
 | toss-investor | [epicsagas/toss-invester](https://github.com/epicsagas/toss-invester) | Analyste d'investissement actions KRX — débat haussier/baissier avec preuves de flux et ventes à découvert et règles KRX, via l'Open API de Toss Securities. |
 | tech-event-scout | [epicsagas/tech-event-scout](https://github.com/epicsagas/tech-event-scout) | Veille d'événements IA/tech — agrégateur déterministe de 9 sources. |
 | toefl-prep | [epicsagas/toefl-prep](https://github.com/epicsagas/toefl-prep) | Correction hors-ligne du TOEFL iBT sur les 4 sections avec un LLM local. |
+| wishket-radar | [epicsagas/wishket-radar](https://github.com/epicsagas/wishket-radar) | Radar de projets Wishket — recherche, analyse approfondie et correspondance technique des projets d'externalisation. |
 
 ---
 
