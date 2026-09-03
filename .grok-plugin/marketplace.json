@@ -60,7 +60,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/llm-transpile.git",
-        "sha": "587ef5dadeb9e632f349d75fae00c6fec5febc1b"
+        "sha": "e622010ffeda9c6d8573afa5e229993b1b10f247"
       },
       "homepage": "https://github.com/epicsagas/llm-transpile",
       "keywords": [
@@ -79,7 +79,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/alcove.git",
-        "sha": "431ab4a8d7066818ab84bc2f69cf62872c8dadc1"
+        "sha": "e22b3abca5e0194077df80c618f6eead9c298573"
       },
       "homepage": "https://github.com/epicsagas/alcove",
       "keywords": [
@@ -102,7 +102,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/Episteme.git",
-        "sha": "009611abffd832e2812219f9c7ae041f6bfa8f4e"
+        "sha": "99aeaa2a37cb8e103508f686e8df54df2c06e9db"
       },
       "homepage": "https://github.com/epicsagas/Episteme",
       "keywords": [
