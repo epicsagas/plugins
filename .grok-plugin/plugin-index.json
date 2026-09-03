@@ -410,51 +410,6 @@
           }
         ]
       }
-    },
-    "agent-glance": {
-      "sha": "a0c5464a87269e9ce258ea994e9f8145002e6e47",
-      "version": "0.1.12",
-      "components": {
-        "skills": [
-          {
-            "name": "agent-glance",
-            "description": "Connect a GeekMagic SmallTV (SD_RU/SDPro ESP8266 or SmallTV Ultra stock firmware — auto-detected) a…"
-          }
-        ],
-        "commands": [
-          {
-            "name": "restore",
-            "description": "Revert the SmallTV to the clock/themes it had before the monitor took it over"
-          },
-          {
-            "name": "setup",
-            "description": "Onboard and set up the GeekMagic SmallTV as an agent status monitor — finds the device, saves its I…"
-          },
-          {
-            "name": "status",
-            "description": "Health check for the SmallTV monitor — device reachability, display state, config, and recent errors"
-          },
-          {
-            "name": "test",
-            "description": "Push a test frame (working / waiting / done) to the SmallTV to check rendering"
-          },
-          {
-            "name": "theme",
-            "description": "Switch the SmallTV screen — weather, forecast, clocks, or back to the monitor"
-          }
-        ],
-        "hooks": [
-          {
-            "name": "UserPromptSubmit"
-          },
-          {
-            "name": "Notification"
-          },
-          {
-            "name": "Stop"
-          }
-        ]
-      }
     }
   }
 }
