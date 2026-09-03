@@ -1,6 +1,6 @@
 {
-  "name": "mpl",
-  "description": "Plugin marketplace",
+  "name": "plugins",
+  "description": "epicsagas multi-host plugin marketplace (claude, codex, grok)",
   "owner": {
     "name": "epicsagas"
   },
@@ -9,7 +9,7 @@
       "name": "velith",
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Fiction, non-fiction, technical, screenplay, poetry, game, academic, and custom genres.",
       "version": "0.6.0",
-      "category": "development",
+      "category": "productivity",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/velith.git",
@@ -17,7 +17,18 @@
       },
       "homepage": "https://github.com/epicsagas/velith",
       "keywords": [
-        "velith"
+        "book",
+        "writing",
+        "publishing",
+        "epub",
+        "pdf",
+        "fiction",
+        "non-fiction",
+        "technical-writing",
+        "screenplay",
+        "poetry",
+        "game-scenario",
+        "academic-writing"
       ]
     }
   ]
