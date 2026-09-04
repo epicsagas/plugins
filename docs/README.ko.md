@@ -26,7 +26,7 @@
 | [epic-harness](#epic-harness) | 자율 에이전트 하니스 — 8개의 파워 커맨드, 자가 진화 스킬, 매 세션을 보호하고 성찰하는 보이지 않는 훅. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | 토큰 최적화 문서 리더 — `.md`, `.html`, `.txt` 파일을 자동 압축해 컨텍스트 사용량을 최대 40% 절감. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP 문서 서버 — BM25+벡터 하이브리드 검색, 린트, 프로젝트 문서를 위한 launchd 라이프사이클 관리. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AI 네이티브 퍼블리싱 시스템 — 아이디에이션부터 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 소프트웨어처럼 책을 제작. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | 사람이 쓴 수준의 책 — 6단계 출판 파이프라인, 12개 에이전트, 준비도 게이트, 비주얼 시스템. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | 소프트웨어 엔지니어링 지식 그래프 — 디자인 패턴, 코드 스멜, 리팩토링 및 아키텍처 원칙과 AI 기반 코드 리뷰. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | 옵시디언 볼트 라이프사이클 관리 — AI 인박스 분류, 지식 그래프 강화, MOC 재생성, 다중 볼트 동기화 스킬. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 개인 에이전트 스킬 컬렉션 — 문제 발견(5 Whys, JTBD, Fishbone), 인지 자기 분석, 오픈소스 출시 준비성 검사. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
@@ -233,22 +233,24 @@ MCP를 통해 AI 코딩 에이전트에게 프라이빗 프로젝트 문서에 �
 
 ### velith
 
-**AI 네이티브 퍼블리싱 시스템**
+**사람이 쓴 수준의 책**
 
-소프트웨어처럼 책을 제작하세요. 백지에서 출판 가능한 EPUB/PDF까지 자율 멀티페이즈 워크플로우. 7개 전문 에이전트가 구조, 드래프팅, 연속성, 스타일, 표지 디자인, 마케팅을 담당합니다.
+이 장르의 책을 사서 읽는 처음 보는 독자는 원고가 기계 초안임을 알아채지 못한다. 여섯 단계, 열두 에이전트, 하나의 기준. 에이전트는 원고 전체를 읽고, 볼륨 드래프팅 전 샘플 챕터로 목소리를 고정하고, 모든 장은 저장 전에 비평·수정되고, 모든 주장은 팩트체크되고, 시뮬레이션 독자가 계속 읽을 것이라 판정하기 전에는 출판이 차단된다.
 
-**활용 시점:**
-- 구조화된 장문 콘텐츠 집필 (소설, 논픽션, 기술, 학술)
-- 책 전체의 챕터 간 일관성과 문체 유지
-- EPUB, PDF, MOBI, Markdown 출판
+**언제 쓰나:**
+- 소설, 비소설, 기술서, 시나리오, 시집, 게임 시나리오, 논문 집필
+- 목소리 드리프트·모순·조작된 사실이 책을 망치는 장분 원고
+- 어떤 이미지 모델로도 한 권의 책처럼 보이는 삽화·다이어그램·표지
+- EPUB, PDF, MOBI, TXT, Markdown 출판
 
 **주요 기능:**
-- 6단계 파이프라인: 온보딩 → 아이디에이션 → 아웃라인 → 드래프팅 → 에디팅 → 퍼블리싱
-- 7개 장르 템플릿 (소설, 논픽션, 기술, 시나리오, 시, 게임, 학술)
-- AI-slop 탐지를 포함한 5단계 에디팅 파이프라인
-- Pandoc + Calibre를 통한 EPUB, PDF, MOBI, TXT, Markdown 출력
-
-→ [소스 & 문서](https://github.com/epicsagas/Velith)
+- 저자 체크포인트가 있는 6단계 파이프라인: 컨셉, 목차, 보이스 락, 룩 락, 개고, 준비도
+- 전권 컨텍스트: 에이전트는 요약이 아니라 책 전체를 읽음
+- 저장 전 초안 → 인용문 비평 → 수정 루프
+- 7단계 편집: 팩트체크 → 진단 → 개고 → 라인 → 교정 → 교열 → 베타리더 준비도 판정
+- 비주얼 시스템: 아트 바이블, 룩 락, 코드 렌더 다이어그램, 5개 백엔드 컴파일 프롬프트, 비전 QA
+- 7개 장르 크래프트 레퍼런스 + 커스텀 장르
+- Pandoc + epubcheck, KDP·국내 플랫폼 체크리스트
 
 ---
 

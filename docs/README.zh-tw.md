@@ -26,7 +26,7 @@
 | [epic-harness](#epic-harness) | 自主智能體框架 — 8 個強力命令、自我進化技能,以及守護、打磨、復盤每次工作階段的無形鉤子。 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | Token 最佳化文件讀取器 — 讀取時靜默壓縮 `.md`、`.html`、`.txt` 檔案,上下文用量最多減少 40%。 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP 文件伺服器 — BM25+向量混合檢索、lint,以及專案文件的 launchd 生命週期管理。 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AI 原生出版系統 — 從構想到 EPUB/PDF 的自主多階段工作流。像做軟體一樣做書。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | 達到人類寫作水準的書籍 — 六階段出版流水線、12 個代理、就緒門檻、視覺系統。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | 軟體工程知識圖譜 — 設計模式、程式碼壞味道、重構與架構法則,搭配 AI 程式碼審查。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian 庫生命週期管理 — AI 收件匣分類、圖譜強化、MOC 再生、多庫同步技能。 | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 個人智能體技能集 — 問題發現(5 Whys、JTBD、Fishbone)、認知自我分析、OSS 發布就緒檢查。 | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |

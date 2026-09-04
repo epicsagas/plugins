@@ -26,7 +26,7 @@
 | [epic-harness](#epic-harness) | هارنس وكلاء مستقل — 8 أوامر ومهارات ذاتية التطور وخطاطيف خفية تحمي كل جلسة وتصقلها وتراجعها. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | قارئ مستندات محسّن للتوكنز — يضغط `.md` و`.html` و`.txt` بصمت عند القراءة فيقلل استهلاك السياق حتى 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | خادم توثيق MCP — بحث هجين BM25+متجهي وفحص lint وإدارة دورة حياة launchd لوثائق المشاريع. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | نظام نشر أصيل بالذكاء الاصطناعي — مسارات مستقلة متعددة المراحل من الفكرة إلى EPUB/PDF. ابنِ الكتب كالبرمجيات. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | كتب بمستوى بشري — خط نشر من 6 مراحل، 12 وكيلًا، بوابة الجاهزية، نظام بصري. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | شبكة معرفية لهندسة البرمجيات — أنماط تصميم وروائح كود وإعادة هيكلة وتحليل معماري مع مراجعة كود بالذكاء الاصطناعي. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | إدارة دورة حياة خزنات Obsidian — تصنيف صادر بالذكاء الاصطناعي وتقوية الشبكة وتجديد MOC ومزامنة متعددة الخزنات كمهارات وكيل. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | مجموعة مهارات وكيل شخصية — اكتشاف المشكلات (5 Whys, JTBD, Fishbone) وتحليل ذاتي معرفي وجاهزية نشر OSS. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |

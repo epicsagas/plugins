@@ -26,7 +26,7 @@
 | [epic-harness](#epic-harness) | 自律エージェントハーネス — 8個のパワーコマンド、自己進化スキル、毎セッションを保護・省察する見えないフック。 | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | トークン最適化ドキュメントリーダー — `.md`, `.html`, `.txt` を自動圧縮しコンテキスト使用量を最大40%削減。 | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCPドキュメントサーバー — BM25+ベクターハイブリッド検索、リント、プロジェクトドキュメントのlaunchdライフサイクル管理。 | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AIネイティブ出版システム — アイデア出しからEPUB/PDFまで自律マルチフェーズワークフロー。ソフトウェアのように本を作る。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | 人間が書いた水準の本 — 6フェーズ出版パイプライン、12エージェント、準備ゲート、ビジュアルシステム。 | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | ソフトウェアエンジニアリングナレッジグラフ — デザインパターン、コードスメル、リファクタリング、アーキテクチャ原則とAIコードレビュー。 | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidianボールトライフサイクル管理 — AIインボックス分類、ナレッジグラフ強化、MOC再生成、マルチボールト同期スキル。 | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | 個人エージェントスキルコレクション — 問題発見(5 Whys, JTBD, Fishbone)、認知自己分析、OSS公開準備チェック。 | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |

@@ -26,7 +26,7 @@
 | [epic-harness](#epic-harness) | Харнес автономных агентов — 8 команд, саморазвивающиеся навыки и невидимые хуки, которые охраняют, шлифуют и осмысляют каждую сессию. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | Оптимизированный по токенам читатель документов — незаметно сжимает `.md`, `.html` и `.txt` при чтении, снижая расход контекста до 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP-сервер документации — гибридный BM25+векторный поиск, линт и управление жизненным циклом launchd для документации проектов. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AI-нативная система публикации — автономные многофазные процессы от идеи до EPUB/PDF. Создавайте книги как софт. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | Книги на уровне человека — издательский пайплайн из 6 фаз, 12 агентов, вердикт готовности, визуальная система. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | Граф знаний программной инженерии — паттерны, код-смелы, рефакторинги и анализ архитектуры с AI-ревью кода. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Управление жизненным циклом хранилищ Obsidian — AI-классификация входящих, усиление графа, регенерация MOC и синхронизация нескольких хранилищ как навыки агента. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Личная коллекция навыков агента — обнаружение проблем (5 Whys, JTBD, Fishbone), интроспекция и готовность OSS-релиза. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
