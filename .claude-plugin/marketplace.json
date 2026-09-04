@@ -39,7 +39,7 @@
         "source": "url",
         "url": "https://github.com/epicsagas/Velith.git"
       },
-      "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software."
+      "description": "Books to the human-quality bar — 6-phase publishing pipeline with 12 agents, voice lock, fact-checking, a beta-reader readiness gate, and a model-agnostic visual system. Fiction, non-fiction, technical, screenplay, poetry, game, academic."
     },
     {
       "name": "episteme",

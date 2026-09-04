@@ -26,7 +26,7 @@ The hub carries the core epiccounty lineup. Everything else lives in its own rep
 | [epic-harness](#epic-harness) | Autonomous agent harness — 8 commands, self-evolving skills, and invisible hooks that guard, polish, and reflect on every session. | [epicsagas/epic-harness](https://github.com/epicsagas/epic-harness) |
 | [llm-transpile](#llm-transpile) | Token-optimized document reader — silently compresses `.md`, `.html`, and `.txt` files on Read, cutting context usage by up to 40%. | [epicsagas/llm-transpile](https://github.com/epicsagas/llm-transpile) |
 | [alcove](#alcove) | MCP documentation server — hybrid BM25+vector search, lint, and launchd lifecycle management for project docs. | [epicsagas/alcove](https://github.com/epicsagas/alcove) |
-| [velith](#velith) | AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Build books like software. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
+| [velith](#velith) | Books to the human-quality bar — 6-phase publishing pipeline, 12 agents, readiness gate, visual system. | [epicsagas/Velith](https://github.com/epicsagas/Velith) |
 | [episteme](#episteme) | Software engineering knowledge graph — design patterns, code smells, refactorings, and architecture analysis with AI-powered code review. | [epicsagas/Episteme](https://github.com/epicsagas/Episteme) |
 | [obsidian-forge](#obsidian-forge) | Obsidian vault lifecycle management — AI inbox classification, graph strengthening, MOC regeneration, and multi-vault sync as agent skills. | [epicsagas/obsidian-forge](https://github.com/epicsagas/obsidian-forge) |
 | [epicsagas](#epicsagas) | Personal agent skill collection — problem discovery (5 Whys, JTBD, Fishbone), introspect (bias detection, thinking pattern analysis), and OSS distribution readiness. | [epicsagas/epicsagas](https://github.com/epicsagas/epicsagas) |
@@ -254,20 +254,24 @@ Gives AI coding agents on-demand access to your private project docs via MCP. Hy
 
 ### velith
 
-**AI-Native Publishing System**
+**Books to the Human-Quality Bar**
 
-Build books like software. Autonomous multi-phase workflows from blank page to publishable EPUB/PDF. Seven specialized agents handle structure, drafting, continuity, style, cover design, and marketing.
+A cold reader who buys books in the genre cannot tell the manuscript was machine-drafted. Six phases, twelve agents, one standard. Agents read the entire manuscript, the voice is locked on a sample chapter before drafting volume, every chapter is critiqued and revised before it is saved, every claim is fact-checked, and publishing is blocked until simulated target readers would keep reading.
 
 **When to use:**
-- Writing structured long-form content (fiction, non-fiction, technical, academic)
-- Maintaining cross-chapter consistency and voice across a full book
-- Publishing to EPUB, PDF, MOBI, or Markdown
+- Writing a novel, nonfiction book, technical guide, screenplay, poetry collection, game scenario, or thesis
+- Long manuscripts where voice drift, contradictions, and invented facts break the book
+- Illustrations, diagrams, and covers that must look like one book, on any image model
+- Publishing to EPUB, PDF, MOBI, TXT, or Markdown
 
 **Key features:**
-- 6-phase pipeline: Onboarding → Ideation → Outlining → Drafting → Editing → Publishing
-- 7 genre templates (fiction, non-fiction, technical, screenplay, poetry, game, academic)
-- 5-stage editing pipeline with AI-slop detection
-- EPUB, PDF, MOBI, TXT, Markdown output via Pandoc + Calibre
+- 6-phase pipeline with author checkpoints: concept, outline, voice lock, look lock, restructures, readiness
+- Full-manuscript context: agents read the whole book, never summaries
+- Draft → critique with quoted lines → revise, inside the writer, before saving
+- 7-stage editing: fact check → assessment → developmental → line → copy → proofread → beta-reader readiness verdict
+- Visual system: art bible, look lock, code-rendered diagrams, prompts compiled for Midjourney/gpt-image/SD/Imagen/Ideogram, vision QA
+- 7 genre craft references (fiction, non-fiction, technical, screenplay, poetry, game, academic) + custom genres
+- EPUB, PDF, MOBI, TXT, Markdown via Pandoc + epubcheck, KDP and Korean platform checklists
 
 → [Source & Docs](https://github.com/epicsagas/Velith)
 
