@@ -1,5 +1,5 @@
-name: epic
-version: "0.8.3"
+name: epic-harness
+version: "0.8.5"
 description: >-
   Cross-agent unified memory, team management, and session reflection
   via epic-harness CLI. Memory CRUD, graph traversal, team sync, and

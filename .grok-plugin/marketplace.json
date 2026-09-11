@@ -8,12 +8,12 @@
     {
       "name": "velith",
       "description": "AI-native publishing system — autonomous multi-phase workflows from ideation to EPUB/PDF. Fiction, non-fiction, technical, screenplay, poetry, game, academic, and custom genres.",
-      "version": "0.7.0",
+      "version": "0.6.0",
       "category": "productivity",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/velith.git",
-        "sha": "cded951e075e70e6ada791d8f2d5ceeb5b3966ef"
+        "sha": "918bf4fc29d89b5e18a895f522e7407672a23be2"
       },
       "homepage": "https://github.com/epicsagas/velith",
       "keywords": [
@@ -34,12 +34,12 @@
     {
       "name": "epic",
       "description": "3 commands + 25 auto-trigger skills + self-evolving agent harness. Less to remember, more automation.",
-      "version": "0.8.3",
+      "version": "0.8.5",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git",
-        "sha": "66014eaf6e6a325a6c071f9e556252496ac54c20"
+        "sha": "dcb521ba0ff6f305295a06acc9fa6db487a6377b"
       },
       "homepage": "https://github.com/epicsagas/epic-harness",
       "keywords": [
@@ -55,12 +55,12 @@
     {
       "name": "llm-transpile",
       "description": "Auto-compress .md, .html, .txt files read by Claude Code via PostToolUse hook.",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/llm-transpile.git",
-        "sha": "9eb6950f3573332076760691e1b6e4b7074de1ac"
+        "sha": "2199ab59fcff688b65c6f12ff1ba05838ff10542"
       },
       "homepage": "https://github.com/epicsagas/llm-transpile",
       "keywords": [
@@ -74,12 +74,12 @@
     {
       "name": "alcove",
       "description": "Local-first memory server — hybrid BM25+vector search, vault management, lint, and launchd lifecycle for project knowledge.",
-      "version": "0.12.2",
+      "version": "0.13.1",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/alcove.git",
-        "sha": "1846219c71abe47e60599670e682190b4727364d"
+        "sha": "9484851b2ae4e8fdc3771f73b68f58fae17d5b39"
       },
       "homepage": "https://github.com/epicsagas/alcove",
       "keywords": [
@@ -97,12 +97,12 @@
     {
       "name": "episteme",
       "description": "Software engineering knowledge graph — design patterns, laws, refactorings, and code smells with graph traversal and AI-powered code analysis.",
-      "version": "0.3.12",
+      "version": "0.3.13",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/Episteme.git",
-        "sha": "f9029e70ad8fa6751b2fc17f43086a59cc8ffaf0"
+        "sha": "ae417d7ffaf99f1a9421b58a7d094873245db0fb"
       },
       "homepage": "https://github.com/epicsagas/Episteme",
       "keywords": [
@@ -121,7 +121,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/obsidian-forge.git",
-        "sha": "35923c0b67d8bfb9c5c6ea685cdfc2bc92473e10"
+        "sha": "1090c4cd673288cd97760362ff0e13dff86567e3"
       },
       "homepage": "https://github.com/epicsagas/obsidian-forge",
       "keywords": [
@@ -142,7 +142,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epicsagas.git",
-        "sha": "ed4751b16563129c530ae1a51e87b6b3adb5939b"
+        "sha": "d6da0e37ba057348d6483902ce90b90b7875f3ce"
       },
       "homepage": "https://github.com/epicsagas/epicsagas",
       "keywords": [

@@ -1,5 +1,11 @@
 name: llm-transpile
+<<<<<<< HEAD
 version: "0.4.2"
+||||||| parent of 02f5563 (chore(hub): repin grok shas + versions for alcove/llm-transpile/episteme/epic, sync hermes versions)
+version: "0.3.2"
+=======
+version: "0.4.3"
+>>>>>>> 02f5563 (chore(hub): repin grok shas + versions for alcove/llm-transpile/episteme/epic, sync hermes versions)
 description: Token-optimized document transpiler — convert and compress documents, check usage statistics via transpile CLI.
 provides_tools:
   - transpile_file
