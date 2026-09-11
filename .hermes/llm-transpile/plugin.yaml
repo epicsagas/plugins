@@ -1,3 +1,5 @@
+name: llm-transpile
+version: "0.4.3"
 description: Token-optimized document transpiler — convert and compress documents, check usage statistics via transpile CLI.
 provides_tools:
   - transpile_file
