@@ -13,7 +13,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/velith.git",
-        "sha": "93798454f8f88f34c7cba8f6a4a8930f7d2e1db6"
+        "sha": "56e62c0b62e49c7161b3fc0ea826543b3531b795"
       },
       "homepage": "https://github.com/epicsagas/velith",
       "keywords": [
