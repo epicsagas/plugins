@@ -115,8 +115,8 @@
     },
     {
       "name": "obsidian-forge",
-      "description": "Obsidian vault lifecycle management — inbox AI classification, graph strengthening, MOC regeneration, and multi-vault sync.",
-      "version": "0.2.4",
+      "description": "Obsidian vault lifecycle management — AI inbox classification, vault integrity checks (tags, links, frontmatter), graph health reporting, and multi-vault git sync.",
+      "version": "0.3.0",
       "category": "development",
       "source": {
         "source": "url",

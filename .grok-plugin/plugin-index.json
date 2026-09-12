@@ -285,7 +285,7 @@
     },
     "obsidian-forge": {
       "sha": "1bd5b933e4a97c4a992076e381ab03dfc4d13a9e",
-      "version": "0.2.4",
+      "version": "0.3.0",
       "components": {
         "skills": [
           {
