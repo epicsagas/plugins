@@ -13,7 +13,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/velith.git",
-        "sha": "b0e018096aef408b316f7fd3fb190b4cc077b6cb"
+        "sha": "93798454f8f88f34c7cba8f6a4a8930f7d2e1db6"
       },
       "homepage": "https://github.com/epicsagas/velith",
       "keywords": [
@@ -102,7 +102,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/Episteme.git",
-        "sha": "5312103250eca1458755ddf61748d3982200d29c"
+        "sha": "a6e0115e27edcaea407782933cffd1d07a127f3b"
       },
       "homepage": "https://github.com/epicsagas/Episteme",
       "keywords": [
@@ -121,7 +121,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/obsidian-forge.git",
-        "sha": "1090c4cd673288cd97760362ff0e13dff86567e3"
+        "sha": "1bd5b933e4a97c4a992076e381ab03dfc4d13a9e"
       },
       "homepage": "https://github.com/epicsagas/obsidian-forge",
       "keywords": [
@@ -142,7 +142,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epicsagas.git",
-        "sha": "d6da0e37ba057348d6483902ce90b90b7875f3ce"
+        "sha": "b64a5bf094d00167c7dbfb0c85cb0ac13b2215ef"
       },
       "homepage": "https://github.com/epicsagas/epicsagas",
       "keywords": [
