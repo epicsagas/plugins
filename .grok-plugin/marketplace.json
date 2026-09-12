@@ -116,12 +116,12 @@
     {
       "name": "obsidian-forge",
       "description": "Obsidian vault lifecycle management — AI inbox classification, vault integrity checks (tags, links, frontmatter), graph health reporting, and multi-vault git sync.",
-      "version": "0.3.0",
+      "version": "0.5.0",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/obsidian-forge.git",
-        "sha": "1bd5b933e4a97c4a992076e381ab03dfc4d13a9e"
+        "sha": "156d5a4a41df571a18fb748d01c5d8c82d32dc49"
       },
       "homepage": "https://github.com/epicsagas/obsidian-forge",
       "keywords": [
