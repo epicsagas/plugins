@@ -176,12 +176,6 @@ grok plugin install <plugin>@<plugin> --trust
 
 也可直接從儲存庫安裝（無需註冊市場）：`grok plugin install epicsagas/<repo> --trust`。
 
-在 Grok Build 中直接從儲存庫安裝（不註冊為 Grok 市集）：
-
-```bash
-grok plugin install epicsagas/<repo> --trust
-```
-
 | 外掛 | 儲存庫 | 說明 |
 |--------|------------|------|
 | obscura-plugin | [epicsagas/obscura-plugin](https://github.com/epicsagas/obscura-plugin) | 無頭瀏覽器 MCP 工具 — 擷取、爬取、抽取 markdown、JS eval。 |
