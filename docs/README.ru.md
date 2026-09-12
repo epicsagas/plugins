@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 Все плагины доступны сразу.
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+Просматривайте каталог с помощью `/marketplace` в Grok TUI.
+
 ### Hermes Agent
 
 Одна команда ставит весь набор epiccounty — 6 плагинов, 32 инструмента:
@@ -151,6 +166,15 @@ cargo install obsidian-forge
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+Прямая установка также поддерживается: `grok plugin install epicsagas/<repo> --trust`.
 
 | Плагин | Репозиторий | Что делает |
 |--------|------------|-----------|

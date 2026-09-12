@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 Todos los plugins quedan disponibles de inmediato.
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+Explora el catálogo con `/marketplace` en Grok TUI.
+
 ### Hermes Agent
 
 Un comando instala el suite epiccounty completo — 6 plugins, 32 herramientas:
@@ -151,6 +166,15 @@ Estos plugins salieron del hub. Cada repositorio incluye su propio marketplace c
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+También se admite la instalación directa: `grok plugin install epicsagas/<repo> --trust`.
 
 | Plugin | Repositorio | Qué hace |
 |--------|------------|----------|

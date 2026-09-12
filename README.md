@@ -62,13 +62,13 @@ All plugins are available immediately — no further steps needed.
 
 ```bash
 grok plugin marketplace add epicsagas/plugins
-grok plugin install epic --trust
-grok plugin install llm-transpile --trust
-grok plugin install alcove --trust
-grok plugin install velith --trust
-grok plugin install episteme --trust
-grok plugin install obsidian-forge --trust
-grok plugin install epicsagas --trust
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
 ```
 
 Browse the catalog with `/marketplace` in the Grok TUI. Note: single-plugin repositories (the Individualized plugins below) do not list as Grok marketplaces — install those directly with `grok plugin install epicsagas/<repo> --trust`.
@@ -167,11 +167,14 @@ claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
 
-Grok Build installs these directly from the repository instead (they do not register as Grok marketplaces):
+Grok Build:
 
 ```bash
-grok plugin install epicsagas/<repo> --trust
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
 ```
+
+Direct install without registering a marketplace is also supported: `grok plugin install epicsagas/<repo> --trust`.
 
 | Plugin | Repository | What it does |
 |--------|------------|--------------|

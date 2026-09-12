@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 모든 플러그인을 즉시 사용할 수 있습니다.
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+Grok TUI에서 `/marketplace`로 카탈로그를 탐색할 수 있습니다. 참고: 단일 플러그인 저장소(아래 개별화된 플러그인)는 Grok 마켓플레이스로 등록되지 않으므로 `grok plugin install epicsagas/<repo> --trust`로 직접 설치합니다.
+
 ### Hermes Agent
 
 한 번의 명령으로 epiccounty 스위트(6개 플러그인, 32개 도구)를 설치합니다:
@@ -151,6 +166,15 @@ cargo install obsidian-forge
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+마켓플레이스 등록 없이 직접 설치할 수도 있습니다: `grok plugin install epicsagas/<repo> --trust`.
 
 | 플러그인 | 레포지토리 | 설명 |
 |--------|------------|------|

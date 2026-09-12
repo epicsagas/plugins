@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 すべてのプラグインが即時利用可能です。
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+Grok TUIの `/marketplace` でカタログを閲覧できます。注: 単一プラグインリポジトリ（下記の個別化されたプラグイン）はGrokマーケットプレイスとして登録されないため、`grok plugin install epicsagas/<repo> --trust` で直接インストールします。
+
 ### Hermes Agent
 
 1コマンドでepiccountyスイート(6プラグイン、32ツール)をインストール:
@@ -151,6 +166,15 @@ cargo install obsidian-forge
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+マーケットプレイス登録なしの直接インストールも可能です: `grok plugin install epicsagas/<repo> --trust`。
 
 | プラグイン | リポジトリ | 説明 |
 |--------|------------|------|

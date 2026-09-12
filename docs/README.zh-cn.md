@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 所有插件立即可用。
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+可在 Grok TUI 中使用 `/marketplace` 浏览目录。注意：单插件仓库（下方单独发布的插件）不会列为 Grok 市场 — 请直接使用 `grok plugin install epicsagas/<repo> --trust` 安装。
+
 ### Hermes Agent
 
 一条命令安装整个 epiccounty 套件 — 6 个插件、32 个工具:
@@ -151,6 +166,15 @@ cargo install obsidian-forge
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
 ```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+也可直接从仓库安装（无需注册市场）：`grok plugin install epicsagas/<repo> --trust`。
 
 | 插件 | 仓库 | 说明 |
 |--------|------------|------|

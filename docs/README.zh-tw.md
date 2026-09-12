@@ -58,6 +58,21 @@ codex plugin marketplace add epicsagas/plugins
 
 所有外掛立即可用。
 
+### Grok Build (xAI)
+
+```bash
+grok plugin marketplace add epicsagas/plugins
+grok plugin install epic@epicsagas --trust
+grok plugin install llm-transpile@epicsagas --trust
+grok plugin install alcove@epicsagas --trust
+grok plugin install velith@epicsagas --trust
+grok plugin install episteme@epicsagas --trust
+grok plugin install obsidian-forge@epicsagas --trust
+grok plugin install epicsagas@epicsagas --trust
+```
+
+可在 Grok TUI 中使用 `/marketplace` 瀏覽目錄。注意：單一外掛儲存庫（下方個別獨立的外掛）不會列為 Grok 市集 — 請直接使用 `grok plugin install epicsagas/<repo> --trust` 安裝。
+
 ### Hermes Agent
 
 一條命令安裝整個 epiccounty 套件 — 6 個外掛、32 個工具:
@@ -150,6 +165,21 @@ cargo install obsidian-forge
 ```bash
 claude plugin marketplace add epicsagas/<repo>
 claude plugin install <plugin>@<plugin>
+```
+
+Grok Build:
+
+```bash
+grok plugin marketplace add epicsagas/<repo>
+grok plugin install <plugin>@<plugin> --trust
+```
+
+也可直接從儲存庫安裝（無需註冊市場）：`grok plugin install epicsagas/<repo> --trust`。
+
+在 Grok Build 中直接從儲存庫安裝（不註冊為 Grok 市集）：
+
+```bash
+grok plugin install epicsagas/<repo> --trust
 ```
 
 | 外掛 | 儲存庫 | 說明 |
