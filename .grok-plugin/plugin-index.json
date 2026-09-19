@@ -112,8 +112,8 @@
       }
     },
     "epic": {
-      "sha": "8b1ef50d83749346d96a4dd574eba54adc72ddef",
-      "version": "0.8.6",
+      "sha": "916ad159af0d52d3a627b3e3ba46ecd49ca9d8a5",
+      "version": "0.1.0",
       "components": {
         "skills": [
           {
