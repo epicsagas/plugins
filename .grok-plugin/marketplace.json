@@ -34,7 +34,7 @@
     {
       "name": "epic",
       "description": "3 commands + 25 auto-trigger skills + self-evolving agent harness. Less to remember, more automation.",
-      "version": "0.1.0",
+      "version": "0.8.7",
       "category": "development",
       "source": {
         "source": "url",
