@@ -94,6 +94,19 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Skills"
+    },
+    {
+      "name": "plugin-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/plugin-forge.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

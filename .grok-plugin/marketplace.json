@@ -156,6 +156,28 @@
         "proofreading",
         "code-porting"
       ]
+    },
+    {
+      "name": "plugin-forge",
+      "description": "Multi-host plugin manager (Claude Code · Codex · agy · hermes · grok). Scaffold, doctor, install-validate, and publish plugins using the manifest pattern established by toefl-prep and byoh.",
+      "version": "0.4.6",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/plugin-forge.git",
+        "sha": "6b88a3e30e4d6388e1fa60db9a0d9ce40e127b1a"
+      },
+      "homepage": "https://github.com/epicsagas/plugin-forge",
+      "keywords": [
+        "plugin-manager",
+        "scaffold",
+        "multi-host",
+        "claude-code",
+        "codex",
+        "agy",
+        "hermes",
+        "grok"
+      ]
     }
   ]
 }
