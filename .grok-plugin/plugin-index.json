@@ -245,8 +245,8 @@
       }
     },
     "llm-transpile": {
-      "sha": "d36586f310699607b2cd8cf5b6602ce79321a907",
-      "version": "0.4.3",
+      "sha": "5430b31bbcc8d0146bb9257c114d6ed5339cfe84",
+      "version": "0.4.4",
       "components": {
         "hooks": [
           {
