@@ -245,15 +245,15 @@
       }
     },
     "llm-transpile": {
-      "sha": "5430b31bbcc8d0146bb9257c114d6ed5339cfe84",
-      "version": "0.4.4",
+      "sha": "780910b055e210aef03efd615743f84be471150b",
+      "version": "0.4.5",
       "components": {
         "hooks": [
           {
             "name": "SessionStart"
           },
           {
-            "name": "PostToolUse"
+            "name": "PreToolUse"
           }
         ]
       }

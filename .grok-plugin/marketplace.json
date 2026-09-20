@@ -54,13 +54,13 @@
     },
     {
       "name": "llm-transpile",
-      "description": "Auto-compress .md, .html, .txt files read by Claude Code via PostToolUse hook.",
-      "version": "0.4.4",
+      "description": "Auto-compress .md, .html, .txt files read by Claude Code via PreToolUse hook.",
+      "version": "0.4.5",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/llm-transpile.git",
-        "sha": "5430b31bbcc8d0146bb9257c114d6ed5339cfe84"
+        "sha": "780910b055e210aef03efd615743f84be471150b"
       },
       "homepage": "https://github.com/epicsagas/llm-transpile",
       "keywords": [
