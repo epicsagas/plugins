@@ -2,8 +2,8 @@
   "version": 1,
   "plugins": {
     "velith": {
-      "sha": "56e62c0e0d5c2eb07beb6292a2c445938072cd7c",
-      "version": "0.7.0",
+      "sha": "6437b62645bcbcff1bb1172d333a75e3db88827a",
+      "version": "0.7.1",
       "components": {
         "skills": [
           {
