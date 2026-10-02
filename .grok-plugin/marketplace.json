@@ -34,12 +34,12 @@
     {
       "name": "epic",
       "description": "3 commands + 25 auto-trigger skills + self-evolving agent harness. Less to remember, more automation.",
-      "version": "0.8.8",
+      "version": "0.8.9",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/epic-harness.git",
-        "sha": "7abf3f1404242815dd99f03b5f417c188b7cde5a"
+        "sha": "196de8a5b3505e32ed9b8a7dbeb385c98e076164"
       },
       "homepage": "https://github.com/epicsagas/epic-harness",
       "keywords": [
