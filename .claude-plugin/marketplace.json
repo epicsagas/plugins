@@ -72,6 +72,14 @@
         "url": "https://github.com/epicsagas/plugin-forge.git"
       },
       "description": "Multi-host plugin manager (Claude Code · Codex · agy · hermes · grok). Scaffold, doctor, install-validate, and publish plugins using the manifest pattern established by toefl-prep and byoh."
+    },
+    {
+      "name": "ux3-product-design-harness",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cis2042/ux3-product-design-harness.git"
+      },
+      "description": "Product decision review with bounded verdicts. MIT installable skill; not hosted A2A. Current source has whitespace-padded override and three missing SVG reference defects; repair PR23/24 remain unmerged. No host/model test claimed."
     }
   ]
 }
