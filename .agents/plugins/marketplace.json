@@ -107,6 +107,19 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "ux3-product-design-harness",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cis2042/ux3-product-design-harness.git",
+        "sha": "48965c6b501f61ebbb8130c9c2e4f9af08922b9f"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
