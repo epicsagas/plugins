@@ -74,12 +74,12 @@
     {
       "name": "alcove",
       "description": "Local-first memory server — hybrid BM25+vector search, vault management, lint, and launchd lifecycle for project knowledge.",
-      "version": "0.14.0",
+      "version": "0.14.3",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/epicsagas/alcove.git",
-        "sha": "3842571cabd083d7f42bb5f3bf83d47773881b79"
+        "sha": "2b74ab76c66a962733ed315ce228da9522653a98"
       },
       "homepage": "https://github.com/epicsagas/alcove",
       "keywords": [
