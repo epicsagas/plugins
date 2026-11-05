@@ -259,8 +259,8 @@
       }
     },
     "alcove": {
-      "sha": "2b74ab76c66a962733ed315ce228da9522653a98",
-      "version": "0.14.3",
+      "sha": "3e9eb153c3cb75de85b8232e3f42af9cf954bf91",
+      "version": "0.14.4",
       "components": {
         "hooks": [
           {
